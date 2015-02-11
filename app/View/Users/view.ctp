@@ -1,7 +1,15 @@
-<h1><?php echo h($user['User']['name']); ?></h1>
+<div class="profileContainer">
+    <div class="personalData">
+        <h1><?php echo h($user['User']['name'])." ".h($user['User']['surname1'])." ".h($user['User']['surname2']); ?></h1>
+        <p><?php echo h($user['User']['description']); ?></p>
+        <p><?php echo h($user['User']['phone']); ?></p>
+        <p><?php echo h($user['User']['email']); ?></p>
+    </div>
+    <div class="educationData"></div>
+    <div class="experienceData"></div>
+    <div class="skillsData"></div>
+</div>
 
-<p class="col"><small>Created: <?php echo $user['User']['created']; ?></small></p>
 
-<p><?php echo h($user['User']['surname1']); ?></p>
 
-<p><?php echo h($user['User']['phone']); ?></p>
+

@@ -255,3 +255,488 @@ Stack Trace:
 #3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-02-11 11:02:26 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-11 11:02:27 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-11 11:02:29 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:02:29 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:06:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:06:05 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:10:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:10:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:10:04 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:12:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:12:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:13:02 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:13:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:13:19 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:14:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:14:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:14:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:14:55 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:04 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:04 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:25 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:25 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:28 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:42 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:43 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:18:46 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:03 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:05 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:06 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:06 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:07 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:18 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:19:28 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-11 11:19:28 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-11 11:19:30 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:20:21 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:20:21 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:22:45 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:22:45 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:23:04 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:23:04 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:23:11 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:10 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:10 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:10 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:11 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:16 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:16 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:40 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:24:41 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:25:41 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-11 11:25:41 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
