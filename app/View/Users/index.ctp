@@ -18,7 +18,8 @@
             <?php echo $this->Html->link($user['User']['name'],
 array('controller' => 'users', 'action' => 'view', $user['User']['id'])); ?>
         </td>
-        <td><?php echo $user['User']['surname']; ?></td>
+        <td><?php echo $user['User']['surname1']; ?></td>
+        <td><?php echo $user['User']['surname2']; ?></td>
         <td><?php echo $user['User']['created']; ?></td>
         <td><?php echo $user['User']['phone']; ?></td>
     </tr>
