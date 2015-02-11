@@ -118,6 +118,10 @@ section.uno{
 	width: 80%;
 	margin: 0 auto;
 }
+.info a{
+    text-decoration: none;
+    color: inherit;
+}
 .info{
 	border: 5px solid black;
 	 background-color: Transparent;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -19,45 +20,48 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
+        <title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
-	</title>
+        </title>
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('styles');
+                echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css');
+                echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,500');
+                
+                echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
+                echo $this->Html->script('util');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
+    </head>
+    <body class="cbp-spmenu-push">
+        <div id="container">
+           <?php
+    echo $this->element('header');
+    echo $this->element('menu');
+    echo $this->element('navbuttons');
+    ?>
+            <div id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+            </div>
+            <div id="footer">
+                    <?php
+    echo $this->element('footer');
+    ?>
+                <p>
+				
+                </p>
+            </div>
+        </div>
+    </body>
 </html>
