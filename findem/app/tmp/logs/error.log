@@ -1,0 +1,48 @@
+2015-02-10 09:37:03 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /findem/findem/users/index
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3613): ConnectionManager::getDataSource('default')
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3640): Model->setSource('users')
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3018): Model->getDataSource()
+#5 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(2990): Model->_readDataSource('all', Array)
+#6 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/app/Controller/UsersController.php(7): Model->find('all')
+#7 [internal function]: UsersController->index()
+#8 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-10 09:37:05 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+Exception Attributes: array (
+  'config' => 'default',
+)
+Request URL: /findem/findem/users/index
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3613): ConnectionManager::getDataSource('default')
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3640): Model->setSource('users')
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(3018): Model->getDataSource()
+#5 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Model/Model.php(2990): Model->_readDataSource('all', Array)
+#6 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/app/Controller/UsersController.php(7): Model->find('all')
+#7 [internal function]: UsersController->index()
+#8 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-10 10:08:26 Error: Fatal Error (4): syntax error, unexpected '<' in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/app/View/Users/add.ctp, line 4]
+2015-02-10 10:08:26 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /findem/findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/datos/local/ve...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/datos/local/ve...', 4, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/datos/local/ve...', 4, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
