@@ -75,6 +75,7 @@ function getProvinces(){
 			url: "/findem/users/getProvinces/"+region,
 			success: function(data){
 				$(".js-province").html("");
+                                $(".js-province").append("<option>Selecciona provincia</option>");
 				$.each(data, function(item, value){
 					var row = "<option value=\"" + item + "\">" + value + "</option>";
 	                $(row).appendTo(".js-province"); 
@@ -94,6 +95,7 @@ function getCities(){
 			url: "/findem/users/getCities/"+province,
 			success: function(data){
 				$(".js-city").html("");
+                                $(".js-province").append("<option>Selecciona ciudad</option>");
 				$.each(data, function(item, value){
 					var row = "<option value=\"" + item + "\">" + value + "</option>";
 	                $(row).appendTo(".js-city"); 
