@@ -20,21 +20,7 @@ $(document).on("scroll", function(){
       }
 });
 
-         function methodToFixLayout( e ) {
-            var winHeight = $(window).height();
-            var winWidth = $(window).width();
-            if(winWidth<480){
-              $('.menusp').followTo(winHeight-(winHeight*0.07));
-            }
-            if(winWidth>768){
-                $('.menuasd').followTo(winHeight-125);
-                }
-        if(winWidth>480 && winWidth<768){
-                 $('.menusp').followTo(winHeight-(winHeight*0.10));
-                }
-}
-
-        
+    
          //scroll entre enlaces
   $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

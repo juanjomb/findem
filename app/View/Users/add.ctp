@@ -1,6 +1,8 @@
 <h1>Add Post</h1>
 <?php
 echo $this->Form->create('User');
+echo $this->Form->input('username');
+echo $this->Form->input('password');
 echo $this->Form->input('name');
 echo $this->Form->input('surname1');
 echo $this->Form->input('surname2');
@@ -12,7 +14,7 @@ echo $this->Form->input('region_id', array(
     'empty' => '(Selecciona tu comunidad)',
     'class' => 'js-region'
 ));
-echo $this->Form->input('provincia_id', array(
+echo $this->Form->input('province_id', array(
     'empty' => '(Selecciona tu provincia)',
     'class' => 'js-province'
 ));

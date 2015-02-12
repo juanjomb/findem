@@ -24,7 +24,7 @@ color: white;
     width: 90%;
     margin-left: 5%;
     min-height:20%;
-    background-color: #BAF2FA;
+    background-color: #C5E6DF;
     
     margin-bottom: 1%;
 }
@@ -39,20 +39,20 @@ color: white;
     margin-left: 5%;
     min-height:30%;
     margin-bottom: 1%;
-    background-color: #BAF2FA;
+    background-color: #C5E6DF;
 }
 .experienceData{
     width: 90%;
     margin-left: 5%;
     min-height:20%;
     margin-bottom: 1%;
-    background-color: #BAF2FA;
+    background-color: #C5E6DF;
 }
 .skillsData{
     width: 90%;
     margin-left: 5%;
     min-height:20%;
-    background-color: #BAF2FA;
+    background-color: #C5E6DF;
 }
 .profileContainer{
     margin-top: 100px;
@@ -65,15 +65,9 @@ height:100%;
 opacity:.95;
 top:0;
 left:0;
-display:none;
 position:fixed;
 background-color:#313131;
 overflow:auto;
- -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
 }
 .loginInput{
 	width: 80%;
