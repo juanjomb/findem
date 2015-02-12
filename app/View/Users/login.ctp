@@ -1,6 +1,5 @@
 <div class="loginBg">
     <div class="loginForm">
-        <i class="fa fa-times fa-2x close"></i> 
         <h4>Inicio de sesión</h4>
                 <?php echo $this->Session->flash('auth'); ?>
         <?php echo $this->Form->create('User'); 

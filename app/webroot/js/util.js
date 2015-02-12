@@ -3,8 +3,6 @@ $(document).ready(function($){
       
         
        $("#showLeftPush").on('click',showMenu);
-       $('.showlogin').on('click',showLoginForm);
-       $('.close').on('click',hideLoginForm);
         $(document).on('scroll',resizeHeader);
         $('.js-region').on('change',getProvinces);
         $('.js-province').on('change',getCities);
@@ -68,12 +66,6 @@ function resizeHeader(){
   }
 }
 
-function showLoginForm(){
-  $('.loginBg').css({'display':'block'});
-}
-function hideLoginForm(){
-  $('.loginBg').css({'display':'none'});
-}
 
 function getProvinces(){
 	region = $(this).val();

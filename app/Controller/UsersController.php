@@ -11,11 +11,14 @@ class UsersController extends AppController {
 
     public function login() {
         if ($this->request->is('post')) {
-            
             if ($this->Auth->login()) {
+                $user=  $this->User->findByUsername($this->request->data['User']['username']);
+                $this->Session->write('user', $user);
                 return $this->redirect($this->Auth->redirectUrl());
-            }
+            }else{
             $this->Session->setFlash(__('Invalid username or password, try again'));
+            return $this->redirect('/');
+            }
         }
     }
 

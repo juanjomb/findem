@@ -1,7 +1,12 @@
+<?php $user=$this->Session->read('user');?>
+
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <?php if($user){?>
     <img class="userImage" src="img/placeholder-user.jpg" alt="imagen usuario">
-    <p class="userName">John Doe</p>
-    <a href="profile"><i class="fa fa-user"></i>    Mi perfil</a>
+    <p class="userName"><?php echo $user['User']['name'].' '.$user['User']['surname1']?></p>
+    
+    <a href="/findem/users/view/<?php echo $user['User']['id'];?>"><i class="fa fa-user"></i>    Mi perfil</a>
+    <?php } ?>
     <a href="messages"><i class="fa fa-inbox"></i>    Mensajes</a>
     <a href="#about"><i class="fa fa-info-circle"></i>     Sobre Findem</a>
     <a href="#emp"><i class="fa fa-institution"></i>     Empresas</a>
