@@ -6,7 +6,8 @@ $(document).ready(function($){
        $('.showlogin').on('click',showLoginForm);
        $('.close').on('click',hideLoginForm);
         $(document).on('scroll',resizeHeader);
-     
+        $('.js-region').on('change',getProvinces);
+        $('.js-province').on('change',getCities);
          
          
          $(window).on("resize", methodToFixLayout);
@@ -86,6 +87,45 @@ function showLoginForm(){
 }
 function hideLoginForm(){
   $('.loginBg').css({'display':'none'});
+}
+
+function getProvinces(){
+	region = $(this).val();
+	if (region != ''){
+		$.ajax({
+			type: "GET",
+			url: "/findem/users/getProvinces/"+region,
+			success: function(data){
+				$(".js-province").html("");
+				$.each(data, function(item, value){
+					var row = "<option value=\"" + item + "\">" + value + "</option>";
+	                $(row).appendTo(".js-province"); 
+				});
+			},
+			dataType: 'json'
+		});
+	} else {
+		$(".js-province").html('');
+	}
+}
+function getCities(){
+	province = $(this).val();
+	if (province != ''){
+		$.ajax({
+			type: "GET",
+			url: "/findem/users/getCities/"+province,
+			success: function(data){
+				$(".js-city").html("");
+				$.each(data, function(item, value){
+					var row = "<option value=\"" + item + "\">" + value + "</option>";
+	                $(row).appendTo(".js-city"); 
+				});
+			},
+			dataType: 'json'
+		});
+	} else {
+		$(".js-city").html('');
+	}
 }
 
     	});

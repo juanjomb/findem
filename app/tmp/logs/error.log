@@ -1225,3 +1225,730 @@ Stack Trace:
 #3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-02-12 07:23:55 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:23:55 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:23:58 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-12 07:23:58 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-12 07:24:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/edit/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->edit('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-12 07:24:08 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/edit/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->edit('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-12 07:24:56 Error: [NotFoundException] Invalid user
+Request URL: /findem/users/view/img/placeholder-user.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'placeholder-use...')
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-12 07:39:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:39:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:40:09 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:40:10 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:41:01 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:41:01 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:41:39 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:41:50 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:42:02 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:42:03 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:43:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/UsersController.php, line 61]
+2015-02-12 07:43:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/datos/local/ve...', 61)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/datos/local/ve...', 61, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/datos/local/ve...', 61, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-12 07:43:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:43:01 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:44:30 Error: Fatal Error (1): Call to a member function find() on a non-object in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/UsersController.php, line 61]
+2015-02-12 07:44:30 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/datos/local/ve...', 61)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/datos/local/ve...', 61, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/datos/local/ve...', 61, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-12 07:44:30 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:44:31 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:49:56 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/View/Helper/FormHelper.php, line 2744]
+2015-02-12 07:49:56 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/datos/local/ve...', 2744)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/datos/local/ve...', 2744, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/datos/local/ve...', 2744, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-12 07:50:08 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/View/Helper/FormHelper.php, line 2744]
+2015-02-12 07:50:08 Error: [FatalErrorException] Maximum execution time of 120 seconds exceeded
+Request URL: /findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/datos/local/ve...', 2744)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/datos/local/ve...', 2744, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/datos/local/ve...', 2744, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-12 07:51:42 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:51:42 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:52:55 Error: Fatal Error (4): syntax error, unexpected ',' in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/View/Users/add.ctp, line 14]
+2015-02-12 07:52:55 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /findem/users/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/datos/local/ve...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/datos/local/ve...', 14, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/datos/local/ve...', 14, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-12 07:52:55 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:53:13 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:53:37 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:53:38 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:55:17 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 07:55:18 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:03:33 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:03:33 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:03:36 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:03:54 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:03:57 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:06:13 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:06:13 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:06:34 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:06:35 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:06:42 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:13:40 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:04 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:07 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:28 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:29 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:46 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:15:47 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:17:15 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:17:16 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:47:13 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:47:15 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:47:46 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:47:47 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:48:43 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:48:43 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:49:10 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:49:10 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:49:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Region.province' in 'field list'
+Request URL: /findem/users/getProvinces/10
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Provinc...', Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Provinc...', Array, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Provinc...', false)
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Model.php(3018): DboSource->read(Object(Province), Array)
+#5 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Model.php(2990): Model->_readDataSource('list', Array)
+#6 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/UsersController.php(74): Model->find('list', Array)
+#7 [internal function]: UsersController->getProvinces('10')
+#8 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-12 08:49:58 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:54:34 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:54:35 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:55:10 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-02-12 08:55:11 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /findem/users/img/placeholder-user.jpg
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
