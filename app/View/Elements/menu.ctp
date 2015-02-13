@@ -2,8 +2,7 @@
 
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
     <?php if($user){?>
-    
-    <img class="userImage" src="/img/uploads/users/<?php echo $user['User']['image']?>" alt="imagen usuario">
+    <img class="userImage" src="/findem/img/uploads/users/<?php echo $user['User']['image']?>" alt="imagen usuario">
     <p class="userName"><?php echo $user['User']['name'].' '.$user['User']['surname1']?></p>
     
     <a href="/findem/users/view/<?php echo $user['User']['id'];?>"><i class="fa fa-user"></i>    Mi perfil</a>

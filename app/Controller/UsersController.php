@@ -37,6 +37,7 @@ class UsersController extends AppController {
         }
 
         $user = $this->User->findById($id);
+        $this->getLists();
         //echo '<pre>';
                 //print_r($user);die();
         if (!$user) {
@@ -68,11 +69,17 @@ class UsersController extends AppController {
                                 move_uploaded_file($file['tmp_name'], WWW_ROOT . 'img/uploads/users/' . $file['name']);
 
                                 //prepare the filename for database entry
-                                $this->data['User']['image'] = $file['name'];
+                                $item=$this->data;
+                                $item['User']['image'] = $file['name'];
+                                
                                 
                         }
                 }
-            if ($this->User->save($this->data)) {
+               
+                if(!isset($item)){
+                    $item=$this->request->data;
+                }
+            if ($this->User->save($item)) {
                 $this->Session->setFlash(__('Your user has been saved.'));
                 return $this->redirect(array('action' => 'index'));
             }
@@ -127,8 +134,8 @@ class UsersController extends AppController {
         $regions = $this->User->Region->find('list', array(
             'fields' => array('Region.comunidad')
         ));
-
-        $this->set(compact('regions'));
+        $skills = $this->User->Skill->find('list',array('fields'=>array('id','title')));
+        $this->set(compact('regions','skills'));
     }
 
     public function getProvinces($region_id) {

@@ -6,9 +6,9 @@ $(document).ready(function($){
         $(document).on('scroll',resizeHeader);
         $('.js-region').on('change',getProvinces);
         $('.js-province').on('change',getCities);
+        $('.goup').on('click',scrollToTop);
          
          
-         $(window).on("resize", methodToFixLayout);
 $(document).on("scroll", function(){
    if($(window).scrollTop()>$(window).height()/2){
           $(".goup").fadeIn(1000);
@@ -65,7 +65,12 @@ function resizeHeader(){
   
   }
 }
-
+   function scrollToTop() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    }
 
 function getProvinces(){
 	region = $(this).val();

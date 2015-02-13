@@ -17,6 +17,18 @@ class User extends AppModel {
             'foreignKey' => 'city_id'
         )
     );
+    public $hasAndBelongsToMany = array(
+        'Skill' => array(
+                'className' => 'Skill',
+                'with' => 'UserSkill',
+                'joinTable' => 'user_skills',
+                'foreignKey' => 'user_id',
+                'associationForeignKey' => 'skill_id',
+                'unique' => true,
+                
+            )
+    );
+    
      public $validate = array(
         'username' => array(
             'required' => array(

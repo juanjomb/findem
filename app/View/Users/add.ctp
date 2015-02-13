@@ -24,5 +24,6 @@ echo $this->Form->input('city_id', array(
     'empty' => '(Selecciona tu ciudad)',
     'class' => 'js-city'
 ));
+echo $this->Form->input('Skill.Skill');
 echo $this->Form->end('Save User');
 ?>
