@@ -30,6 +30,13 @@ class UsersController extends AppController {
     public function index() {
         $this->set('users', $this->User->find('all'));
     }
+    public function isAdmin($user) {
+        if($user['role']=='admin'){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function view($id) {
         if (!$id) {
