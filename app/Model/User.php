@@ -26,6 +26,15 @@ class User extends AppModel {
                 'associationForeignKey' => 'skill_id',
                 'unique' => true,
                 
+            ),
+        'Language' => array(
+                'className' => 'Language',
+                'with' => 'UserLanguage',
+                'joinTable' => 'user_language',
+                'foreignKey' => 'user_id',
+                'associationForeignKey' => 'language_id',
+                'unique' => true,
+                
             )
     );
     

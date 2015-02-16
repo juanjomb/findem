@@ -29,9 +29,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('styles');
                 echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css');
+                echo $this->Html->css('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
                 echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,500');
+                echo $this->Html->css('styles');
                 
                 echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
                 echo $this->Html->script('util');
