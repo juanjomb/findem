@@ -3089,3 +3089,15 @@ Stack Trace:
 #11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LanguagesController), Object(CakeRequest))
 #12 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2015-02-17 07:00:47 Error: [MissingViewException] View file "Levels/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Levels/index.ctp',
+)
+Request URL: /findem/levels/index/
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LevelsController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

@@ -1,7 +1,7 @@
 <div class="container content">
 
 <h1>Languages </h1>
-<table class="table-hover">
+<table class="table table-hover">
     <tr>
         <th>Created</th>
         <th>Title</th>

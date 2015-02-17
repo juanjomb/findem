@@ -9,8 +9,13 @@ html,body{
 .userImage{
 	margin: 1.5em;
 	width: 150px;
+        height: 150px;
 	border-radius: 50%;
 	border: 4px solid white;
+}
+.profileImg{
+    width: 250px;
+    height: 250px;
 }
 .userName{
 	text-align: center;
@@ -38,7 +43,7 @@ color: white;
     margin-left: 5%;
     min-height:20%;
     background-color: #C5E6DF;
-    
+    padding: 1rem;
     margin-bottom: 1%;
 }
 .profileContainer p{
@@ -47,13 +52,12 @@ color: white;
     
     
 }
-.skillsData p{
-    padding-left: 20px;
-    padding-top: 10px;
-    width: 80px;
-    min-width: 80px;
+.skillsData .skillPill{
+    padding: 1%;
+    width: auto;
     min-height: 30px;
     border-radius: 5px;
+    float: left;
     color: #C5E6DF;
     background-color: #0A3238;
 }
@@ -86,7 +90,6 @@ color: white;
 }
 .profileContainer{
     margin-top: 100px;
-    height: 150%;
     width: 100%;
 }
 .content{
@@ -278,6 +281,8 @@ section.tres{
 	width: 100%;
 }
 footer{
+    position: absolute;
+    bottom: 0;
 	height:300px;
 	width: 100%;
 
