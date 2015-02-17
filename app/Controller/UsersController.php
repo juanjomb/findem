@@ -55,6 +55,7 @@ class UsersController extends AppController {
 
     public function add() {
 
+        //echo '<pre>';print_r($this->request->data);die();
             $this->getLists();
             $this->User->create();
             if(!empty($this->request->data))

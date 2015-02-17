@@ -1,25 +1,25 @@
-<h1>Add User</h1>
-<?php
-echo $this->Form->create('User');
-echo $this->Form->input('username');
-echo $this->Form->input('password');
-echo $this->Form->input('name');
-echo $this->Form->input('surname1');
-echo $this->Form->input('surname2');
-echo $this->Form->input('description',array('rows' => '3'));
-echo $this->Form->input('email');
-echo $this->Form->input('phone');
-echo $this->Form->input('region_id', array(
-    'empty' => '(Selecciona tu comunidad)',
-    'class' => 'js-region'
-));
-echo $this->Form->input('province_id', array(
-    'empty' => '(Selecciona tu provincia)',
-    'class' => 'js-province'
-));
-echo $this->Form->input('city_id', array(
-    'empty' => '(Selecciona tu ciudad)',
-    'class' => 'js-city'
-));
-echo $this->Form->end('Save User');
-?>
+<?php echo $this->Form->create('Language'); ?>
+<div class="container content">
+    <h2 class="formHeader">Edit Language</h2>
+    <div class="form-group">
+        <?php
+        echo $this->Form->input('title', array(
+            'type' => 'text',
+            'class' => 'col-xs-12 col-md-12 form-control',
+            'div' => 'col-xs-12 col-md-6'
+        ));
+        echo $this->Form->input('level_id', array(
+            'empty' => '(Selecciona tu nivel)',
+            'options' => $levels,
+            'class' => 'col-xs-12 col-md-12 form-control',
+            'div' => 'col-xs-12 col-md-6'
+        ));
+        $options = array(
+            'label' => 'Save Language',
+            'class' => 'btn btn-default send',
+            'div'=>'col-xs-12 col-md-12'
+        );
+        echo $this->Form->end($options);
+        ?>
+    </div>
+</div>

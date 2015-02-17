@@ -4,10 +4,17 @@
     <div class="form-group">
         <?php
         echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-6'
+            'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('password', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-6'
+            'div' => 'col-xs-12 col-md-4'
+        ));
+        $roles=array('admin' => 'admin','user' => 'user','company' => 'company');
+        echo $this->Form->input('role', array(
+            'options' => $roles,
+            'empty' => '(Tipo usuario)',
+            'class' => 'col-xs-12 col-md-12 form-control',
+            'div' => 'col-xs-12 col-md-4'
         ));
         ?>
     </div>
