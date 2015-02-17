@@ -3152,3 +3152,20 @@ Stack Trace:
 #3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-02-17 11:07:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Level.name' in 'field list'
+Request URL: /findem/skills/add
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Level`....', Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Level`....', Array, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Level`....', false)
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Model.php(3018): DboSource->read(Object(Level), Array)
+#5 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Model/Model.php(2990): Model->_readDataSource('list', Array)
+#6 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/SkillsController.php(92): Model->find('list', Array)
+#7 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/SkillsController.php(32): SkillsController->getLists()
+#8 [internal function]: SkillsController->add()
+#9 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SkillsController), Array)
+#10 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest))
+#12 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

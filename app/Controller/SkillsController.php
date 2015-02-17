@@ -88,7 +88,7 @@ class SkillsController extends AppController {
     private function getLists($skill = null) {
 
         $levels = $this->Skill->Level->find('list', array(
-            'fields' => array('Level.name')
+            'fields' => array('Level.title')
         ));
         $this->set(compact('levels'));
     }
