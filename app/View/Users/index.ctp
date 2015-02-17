@@ -4,7 +4,15 @@
         <div class="col-xs-12 col-md-12"> <h2>Users</h2></div>
     </div>
 
+<div class="row">
 
+        <div class="col-xs-12 col-md-12"> <?php 
+                        echo $this->Html->link('<span class="btn btn-success">Create user</span>', array('controller' => 'users', 'action' => 'add'),
+                                array('escape' => false)
+                                );?>
+        </div>
+    </div>
+    <br>
     <div class="row">
         <table class="table table-hover">
             <tr>
@@ -36,11 +44,11 @@
                     <td><?php echo $user['User']['phone']; ?></td>
                     <td>
                         <?php 
-                        echo $this->Html->link('<i class="fa fa-pencil"></i>', array('controller' => 'users', 'action' => 'edit', $user['User']['id']),
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'users', 'action' => 'edit', $user['User']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo $this->Form->postLink('<i class="fa fa-trash"></i>', array('controller' => 'users', 'action' => 'delete', $user['User']['id']),
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'users', 'action' => 'delete', $user['User']['id']),
                                 array('escape' => false),
                                 array('confirm' => 'Are you sure?')
                                 );

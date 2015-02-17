@@ -185,6 +185,16 @@ header{
     transition: height 1s;
 
 }
+a i{
+    margin: 5px;
+}
+
+.deleteIcon{
+    color: indianred;
+}
+.editIcon{
+    color: cadetblue;
+}
 .smaller{
 	height:50px;
 	-webkit-transition: height 1s; /* Chrome, Safari, Opera */
