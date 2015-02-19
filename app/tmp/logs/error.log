@@ -3169,3 +3169,136 @@ Stack Trace:
 #11 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(SkillsController), Object(CakeRequest))
 #12 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2015-02-19 10:41:04 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /findem/users/login
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('users')
+#1 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\View\Users\login.ctp(5): FormHelper->create('User')
+#5 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\View.php(961): include('C:\\Bitnami\\wamp...')
+#6 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\View.php(923): View->_evaluate('C:\\Bitnami\\wamp...', Array)
+#7 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\View.php(473): View->_render('C:\\Bitnami\\wamp...')
+#8 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render(NULL, NULL)
+#9 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-02-19 10:41:57 Error: [MissingTableException] Table user_languages for model UserLanguage was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_languages',
+  'class' => 'UserLanguage',
+  'ds' => 'default',
+)
+Request URL: /findem/users/login
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('user_languages')
+#1 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(891): Model->schema()
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(919): Model->__isset('UserLanguage')
+#4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3716): Model->__get('UserLanguage')
+#5 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1779): Model->joinModel('UserLanguage', Array)
+#6 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1257): DboSource->generateAssociationQuery(Object(User), Object(Language), 'hasAndBelongsTo...', 'Language', Array, Array, true)
+#7 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Language), 'hasAndBelongsTo...', 'Language', Array, Array, true, Array, 0, Array)
+#8 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#9 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#10 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#11 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(827): DboSource->query('findByUsername', Array, Object(User))
+#12 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(15): Model->__call('findByUsername', Array)
+#13 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(15): User->findByUsername('b')
+#14 [internal function]: UsersController->login()
+#15 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-02-19 10:50:58 Error: [MissingControllerException] Controller class MessagesController could not be found.
+Exception Attributes: array (
+  'class' => 'MessagesController',
+  'plugin' => NULL,
+)
+Request URL: /findem/messages
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-19 11:20:49 Error: Fatal Error (1): Unsupported operand types in [C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\View\Helper\FormHelper.php, line 1674]
+2015-02-19 11:20:49 Error: [FatalErrorException] Unsupported operand types
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\Bitnami\\wamp...', 1674)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\Bitnami\\wamp...', 1674, Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\Bitnami\\wamp...', 1674, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-19 11:32:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php, line 145]
+2015-02-19 11:32:11 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 145)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 145, Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 145, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-19 11:34:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Education.user_id' in 'field list'
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Educati...', Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Educati...', Array, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1444): DboSource->fetchAll('SELECT `Educati...', false)
+#4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `Educati...', Array)
+#5 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Education), 'hasMany', 'Education', Array, Array, true, Array, 0, Array)
+#6 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#8 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#9 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(827): DboSource->query('findById', Array, Object(User))
+#10 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(46): Model->__call('findById', Array)
+#11 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(46): User->findById('54e62f5a-5ddc-4...')
+#12 [internal function]: UsersController->view('54e62f5a-5ddc-4...')
+#13 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-02-19 12:38:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Skill`....', Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Skill`....', Array, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Skill`....', false)
+#4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(Skill), Array)
+#5 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('list', Array)
+#6 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(143): Model->find('list', Array)
+#7 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(47): UsersController->getLists(Array)
+#8 [internal function]: UsersController->view('54e62f5a-5ddc-4...')
+#9 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-19 12:38:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserSkill.user_id' in 'where clause'
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Skill`....', Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Skill`....', Array, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Skill`....', false)
+#4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(Skill), Array)
+#5 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('list', Array)
+#6 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(143): Model->find('list', Array)
+#7 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\UsersController.php(47): UsersController->getLists(Array)
+#8 [internal function]: UsersController->view('54e62f5a-5ddc-4...')
+#9 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#10 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#12 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

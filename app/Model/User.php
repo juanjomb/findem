@@ -38,6 +38,19 @@ class User extends AppModel {
             )
     );
     
+    public $hasMany = array(
+        'Education' => array(
+            'className' => 'Education',
+            'foreignKey' => 'user_id',
+            'dependent' => true
+        ),
+        'Experience' => array(
+            'className' => 'Experience',
+            'foreignKey' => 'user_id',
+            'dependent' => true
+        )
+    );
+    
      public $validate = array(
         'username' => array(
             'required' => array(

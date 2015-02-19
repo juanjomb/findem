@@ -44,9 +44,8 @@ class UsersController extends AppController {
         }
 
         $user = $this->User->findById($id);
-        $this->getLists();
-        //echo '<pre>';
-                //print_r($user);die();
+        $this->getLists($user);
+        
         if (!$user) {
             throw new NotFoundException(__('Invalid user'));
         }
@@ -141,8 +140,9 @@ class UsersController extends AppController {
         $regions = $this->User->Region->find('list', array(
             'fields' => array('Region.comunidad')
         ));
-        $skills = $this->User->Skill->find('list',array('fields'=>array('id','title')));
-        $this->set(compact('regions','skills'));
+        //$skills = $this->User->Skill->find('list',array('fields'=>array('id','title'),'conditions'=>array('UserSkill.user_id'=>$user['User']['id'])));
+        $educations = $this->User->Education->find('all',array('conditions' => array('Education.user_id'=>$user['User']['id'])));
+        $this->set(compact('regions','skills','educations'));
     }
 
     public function getProvinces($region_id) {
@@ -156,6 +156,18 @@ class UsersController extends AppController {
         }
     }
 
+      public function saveEducation() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $this->User->Education->create();
+            if ($this->User->Education->save($this->request->data)) {
+                echo json_encode($this->request->data);
+            }else{
+                echo json_encode('{"ko":"1"}');
+                
+            }
+        }
+    }
     public function getCities($province_id) {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;

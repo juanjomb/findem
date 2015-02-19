@@ -16,6 +16,12 @@ html,body{
 .container{
     margin-top: 80px;
 }
+
+.singleEducation p:first-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
 .profileImg{
     width: 250px;
     height: 250px;
@@ -45,7 +51,7 @@ color: white;
     width: 90%;
     margin-left: 5%;
     min-height:20%;
-    background-color: #C5E6DF;
+    background-color: #F4FFFD;
     padding: 1rem;
     margin-bottom: 1%;
 }
@@ -61,7 +67,7 @@ color: white;
     min-height: 30px;
     border-radius: 5px;
     float: left;
-    color: #C5E6DF;
+    color: #F4FFFD;
     background-color: #0A3238;
 }
 .profileContainer h3{
@@ -72,24 +78,25 @@ color: white;
     
 }
 .educationData{
+    padding: 20px;
     width: 90%;
     margin-left: 5%;
     min-height:30%;
     margin-bottom: 1%;
-    background-color: #C5E6DF;
+    background-color: #F4FFFD;
 }
 .experienceData{
     width: 90%;
     margin-left: 5%;
     min-height:20%;
     margin-bottom: 1%;
-    background-color: #C5E6DF;
+    background-color: #F4FFFD;
 }
 .skillsData{
     width: 90%;
     margin-left: 5%;
     min-height:20%;
-    background-color: #C5E6DF;
+    background-color: #F4FFFD;
 }
 .profileContainer{
     margin-top: 100px;
@@ -360,6 +367,7 @@ p{
 	height: 50px;
 	border-radius: 50%;
 	position: fixed;
+        z-index: 99;
 	bottom: 75px;
 	right: 20px;
 	color: white;
@@ -376,13 +384,13 @@ p{
 	color: white;
 }
 .menu i{
-margin-left: 22%;
-margin-top:  18%;
+margin-left: 25%;
+margin-top:  22%;
 cursor:pointer;
 }
 .goup i{
-margin-left: 18%;
-margin-top:  12%;
+margin-left: 22%;
+margin-top:  18%;
 cursor:pointer;
 }
 

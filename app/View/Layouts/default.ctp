@@ -15,7 +15,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$findemtitle = __d('cake_dev', 'Findem, red de profesionales informáticos');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <head>
 	<?php echo $this->Html->charset(); ?>
         <title>
-		<?php echo $cakeDescription ?>:
+		<?php echo $findemtitle ?>:
 		<?php echo $this->fetch('title'); ?>
         </title>
 	<?php
@@ -35,6 +35,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->css('styles');
                 
                 echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
+                echo $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
                 echo $this->Html->script('util');
 
 		echo $this->fetch('meta');
