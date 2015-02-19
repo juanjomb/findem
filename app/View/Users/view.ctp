@@ -35,7 +35,7 @@
         <?php
         foreach ($skills as $skill) {
             ?>
-            <p class="skillPill"><?php print $skill; ?></p>
+            <p class="skillPill"><?php print $skill['Skill']['title']; ?></p>
         <?php } ?>
 
 

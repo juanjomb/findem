@@ -140,7 +140,8 @@ class UsersController extends AppController {
         $regions = $this->User->Region->find('list', array(
             'fields' => array('Region.comunidad')
         ));
-        //$skills = $this->User->Skill->find('list',array('fields'=>array('id','title'),'conditions'=>array('UserSkill.user_id'=>$user['User']['id'])));
+        $this->User->UserSkill->unBindModel(array('belongsTo' => array('User')));
+        $skills = $this->User->UserSkill->find('all',array('conditions'=>array('user_id'=>$user['User']['id'])));
         $educations = $this->User->Education->find('all',array('conditions' => array('Education.user_id'=>$user['User']['id'])));
         $this->set(compact('regions','skills','educations'));
     }
