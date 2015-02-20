@@ -9,6 +9,7 @@ $(document).ready(function ($) {
         $('.goup').on('click', scrollToTop);
         $('.saveEducation').on('click', saveEducation);
         $('.js-us').on('click', showUserForm);
+        $('.register').on('click', register);
 
 
         $(document).on("scroll", function () {
@@ -129,18 +130,18 @@ $(document).ready(function ($) {
                 success: function (data) {
                     $('#EducationTitle').val('');
                     $('#EducationDescription').val('');
-                    ed='<div class="singleEducation col-xs-12 col-md-12">';
-                    ed+='<p>' + data.title + '</p>';
-                    ed+='<p>' + data.description + '</p>';
-                    ed+='</div>';
+                    ed = '<div class="singleEducation col-xs-12 col-md-12">';
+                    ed += '<p>' + data.title + '</p>';
+                    ed += '<p>' + data.description + '</p>';
+                    ed += '</div>';
                     $('.educationData').append(ed);
                 },
                 dataType: 'json'
             });
 
         }
-        
-        function showUserForm(){
+
+        function showUserForm() {
             $('.registerUserBg').show();
         }
         function register() {
@@ -155,7 +156,16 @@ $(document).ready(function ($) {
                 url: "/findem/users/register/",
                 data: formData,
                 success: function (data) {
-                   
+                    if (data.ok) {
+                        html = +data.ok;
+                        $('.registermessage').empty();
+                        $('.registermessage').append(html);
+
+                    } else {
+                        html = data.ko;
+                        $('.registermessage').empty();
+                        $('.registermessage').append(html);
+                    }
                 },
                 dataType: 'json'
             });

@@ -167,16 +167,19 @@ class UsersController extends AppController {
     public function register() {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
-            $user = $this->User->findByUsername($this->request->data['User']['Username']);
-            if (!$user) {
+            $user = $this->User->findByUsername($this->request->data['username']);
+            if (empty($user)) {
                 $this->User->create();
                 if ($this->User->save($this->request->data)) {
-                    echo json_encode($this->request->data);
+                    $result['ok']='Your account have been successfully registered';
+                    echo json_encode($result);
                 } else {
-                    echo json_encode('{"message":"Error on registering"}');
+                    $result['ko']='Error on registering';
+                    echo json_encode($result);
                 }
             } else {
-                echo json_encode('{"message":"Username already exists"}');
+                $result['ko']='Username already exists';
+                echo json_encode($result);
             }
         }
     }

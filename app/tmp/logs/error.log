@@ -3405,3 +3405,13 @@ Stack Trace:
 #15 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #16 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #17 {main}
+2015-02-20 10:40:15 Error: Fatal Error (4): syntax error, unexpected ''div'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/View/Pages/home.ctp, line 39]
+2015-02-20 10:40:15 Error: [FatalErrorException] syntax error, unexpected ''div'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /findem/
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/datos/local/ve...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/datos/local/ve...', 39, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/datos/local/ve...', 39, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

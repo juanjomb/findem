@@ -36,6 +36,7 @@
         echo $this->Form->input('username',array(
             'class'=>'loginInput',
             'placeholder'=>"Username"
+            
         ));
         echo $this->Form->hidden('role',array(
             'value'=>'user'
@@ -43,10 +44,16 @@
         echo $this->Form->input('password',array(
             'class'=>'loginInput',
             'placeholder'=>"Password"
+            
         ));
+         $options = array(
+            'label' => 'Register',
+            'class' => 'btn btn-default register',
+            'div'=>'col-xs-12 col-md-12'
+        );
     ?>
-<?php echo $this->Form->end(__('Registro')); ?>
-
+<?php echo $this->Form->end($options); ?>
+        <div class="registermessage"></div>
     </div>
 </div>
 

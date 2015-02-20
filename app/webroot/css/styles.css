@@ -178,12 +178,17 @@ right: 10px;
 top: 10px;
 cursor: pointer;
 }
+.registermessage{
+    margin: 5px;
+}
 div.loginForm {
 	text-align: center;
 	border-radius: 10px;
 	color: #0A3238;
 	width: 400px;
-	min-height: 300px;
+	min-height: 350px;
+        height: auto;
+        padding: 20px;
 	background-color: white;
 	position:absolute;
 	left:50%;
