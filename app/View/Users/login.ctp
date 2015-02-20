@@ -9,7 +9,7 @@
         ));
         echo $this->Form->input('password',array(
             'class'=>'loginInput',
-            'placeholder'=>"Username"
+            'placeholder'=>"Password"
         ));
     ?>
 <?php echo $this->Form->end(__('Acceder')); ?>

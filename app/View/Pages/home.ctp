@@ -10,7 +10,7 @@
     <span id="emp"></span>
     <h3>¿Cómo puedo registrarme?</h3>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </p>
-    <div class="botones"><button class="alta">Alta profesional</button> <button class="alta">Alta empresa</button></div>
+    <div class="botones"><button class="alta js-us">Alta profesional</button> <button class="alta js-com">Alta empresa</button></div>
 
 </section>
 <section id="prof" class="tres color-primary-2">
@@ -29,4 +29,44 @@
     </article>
 
 </section>
+<div class="registerUserBg">
+    <div class="loginForm">
+        <h4>Registro de usuario</h4>
+        <?php echo $this->Form->create('User'); 
+        echo $this->Form->input('username',array(
+            'class'=>'loginInput',
+            'placeholder'=>"Username"
+        ));
+        echo $this->Form->hidden('role',array(
+            'value'=>'user'
+        ));
+        echo $this->Form->input('password',array(
+            'class'=>'loginInput',
+            'placeholder'=>"Password"
+        ));
+    ?>
+<?php echo $this->Form->end(__('Registro')); ?>
 
+    </div>
+</div>
+
+<div class="registerCompanyBg">
+    <div class="loginForm">
+        <h4>Registro de empresa</h4>
+        <?php echo $this->Form->create('User'); 
+        echo $this->Form->input('username',array(
+            'class'=>'loginInput',
+            'placeholder'=>"Username"
+        ));
+        echo $this->Form->hidden('role',array(
+            'value'=>'company'
+        ));
+        echo $this->Form->input('password',array(
+            'class'=>'loginInput',
+            'placeholder'=>"Password"
+        ));
+    ?>
+<?php echo $this->Form->end(__('Registro')); ?>
+
+    </div>
+</div>

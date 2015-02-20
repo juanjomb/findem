@@ -12,12 +12,12 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                $user=  $this->User->findByUsername($this->request->data['User']['username']);
+                $user = $this->User->findByUsername($this->request->data['User']['username']);
                 $this->Session->write('user', $user);
                 return $this->redirect($this->Auth->redirectUrl());
-            }else{
-            $this->Session->setFlash(__('Invalid username or password, try again'));
-            return $this->redirect('/');
+            } else {
+                $this->Session->setFlash(__('Invalid username or password, try again'));
+                return $this->redirect('/');
             }
         }
     }
@@ -30,10 +30,11 @@ class UsersController extends AppController {
     public function index() {
         $this->set('users', $this->User->find('all'));
     }
+
     public function isAdmin($user) {
-        if($user['role']=='admin'){
+        if ($user['role'] == 'admin') {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -45,7 +46,7 @@ class UsersController extends AppController {
 
         $user = $this->User->findById($id);
         $this->getLists($user);
-        
+
         if (!$user) {
             throw new NotFoundException(__('Invalid user'));
         }
@@ -55,36 +56,30 @@ class UsersController extends AppController {
     public function add() {
 
         //echo '<pre>';print_r($this->request->data);die();
-            $this->getLists();
-            $this->User->create();
-            if(!empty($this->request->data))
-        {
-                
-                //Comprueba si la imagen se ha subido
-                if(!empty($this->request->data['User']['upload']['name']))
-                {
-                        $file = $this->request->data['User']['upload']; 
-                        
-                        $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //obtener la extensión
-                        $arr_ext = array('jpg', 'jpeg', 'gif'); //obtener las extensiones permitidas
+        $this->getLists();
+        $this->User->create();
+        if (!empty($this->request->data)) {
 
-                        //solo procesa las extensiones permitidas
-                        if(in_array($ext, $arr_ext))
-                        {
-                                //primer argumento lugar temporal, segundo a donde lo movemos
-                                move_uploaded_file($file['tmp_name'], WWW_ROOT . 'img/uploads/users/' . $file['name']);
+            //Comprueba si la imagen se ha subido
+            if (!empty($this->request->data['User']['upload']['name'])) {
+                $file = $this->request->data['User']['upload'];
 
-                                //prepara el nombre del archivo para la bbdd
-                                $item=$this->data;
-                                $item['User']['image'] = $file['name'];
-                                
-                                
-                        }
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //obtener la extensión
+                $arr_ext = array('jpg', 'jpeg', 'gif'); //obtener las extensiones permitidas
+                //solo procesa las extensiones permitidas
+                if (in_array($ext, $arr_ext)) {
+                    //primer argumento lugar temporal, segundo a donde lo movemos
+                    move_uploaded_file($file['tmp_name'], WWW_ROOT . 'img/uploads/users/' . $file['name']);
+
+                    //prepara el nombre del archivo para la bbdd
+                    $item = $this->data;
+                    $item['User']['image'] = $file['name'];
                 }
-               
-                if(!isset($item)){
-                    $item=$this->request->data;
-                }
+            }
+
+            if (!isset($item)) {
+                $item = $this->request->data;
+            }
             if ($this->User->save($item)) {
                 $this->Session->setFlash(__('Your user has been saved.'));
                 return $this->redirect(array('action' => 'index'));
@@ -141,9 +136,9 @@ class UsersController extends AppController {
             'fields' => array('Region.comunidad')
         ));
         $this->User->UserSkill->unBindModel(array('belongsTo' => array('User')));
-        $skills = $this->User->UserSkill->find('all',array('conditions'=>array('user_id'=>$user['User']['id'])));
-        $educations = $this->User->Education->find('all',array('conditions' => array('Education.user_id'=>$user['User']['id'])));
-        $this->set(compact('regions','skills','educations'));
+        $skills = $this->User->UserSkill->find('all', array('conditions' => array('user_id' => $user['User']['id'])));
+        $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
+        $this->set(compact('regions', 'skills', 'educations'));
     }
 
     public function getProvinces($region_id) {
@@ -157,18 +152,35 @@ class UsersController extends AppController {
         }
     }
 
-      public function saveEducation() {
+    public function saveEducation() {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
             $this->User->Education->create();
             if ($this->User->Education->save($this->request->data)) {
                 echo json_encode($this->request->data);
-            }else{
+            } else {
                 echo json_encode('{"ko":"1"}');
-                
             }
         }
     }
+
+    public function register() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $user = $this->User->findByUsername($this->request->data['User']['Username']);
+            if (!$user) {
+                $this->User->create();
+                if ($this->User->save($this->request->data)) {
+                    echo json_encode($this->request->data);
+                } else {
+                    echo json_encode('{"message":"Error on registering"}');
+                }
+            } else {
+                echo json_encode('{"message":"Username already exists"}');
+            }
+        }
+    }
+
     public function getCities($province_id) {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;

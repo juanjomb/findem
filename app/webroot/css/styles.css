@@ -110,12 +110,23 @@ color: white;
     margin-bottom: 20px!important;
 }
 
+.registerCompanyBg,.registerUserBg{
+    display: none;
+    width: 100%;
+    height:100%;
+    position:fixed;
+    opacity: 0.9;
+    top: 0;
+    background-color:#313131;
+    overflow:auto;
+}
+
 .loginBg{
-	width: 100%;
-height:100%;
-position:relative;
-background-color:#313131;
-overflow:auto;
+    width: 100%;
+    height:100%;
+    position:relative;
+    background-color:#313131;
+    overflow:auto;
 }
 .loginInput{
 	width: 80%;

@@ -8,6 +8,7 @@ $(document).ready(function ($) {
         $('.js-province').on('change', getCities);
         $('.goup').on('click', scrollToTop);
         $('.saveEducation').on('click', saveEducation);
+        $('.js-us').on('click', showUserForm);
 
 
         $(document).on("scroll", function () {
@@ -126,11 +127,35 @@ $(document).ready(function ($) {
                 url: "/findem/users/saveEducation/",
                 data: formData,
                 success: function (data) {
-                    ed='<div class="singleEducation col-xs-12 col-md-12">'
+                    $('#EducationTitle').val('');
+                    $('#EducationDescription').val('');
+                    ed='<div class="singleEducation col-xs-12 col-md-12">';
                     ed+='<p>' + data.title + '</p>';
                     ed+='<p>' + data.description + '</p>';
                     ed+='</div>';
                     $('.educationData').append(ed);
+                },
+                dataType: 'json'
+            });
+
+        }
+        
+        function showUserForm(){
+            $('.registerUserBg').show();
+        }
+        function register() {
+            event.preventDefault();
+            var formData = {
+                'username': $('#UserUsername').val(),
+                'password': $('#UserPassword').val(),
+                'role': $('#UserRole').val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "/findem/users/register/",
+                data: formData,
+                success: function (data) {
+                   
                 },
                 dataType: 'json'
             });
