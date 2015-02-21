@@ -33,18 +33,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->css('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
                 echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,500');
                 echo $this->Html->css('styles');
+                echo $this->Html->css('http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css'); 
                 
+                
+                echo $this->Html->script('http://code.jquery.com/ui/1.11.3/jquery-ui.js'); 
                 echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
                 echo $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
+                echo $this->Html->script('https://code.jquery.com/ui/1.11.2/jquery-ui.min.js');
                 echo $this->Html->script('util');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
     </head>
     <body class="cbp-spmenu-push">
-       
+
            <?php
     echo $this->element('header');
     echo $this->element('menu');
@@ -53,6 +56,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     echo $this->fetch('content'); 
     echo $this->element('footer');
     ?>
-              
+
     </body>
 </html>

@@ -1,4 +1,6 @@
-<?php echo $this->Form->create('User', array('enctype' => 'multipart/form-data')); ?>
+<?php
+
+echo $this->Form->create('User', array('enctype' => 'multipart/form-data')); ?>
 <div class="container content">
     <h2 class="formHeader">Add User</h2>
     <div class="form-group">
@@ -79,12 +81,17 @@
             'empty' => '(Selecciona tu ciudad)',
             'class' => 'js-city col-xs-12 col-md-12 form-control',
             'div' => 'col-xs-12 col-md-4'
-        ));
-
+        )); 
+        echo $this->Form->input("birthdate", array(
+             'label' => "Birthdate : ",
+             'type' => 'text',
+             'error' => false ,
+             'id' => 'datepicker'));
+         
         $options = array(
-            'label' => 'Save User',
-            'class' => 'btn btn-default send',
-            'div'=>'col-xs-12 col-md-12'
+        'label' => 'Save User',
+        'class' => 'btn btn-default send',
+        'div'=>'col-xs-12 col-md-12'
         );
         echo $this->Form->end($options);
         ?>

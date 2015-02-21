@@ -6,12 +6,35 @@ $(document).ready(function ($) {
         $(document).on('scroll', resizeHeader);
         $('.js-region').on('change', getProvinces);
         $('.js-province').on('change', getCities);
+        $('.js-startdate').on('change', populateYears);
         $('.goup').on('click', scrollToTop);
         $('.saveEducation').on('click', saveEducation);
         $('.js-us').on('click', showUserForm);
         $('.register').on('click', register);
-
-
+        $("#datepicker").datepicker({
+            changeYear: true,
+            minDate: "-80Y",
+            maxDate: "+1M +10D"
+        });
+        $("#from").datepicker({
+            defaultDate: "+1w",
+            changeYear: true,
+            changeMonth: true,
+            minDate: "-30Y",
+            numberOfMonths: 3,
+            onClose: function (selectedDate) {
+                $("#to").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#to").datepicker({
+            defaultDate: "+1w",
+            changeYear: true,
+            changeMonth: true,
+            numberOfMonths: 3,
+            onClose: function (selectedDate) {
+                $("#from").datepicker("option", "maxDate", selectedDate);
+            }
+        });
         $(document).on("scroll", function () {
             if ($(window).scrollTop() > $(window).height() / 2) {
                 $(".goup").fadeIn(1000);
@@ -121,6 +144,8 @@ $(document).ready(function ($) {
             var formData = {
                 'title': $('#EducationTitle').val(),
                 'description': $('#EducationDescription').val(),
+                'start_date': $('#EducationStartDate').val(),
+                'end_date': $('#EducationEndDate').val(),
                 'user_id': $('#EducationUserId').val()
             };
             $.ajax({
@@ -130,9 +155,11 @@ $(document).ready(function ($) {
                 success: function (data) {
                     $('#EducationTitle').val('');
                     $('#EducationDescription').val('');
+                    $('#EducationStartDate').val('');
+                    $('#EducationEndDate').val('');
                     ed = '<div class="singleEducation col-xs-12 col-md-12">';
                     ed += '<p>' + data.title + '</p>';
-                    ed += '<p>' + data.description + '</p>';
+                    ed += '<p>' + data.description + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                     ed += '</div>';
                     $('.educationData').append(ed);
                 },
@@ -143,6 +170,12 @@ $(document).ready(function ($) {
 
         function showUserForm() {
             $('.registerUserBg').show();
+        }
+        function populateYears() {
+            for ($i = $(this).val(); $i <= 2022; $i++) {
+                var row = "<option value=\"" + $i + "\">" + $i + "</option>";
+                $(row).appendTo(".js-enddate");
+            }
         }
         function register() {
             event.preventDefault();
@@ -171,6 +204,12 @@ $(document).ready(function ($) {
             });
 
         }
+
+
+
+
+
+
 
     });
 });

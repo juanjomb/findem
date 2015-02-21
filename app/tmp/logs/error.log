@@ -3415,3 +3415,77 @@ Stack Trace:
 #3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-02-21 08:19:45 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\View\Users\add.ctp, line 85]
+2015-02-21 08:19:45 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /findem/users/add
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 85)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 85, Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 85, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-21 08:20:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 08:20:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 08:43:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 08:46:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 08:47:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 08:47:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/datepicker_calendar_icon.gif
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-21 09:24:14 Error: Fatal Error (4): syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\View\Users\view.ctp, line 76]
+2015-02-21 09:24:14 Error: [FatalErrorException] syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /findem/users/view/54e62f5a-5ddc-47e9-8206-0de04fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 76, Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\Bitnami\\wamp...', 76, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
