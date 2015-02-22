@@ -30,6 +30,9 @@ html,body{
 .addAjax{
     background-color: #276169;
 }
+.familyIcon{
+    color: #276169;
+}
 .profileImg{
     width: 250px;
     height: 250px;
