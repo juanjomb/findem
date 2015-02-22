@@ -44,6 +44,14 @@
                     <td><?php echo $user['User']['phone']; ?></td>
                     <td>
                         <?php 
+                        echo $this->Html->link('<i class="fa fa-university familyIcon"></i>', array('controller' => 'educations', 'action' => 'index', $user['User']['id']),
+                                array('escape' => false)
+                                
+                                );
+                        echo $this->Html->link('<i class="fa fa-briefcase familyIcon"></i>', array('controller' => 'experiences', 'action' => 'index', $user['User']['id']),
+                                array('escape' => false)
+                                
+                                );
                         echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'users', 'action' => 'edit', $user['User']['id']),
                                 array('escape' => false)
                                 

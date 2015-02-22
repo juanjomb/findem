@@ -9,6 +9,7 @@ $(document).ready(function ($) {
         $('.js-startdate').on('change', populateYears);
         $('.goup').on('click', scrollToTop);
         $('.saveEducation').on('click', saveEducation);
+        $('.saveExperience').on('click', saveExperience);
         $('.js-us').on('click', showUserForm);
         $('.register').on('click', register);
         $("#datepicker").datepicker({
@@ -16,25 +17,7 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
-        $("#from").datepicker({
-            defaultDate: "+1w",
-            changeYear: true,
-            changeMonth: true,
-            minDate: "-30Y",
-            numberOfMonths: 3,
-            onClose: function (selectedDate) {
-                $("#to").datepicker("option", "minDate", selectedDate);
-            }
-        });
-        $("#to").datepicker({
-            defaultDate: "+1w",
-            changeYear: true,
-            changeMonth: true,
-            numberOfMonths: 3,
-            onClose: function (selectedDate) {
-                $("#from").datepicker("option", "maxDate", selectedDate);
-            }
-        });
+      
         $(document).on("scroll", function () {
             if ($(window).scrollTop() > $(window).height() / 2) {
                 $(".goup").fadeIn(1000);
@@ -162,6 +145,37 @@ $(document).ready(function ($) {
                     ed += '<p>' + data.description + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                     ed += '</div>';
                     $('.educationData').append(ed);
+                },
+                dataType: 'json'
+            });
+
+        }
+        
+          function saveExperience() {
+            event.preventDefault();
+            var formData = {
+                'title': $('#ExperienceTitle').val(),
+                'description': $('#ExperienceDescription').val(),
+                'company': $('#ExperienceCompany').val(),
+                'start_date': $('#ExperienceStartDate').val(),
+                'end_date': $('#ExperienceEndDate').val(),
+                'user_id': $('#ExperienceUserId').val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "/findem/users/saveExperience/",
+                data: formData,
+                success: function (data) {
+                    $('#ExperienceTitle').val('');
+                    $('#ExperienceDescription').val('');
+                    $('#ExperienceStartDate').val('');
+                    $('#ExperienceEndDate').val('');
+                    ed = '<div class="singleExperience col-xs-12 col-md-12">';
+                    ed += '<p>' + data.title + '</p>';
+                    ed += '<p>' + data.company + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
+                     ed += '<p>' + data.description + '</p>';
+                    ed += '</div>';
+                    $('.experienceData').append(ed);
                 },
                 dataType: 'json'
             });

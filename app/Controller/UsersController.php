@@ -141,8 +141,9 @@ class UsersController extends AppController {
         }
         $this->User->UserSkill->unBindModel(array('belongsTo' => array('User')));
         $skills = $this->User->UserSkill->find('all', array('conditions' => array('user_id' => $user['User']['id'])));
+        $experiences = $this->User->Experience->find('all', array('conditions' => array('Experience.user_id' => $user['User']['id'])));
         $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
-        $this->set(compact('regions','years','skills', 'educations'));
+        $this->set(compact('regions','experiences','years','skills', 'educations'));
     }
 
     public function getProvinces($region_id) {
@@ -161,6 +162,18 @@ class UsersController extends AppController {
             $this->autoRender = false;
             $this->User->Education->create();
             if ($this->User->Education->save($this->request->data)) {
+                echo json_encode($this->request->data);
+            } else {
+                echo json_encode('{"ko":"1"}');
+            }
+        }
+    }
+    
+       public function saveExperience() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $this->User->Experience->create();
+            if ($this->User->Experience->save($this->request->data)) {
                 echo json_encode($this->request->data);
             } else {
                 echo json_encode('{"ko":"1"}');

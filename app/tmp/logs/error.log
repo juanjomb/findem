@@ -3489,3 +3489,13 @@ Stack Trace:
 #3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-02-22 08:45:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\Controller\EducationsController.php, line 92]
+2015-02-22 08:45:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /findem/educations/edit/54e8ca4b-bdac-4c1c-b11d-0d884fb7e87d
+Stack Trace:
+#0 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 92)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 92, Array)
+#2 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\Bitnami\\wamp...', 92, Array)
+#3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
