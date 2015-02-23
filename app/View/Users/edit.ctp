@@ -3,25 +3,19 @@
     <h2 class="formHeader">Edit User</h2>
     <div class="form-group">
         <?php
+        
         echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-6'
-        ));
-        echo $this->Form->input('password', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-6'
-        ));
-        ?>
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-        <?php
+            'div' => 'col-xs-12 col-md-3'
+        )); 
+       
         echo $this->Form->input('name', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-4'));
+            'div' => 'col-xs-12 col-md-3'));
 
         echo $this->Form->input('surname1', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-4'
+            'div' => 'col-xs-12 col-md-3'
         ));
         echo $this->Form->input('surname2', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-4'
+            'div' => 'col-xs-12 col-md-3'
         ));
         ?>
     </div>

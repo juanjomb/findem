@@ -8,6 +8,7 @@ $user = $this->Session->read('user'); ?>
     <p class="userName"><?php echo $user['User']['name'] . ' ' . $user['User']['surname1'] ?></p>
 
     <a href="/findem/users/view/<?php echo $user['User']['id']; ?>"><i class="fa fa-user"></i>    Mi perfil</a>
+     <a href="/findem/users/edit/<?php echo $user['User']['id']; ?>"><i class="fa fa-pencil"></i>    Editar perfil</a>
         <?php
         if ($user['User']['role'] == 'admin') {
             ?>

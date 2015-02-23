@@ -11,6 +11,8 @@ $(document).ready(function ($) {
         $('.saveEducation').on('click', saveEducation);
         $('.saveExperience').on('click', saveExperience);
         $('.js-us').on('click', showUserForm);
+        $('.js-com').on('click', showCompanyForm);
+        $('.loginForm i').on('click', hideForm);
         $('.register').on('click', register);
         $("#datepicker").datepicker({
             changeYear: true,
@@ -183,8 +185,18 @@ $(document).ready(function ($) {
         }
 
         function showUserForm() {
-            $('.registerUserBg').show();
+            $('.bgopacity').show();
+            $('.js-loginformuser').show();
         }
+        function showCompanyForm() {
+            $('.bgopacity').show();
+            $('.js-loginformcompany').show();
+        }
+        function hideForm() {
+            $(this).closest('.loginForm').hide();
+            $('.bgopacity').hide();
+        }
+        
         function populateYears() {
             for ($i = $(this).val(); $i <= 2022; $i++) {
                 var row = "<option value=\"" + $i + "\">" + $i + "</option>";
@@ -204,7 +216,7 @@ $(document).ready(function ($) {
                 data: formData,
                 success: function (data) {
                     if (data.ok) {
-                        html = +data.ok;
+                        html = data.ok;
                         $('.registermessage').empty();
                         $('.registermessage').append(html);
 

@@ -29,8 +29,9 @@
     </article>
 
 </section>
-<div class="registerUserBg">
-    <div class="loginForm">
+<div class="bgopacity"></div>
+    <div class="loginForm js-loginformuser">
+<i class="fa fa-close"></i>
         <h4>Registro de usuario</h4>
         <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
@@ -53,12 +54,14 @@
         );
     ?>
 <?php echo $this->Form->end($options); ?>
+<br>
         <div class="registermessage"></div>
     </div>
-</div>
 
-<div class="registerCompanyBg">
-    <div class="loginForm">
+
+
+    <div class="loginForm js-loginformcompany">
+<i class="fa fa-close"></i>
         <h4>Registro de empresa</h4>
         <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
@@ -74,6 +77,7 @@
         ));
     ?>
 <?php echo $this->Form->end(__('Registro')); ?>
+<br>
+        <div class="registermessage"></div>
 
     </div>
-</div>

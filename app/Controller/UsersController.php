@@ -100,9 +100,30 @@ class UsersController extends AppController {
         $this->getLists($user);
         if ($this->request->is(array('post', 'put'))) {
             $this->User->id = $id;
-            if ($this->User->save($this->request->data)) {
+             //Comprueba si la imagen se ha subido
+            if (!empty($this->request->data['User']['upload']['name'])) {
+                $file = $this->request->data['User']['upload'];
+
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //obtener la extensión
+                $arr_ext = array('jpg', 'jpeg', 'gif'); //obtener las extensiones permitidas
+                //solo procesa las extensiones permitidas
+                if (in_array($ext, $arr_ext)) {
+                    //primer argumento lugar temporal, segundo a donde lo movemos
+                    move_uploaded_file($file['tmp_name'], WWW_ROOT . 'img/uploads/users/' . $file['name']);
+
+                    //prepara el nombre del archivo para la bbdd
+                    $item = $this->data;
+                    $item['User']['image'] = $file['name'];
+                }
+            }
+
+            if (!isset($item)) {
+                $item = $this->request->data;
+            }
+            if ($this->User->save($item)) {
                 $this->Session->setFlash(__('Your user has been updated.'));
-                return $this->redirect(array('action' => 'index'));
+                
+                return $this->redirect(array('action' => 'view',$id));
             }
             $this->Session->setFlash(__('Unable to update your user.'));
         }

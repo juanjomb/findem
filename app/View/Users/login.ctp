@@ -1,5 +1,5 @@
 <div class="loginBg">
-    <div class="loginForm">
+    <div class="loginForm visible">
         <h4>Inicio de sesión</h4>
                 <?php echo $this->Session->flash('auth'); ?>
         <?php echo $this->Form->create('User'); 
