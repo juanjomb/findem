@@ -66,7 +66,8 @@ class LevelsController extends AppController {
             $this->request->data = $level;
         }
     }
-
+    private function getLists($level = null) {
+    }
     public function delete($id) {
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();

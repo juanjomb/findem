@@ -9,4 +9,12 @@ class Skill extends AppModel {
             'foreignKey' => 'level_id'
         )
     );
+  public $validate = array(
+        'title' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'A title is required'
+            )
+        )
+    );
 }

@@ -3520,3 +3520,37 @@ Stack Trace:
 #3 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LevelsController), Object(CakeRequest))
 #4 C:\Bitnami\wampstack-5.4.33-0\apache2\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-02-23 07:59:31 Error: [MissingViewException] View file "Levels/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Levels/index.ctp',
+)
+Request URL: /findem/levels/index/
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LevelsController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-23 07:59:46 Error: [MissingViewException] View file "Levels/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Levels/index.ctp',
+)
+Request URL: /findem/levels/index/
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LevelsController), Object(CakeRequest))
+#4 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-23 08:04:54 Error: Fatal Error (1): Call to undefined method LevelsController::getLists() in [/datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/app/Controller/LevelsController.php, line 55]
+2015-02-23 08:04:54 Error: [FatalErrorException] Call to undefined method LevelsController::getLists()
+Request URL: /findem/levels/edit/c39eef53-b396-11e4-8ed7-002354da9145
+Stack Trace:
+#0 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/datos/local/ve...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/datos/local/ve...', 55, Array)
+#2 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/datos/local/ve...', 55, Array)
+#3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
