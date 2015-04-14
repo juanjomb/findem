@@ -1,10 +1,10 @@
 <div class="profileContainer container">
-    <div class="personalData row">
+    <div class="dataBlock row">
         <div class="col-xs-12 col-md-4">
             <?php if (!empty($user['User']['image'])) { ?>
-                <img class="profileImg img-rounded" src="/findem/img/uploads/users/<?php echo $user['User']['image'] ?>" alt="imagen usuario">
+                <img class="profileImg img-rounded" src="/img/uploads/users/<?php echo $user['User']['image'] ?>" alt="imagen usuario">
             <?php } else { ?>
-                <img class="profileImg img-rounded" src="/findem/img/placeholder-user.jpg" alt="imagen usuario">
+                <img class="profileImg img-rounded" src="/img/placeholder-user.jpg" alt="imagen usuario">
             <?php } ?>
         </div>
         <div class="col-xs-12 col-md-8">
@@ -14,7 +14,7 @@
             <p><?php echo h($user['User']['email']); ?></p>
         </div>
     </div>
-    <div class="educationData row">
+    <div class="dataBlock row">
         <div class="col-xs-12 col-md-8">
             <h3>Education</h3>
         </div>
@@ -33,7 +33,7 @@
             </div>
         <?php } ?>
     </div>
-    <div class="experienceData row">
+    <div class="dataBlock row">
         <div class="col-xs-12 col-md-8">
             <h3>Experience</h3>
         </div>
@@ -53,7 +53,7 @@
             </div>
         <?php } ?>
     </div>
-    <div class="skillsData row">
+    <div class="dataBlock row">
         <h3>Skills</h3>
         <?php
         foreach ($skills as $skill) {

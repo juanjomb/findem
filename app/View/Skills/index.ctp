@@ -17,7 +17,6 @@
         <table class="table table-hover">
             <tr>
                 <th>Title</th>
-                <th>Level</th>
                 <th>Actions</th>
 
             </tr>
@@ -29,7 +28,6 @@
                         <?php echo $this->Html->link($skill['Skill']['title'], array('controller' => 'skills', 'action' => 'view', $skill['Skill']['id']));
                         ?>
                     </td>
-                    <td><?php echo $skill['Level']['title']; ?></td>
                     <td>
                         <?php
                         echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'skills', 'action' => 'edit', $skill['Skill']['id']), array('escape' => false)

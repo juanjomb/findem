@@ -73,7 +73,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'bitnami',
+		'password' => '',
 		'database' => 'findem',
 		'prefix' => '',
 		//'encoding' => 'utf8',

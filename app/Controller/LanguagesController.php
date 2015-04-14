@@ -87,10 +87,7 @@ class LanguagesController extends AppController {
 
     private function getLists($language = null) {
 
-        $levels = $this->Language->Level->find('list', array(
-            'fields' => array('Level.title')
-        ));
-        $this->set(compact('levels'));
+       
     }
 
   

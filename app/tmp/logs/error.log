@@ -3554,3 +3554,175 @@ Stack Trace:
 #3 /datos/local/vesprada/lampstack-5.4.32-0/apache2/htdocs/findem/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-04-14 16:38:22 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:38:40 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/users/edit/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:38:40 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:39:56 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/users/edit/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:39:59 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/users/edit/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:40:09 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:43:21 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:43:21 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:43:39 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:43:39 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:44:12 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:44:12 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:44:35 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:44:35 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-14 16:48:03 Error: [NotFoundException] Invalid user
+Request URL: /users/view/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'uploads', 'users', 'maxresdefault.j...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-14 16:48:04 Error: [NotFoundException] Invalid user
+Request URL: /users/view/img/uploads/users/maxresdefault.jpg
+Stack Trace:
+#0 [internal function]: UsersController->view('img', 'uploads', 'users', 'maxresdefault.j...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-14 17:25:02 Error: [MissingTableException] Table levels for model Level was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'levels',
+  'class' => 'Level',
+  'ds' => 'default',
+)
+Request URL: /levels/index/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('levels')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\findem\app\Controller\LevelsController.php(14): Model->find('all')
+#4 [internal function]: LevelsController->index()
+#5 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(LevelsController), Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LevelsController), Object(CakeRequest))
+#8 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-04-14 17:27:10 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\findem\app\Controller\LanguagesController.php, line 90]
+2015-04-14 17:27:10 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /languages/add
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 90)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 90, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 90, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
