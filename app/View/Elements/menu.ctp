@@ -18,7 +18,6 @@ $user = $this->Session->read('user'); ?>
             ?>
     <a href="/users/index/"><i class="fa fa-users"></i>     Users</a>
     <a href="/languages/index/"><i class="fa fa-inbox"></i>    Languages</a>
-    <a href="/levels/index/"><i class="fa fa-info-circle"></i>     Levels</a>
     <a href="/skills/index/"><i class="fa fa-institution"></i>     Skills</a>
             <?php
         }

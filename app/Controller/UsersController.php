@@ -161,10 +161,11 @@ class UsersController extends AppController {
             $years[$i]=$i;
         }
         $this->User->UserSkill->unBindModel(array('belongsTo' => array('User')));
-        $skills = $this->User->UserSkill->find('all', array('conditions' => array('user_id' => $user['User']['id'])));
+        $skills = $this->User->Skill->find('list');
+        $userskills = $this->User->UserSkill->find('all',array('conditions' => array('UserSkill.user_id' => $user['User']['id'])));
         $experiences = $this->User->Experience->find('all', array('conditions' => array('Experience.user_id' => $user['User']['id'])));
         $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
-        $this->set(compact('regions','experiences','years','skills', 'educations'));
+        $this->set(compact('regions','experiences','years','userskills','skills', 'educations'));
     }
 
     public function getProvinces($region_id) {
@@ -185,10 +186,27 @@ class UsersController extends AppController {
             if ($this->User->Education->save($this->request->data)) {
                 echo json_encode($this->request->data);
             } else {
-                echo json_encode('{"ko":"1"}');
+                $data['ko']=0;
+                echo json_encode($data);
             }
         }
     }
+    
+    public function saveSkill() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $this->User->UserSkill->create();
+            $datos['user_id'] = $this->Session->read('Auth.User.id');
+            $datos['skill_id'] = $this->request->data['id'];
+            if ($this->User->UserSkill->save($datos)) {
+                echo json_encode($datos);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        }
+    }
+    
     
        public function saveExperience() {
         if ($this->request->is('ajax')) {
@@ -197,9 +215,23 @@ class UsersController extends AppController {
             if ($this->User->Experience->save($this->request->data)) {
                 echo json_encode($this->request->data);
             } else {
-                echo json_encode('{"ko":"1"}');
+                $data['ko']=0;
+                echo json_encode($data);
             }
         }
+    }
+    public function removeSkill(){
+       if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            if ($this->User->UserSkill->deleteAll(array('UserSkill.user_id' => $this->Session->read('Auth.User.id'),
+                'UserSkill.skill_id' => $this->request->data['id']))) {
+                $data['ok']=1;
+                echo json_encode($data);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        } 
     }
 
     public function register() {

@@ -16,7 +16,48 @@ html,body{
 .container{
     margin-top: 80px;
 }
-
+.popupBg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.js-removeSkill{
+    cursor: pointer;
+}
+.popup{
+    position: fixed;
+    margin-left: 25%;
+    display: none;
+    width: 50%;
+    min-height: 300px;
+    z-index: 1000;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.js-search-skill{
+    font-size: 1.5rem;
+    color: #276169;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.js-optionSkills{
+    position: relative;
+    border: 1px solid #276169;
+    top: 0;
+    width: 70%;
+    margin-left: 15%;
+}
+.completion{
+   color: #276169;
+   cursor: pointer;
+   padding: 10px;
+   margin: 0px !important;
+}
+.completion:hover{
+    background-color: #276169;
+    color: #fff;
+}
 .singleEducation p:first-child{
     font-size: 1.5rem;
     font-weight: bold;
@@ -85,9 +126,16 @@ color: white;
 }
 .profileContainer h3{
     text-align: center;
+    width: 30%;
     color: #0A3238;
     font-size: 3rem;
     
+}
+.addSkill{
+    color: #0A3238;
+    cursor: pointer;
+    font-size: 3rem;
+    position: relative;
     
 }
 
@@ -170,7 +218,7 @@ div.loginForm form{
     text-align:center;
 }
 
-.loginForm i{
+.closePopup{
 position: absolute;
 right: 10px;
 top: 10px;

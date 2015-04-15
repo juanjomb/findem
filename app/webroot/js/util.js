@@ -12,8 +12,11 @@ $(document).ready(function ($) {
         $('.saveExperience').on('click', saveExperience);
         $('.js-us').on('click', showUserForm);
         $('.js-com').on('click', showCompanyForm);
-        $('.loginForm i').on('click', hideForm);
+        $('.closePopup').on('click', hideForm);
         $('.register').on('click', register);
+        $('.js-add-skill').on('click', showPopup);
+        $('.js-search-skill').on('keyup',searchSkill)
+        $('.js-removeSkill').on('click', removeSkill)
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -28,7 +31,7 @@ $(document).ready(function ($) {
                 $(".goup").fadeOut(1000);
             }
         });
-
+        var sk='';
 
         //scroll entre enlaces
         $(function () {
@@ -83,12 +86,69 @@ $(document).ready(function ($) {
             return false;
         }
 
+
+    function searchSkill(event) {
+                sk = $(this).val();
+                if(sk.length > 0){
+                $.ajax({
+                    type: "POST",
+                    data: {sk:sk},
+                    url: "/skills/getSkill/",
+                    success: function (data) {
+                        $(".js-optionSkills").empty();
+                        $.each(data, function (item, value) {
+                            var pill = '<p class="completion" data="'+value.Skill.id+'">'+ value.Skill.title + "</p>";
+                            $(pill).appendTo(".js-optionSkills");
+                            $('.completion').on('click',addSkill);
+                        });
+                    },
+                    dataType: 'json'
+                });
+                   
+                }else{
+                    $(".js-optionSkills").empty();
+                }
+           
+        }
+        function addSkill(){
+            var id = $(this).attr('data');
+            var title = $(this).text();
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/saveSkill/",
+                    success: function (data) {
+                        if(!data.ko){
+                            pill ='<p class="skillPill" data="' + data.skill_id + '">' + title + '<span class="fa fa-trash js-removeSkill"></span></p>';
+                            $('.js-skills-block').append(pill);
+                            $('.js-removeSkill').on('click', removeSkill);
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
+        
+        function removeSkill(){
+            var id = $(this).closest('.skillPill').attr('data');
+            var pill = $(this).closest('.skillPill');
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/removeSkill/",
+                    success: function (data) {
+                        if(data.ok === 1){
+                            pill.remove();
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
         function getProvinces() {
             region = $(this).val();
             if (region != '') {
                 $.ajax({
                     type: "GET",
-                    url: "/findem/users/getProvinces/" + region,
+                    url: "/users/getProvinces/" + region,
                     success: function (data) {
                         $(".js-province").html("");
                         $(".js-province").append("<option>Selecciona provincia</option>");
@@ -108,7 +168,7 @@ $(document).ready(function ($) {
             if (province != '') {
                 $.ajax({
                     type: "GET",
-                    url: "/findem/users/getCities/" + province,
+                    url: "/users/getCities/" + province,
                     success: function (data) {
                         $(".js-city").html("");
                         $(".js-province").append("<option>Selecciona ciudad</option>");
@@ -165,7 +225,7 @@ $(document).ready(function ($) {
             };
             $.ajax({
                 type: "POST",
-                url: "/findem/users/saveExperience/",
+                url: "/users/saveExperience/",
                 data: formData,
                 success: function (data) {
                     $('#ExperienceTitle').val('');
@@ -184,6 +244,11 @@ $(document).ready(function ($) {
 
         }
 
+        function showPopup(){
+            if($(this).hasClass('js-add-skill')){
+                $('.js-popup-skills').show();
+            }
+        }
         function showUserForm() {
             $('.bgopacity').show();
             $('.js-loginformuser').show();
@@ -193,8 +258,7 @@ $(document).ready(function ($) {
             $('.js-loginformcompany').show();
         }
         function hideForm() {
-            $(this).closest('.loginForm').hide();
-            $('.bgopacity').hide();
+            $(this).closest('.popup').hide();
         }
         
         function populateYears() {
@@ -212,7 +276,7 @@ $(document).ready(function ($) {
             };
             $.ajax({
                 type: "POST",
-                url: "/findem/users/register/",
+                url: "/users/register/",
                 data: formData,
                 success: function (data) {
                     if (data.ok) {

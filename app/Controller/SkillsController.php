@@ -84,13 +84,17 @@ class SkillsController extends AppController {
 
         return $this->redirect(array('action' => 'index'));
     }
+    public function getSkill(){
+        if ($this->request->is('ajax')) {           
+            $this->autoRender = false;
+            $skills = $this->Skill->find('all', array(
+                'conditions'=>array('Skill.title LIKE ' => $this->request->data['sk'].'%')));
+            return json_encode($skills);
+         }
+    }
 
     private function getLists($skill = null) {
 
-        $levels = $this->Skill->Level->find('list', array(
-            'fields' => array('Level.title')
-        ));
-        $this->set(compact('levels'));
     }
 
   
