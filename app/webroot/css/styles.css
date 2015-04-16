@@ -17,7 +17,12 @@ html,body{
     margin-top: 80px;
 }
 .popupBg{
-    position: absolute;
+    display: none;
+    background: rgba( 69,69,69,0.6 );
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 }
@@ -27,7 +32,7 @@ html,body{
 .popup{
     position: fixed;
     margin-left: 25%;
-    display: none;
+    margin-top: 10%;
     width: 50%;
     min-height: 300px;
     z-index: 1000;
@@ -38,7 +43,6 @@ html,body{
     font-size: 1.5rem;
     color: #276169;
     width: 70%;
-    margin-left: 15%;
     margin-top: 5%;
 }
 .js-optionSkills{
@@ -49,6 +53,7 @@ html,body{
     margin-left: 15%;
 }
 .completion{
+   font-size: 1.5rem;
    color: #276169;
    cursor: pointer;
    padding: 10px;
@@ -447,6 +452,11 @@ p{
 	bottom: 20px;
 	right: 20px;
 	color: white;
+        box-shadow: 1px 8px 19px 0px rgba(50, 50, 50, 0.75);
+}
+.menuButton:hover{
+    transform: rotate(30deg);
+    transition: all 1s;
 }
 .menu i{
 margin-left: 25%;

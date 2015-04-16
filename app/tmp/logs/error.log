@@ -3913,3 +3913,12 @@ Stack Trace:
 #11 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #12 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2015-04-16 16:44:27 Error: [MissingControllerException] Controller class PipipiController could not be found.
+Exception Attributes: array (
+  'class' => 'PipipiController',
+  'plugin' => NULL,
+)
+Request URL: /pipipi
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

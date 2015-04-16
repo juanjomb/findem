@@ -1,6 +1,7 @@
 <div class="popupBg">  
         <div class="popup js-popup-skills">
             <i class="fa fa-close closePopup"></i>
+            <h3>Search skill<h3>
             <input type="text" class="js-search-skill">
             <div class="js-optionSkills"></div>
         </div>

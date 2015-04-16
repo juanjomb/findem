@@ -30,9 +30,18 @@ class User extends AppModel {
         'Language' => array(
                 'className' => 'Language',
                 'with' => 'UserLanguage',
-                'joinTable' => 'user_language',
+                'joinTable' => 'user_languages',
                 'foreignKey' => 'user_id',
                 'associationForeignKey' => 'language_id',
+                'unique' => true,
+                
+            ),
+        'Suitable' => array(
+                'className' => 'User',
+                'with' => 'UserSuitable',
+                'joinTable' => 'user_suitables',
+                'foreignKey' => 'user_id',
+                'associationForeignKey' => 'suitable_id',
                 'unique' => true,
                 
             )

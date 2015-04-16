@@ -195,6 +195,12 @@ class UsersController extends AppController {
     public function saveSkill() {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
+            $conditions = array(
+                'UserSkill.user_id'=>$this->Session->read('Auth.User.id'),
+                'UserSkill.skill_id'=>$this->request->data['id']
+                );
+            $userskill=$this->User->UserSkill->find('all',  compact('conditions'));
+            if(!$userskill){
             $this->User->UserSkill->create();
             $datos['user_id'] = $this->Session->read('Auth.User.id');
             $datos['skill_id'] = $this->request->data['id'];
@@ -204,7 +210,9 @@ class UsersController extends AppController {
                 $data['ko']=0;
                 echo json_encode($data);
             }
-        }
+            }
+            
+            }
     }
     
     

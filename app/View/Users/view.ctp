@@ -54,11 +54,15 @@
         <?php } ?>
     </div>
     <div class="dataBlock row js-skills-block">
-        <h3>Skills</h3><i class="fa fa-plus addSkill js-add-skill"></i>
+        <h3>Skills
+           <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+            <i class="fa fa-plus-circle addSkill js-add-skill"></i>
+            <?php } ?>
+        </h3>
         <?php
         foreach ($userskills as $skill) {
             ?>
-            <p class="skillPill" data="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title']; 
+            <p class="skillPill" data="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title'].' '; 
             if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeSkill"></span>
          <?php   }

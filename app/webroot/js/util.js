@@ -12,11 +12,11 @@ $(document).ready(function ($) {
         $('.saveExperience').on('click', saveExperience);
         $('.js-us').on('click', showUserForm);
         $('.js-com').on('click', showCompanyForm);
-        $('.closePopup').on('click', hideForm);
+        $('.closePopup').on('click', closePopup);
         $('.register').on('click', register);
         $('.js-add-skill').on('click', showPopup);
-        $('.js-search-skill').on('keyup',searchSkill)
-        $('.js-removeSkill').on('click', removeSkill)
+        $('.js-search-skill').on('keyup',searchSkill);
+        $('.js-removeSkill').on('click', removeSkill);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -51,8 +51,12 @@ $(document).ready(function ($) {
 
         function showMenu() {
             if ($(this).hasClass('active')) {
+                $(this).removeClass('fa-close');
+                $(this).addClass('fa-bars');
                 $(this).removeClass('active');
             } else {
+                $(this).removeClass('fa-bars');
+                $(this).addClass('fa-close');
                 $(this).addClass('active');
             }
             if ($('body').hasClass('cbp-spmenu-push-toright')) {
@@ -246,7 +250,8 @@ $(document).ready(function ($) {
 
         function showPopup(){
             if($(this).hasClass('js-add-skill')){
-                $('.js-popup-skills').show();
+                $('.js-popup-skills').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
             }
         }
         function showUserForm() {
@@ -257,9 +262,12 @@ $(document).ready(function ($) {
             $('.bgopacity').show();
             $('.js-loginformcompany').show();
         }
-        function hideForm() {
-            $(this).closest('.popup').hide();
+        function closePopup() {
+            $(this).closest('.popupBg').hide();
+            $('body').css('overflow-y','auto');
         }
+        
+        
         
         function populateYears() {
             for ($i = $(this).val(); $i <= 2022; $i++) {
