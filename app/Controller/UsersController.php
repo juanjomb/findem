@@ -38,6 +38,15 @@ class UsersController extends AppController {
             return false;
         }
     }
+    
+    public function inbox(){
+        $message = $this->User->SentMessage->find('first',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
+     $sent = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
+     $received = $this->User->ReceivedMessage->find('all',array('conditions' => array('ReceivedMessage.to_id' => $this->Session->read('Auth.User.id'))));
+     $this->set(compact('message','sent','received'));
+    }
+    
+    
 
     public function view($id) {
         if (!$id) {
@@ -189,6 +198,13 @@ class UsersController extends AppController {
                 $data['ko']=0;
                 echo json_encode($data);
             }
+        }
+    }
+    public function showMessageBody() {
+        if ($this->request->is('ajax')) {
+            $message = $this->User->SentMessage->findById($this->request->data['id']);
+            $this->set(compact('message'));
+            $this->render('/Elements/bodymessage','ajax');
         }
     }
     

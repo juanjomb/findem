@@ -13,6 +13,7 @@ $user = $this->Session->read('user'); ?>
 
     <a href="/users/view/<?php echo $user['User']['id']; ?>"><i class="fa fa-user"></i>    Mi perfil</a>
      <a href="/users/edit/<?php echo $user['User']['id']; ?>"><i class="fa fa-pencil"></i>    Editar perfil</a>
+       <a href="/users/inbox"><i class="fa fa-envelope"></i>    Inbox</a>
         <?php
         if ($user['User']['role'] == 'admin') {
             ?>

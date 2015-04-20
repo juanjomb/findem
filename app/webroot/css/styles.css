@@ -136,6 +136,104 @@ color: white;
     font-size: 3rem;
     
 }
+.inbox-container{
+    height: 90%;
+    width: 85%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 8%;
+    border-radius: 5px;
+    background-color: #F4FFFD;
+    box-shadow: 3px 3px 15px #888888;
+}
+.inbox-messages{
+    overflow-y: scroll;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #276169;
+    border-radius: 5px 0px 0px 5px;
+}
+.inbox-body{
+    overflow-y: scroll;
+    padding: 15px;
+    float: left;
+    width: 80%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+.inbox-body p{
+    color: #276169;
+    border-bottom: 1px solid #276169;
+    font-size: 1.5rem;
+}
+.single-Message{
+    cursor: pointer;
+    width: 100%;
+    max-height: 10%;
+    color: #F4FFFD;
+    list-style: none;
+    border-bottom: 1px solid #F4FFFD;
+    padding: 10px;
+}
+.single-Message:hover{
+    background-color: #58959D;
+}
+.inbox-bar-Subject{
+    font-size: 0.8rem;
+}
+.inbox-bar-User{
+    font-weight: bolder;
+    text-align: center;
+}
+.ul-messages{
+    width: 100%;
+    padding: 0;
+    display: block;
+}
+.inbox-bar-userImage{
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+     border-radius: 5px;
+     float: left;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #F4FFFD;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0A3238;
+}
+
+.inbox-tabs{
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    
+}
+.inbox-single-tab{
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: #F4FFFD;
+    font-size: 0.9rem;
+    padding: 5%;
+    list-style: none;
+    cursor: pointer;
+}
+.inbox-single-tab:hover{
+    background-color: #58959D;
+}
 .addSkill{
     color: #0A3238;
     cursor: pointer;
@@ -428,7 +526,7 @@ article{
 	min-height: 100%;
 }
 p{
-	color: #BAF2FA;
+	color: #F4FFFD;
 	text-align: justify;
 	margin: 10px;
 }

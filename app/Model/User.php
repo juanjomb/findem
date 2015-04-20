@@ -57,7 +57,18 @@ class User extends AppModel {
             'className' => 'Experience',
             'foreignKey' => 'user_id',
             'dependent' => true
+        ),
+        'SentMessage' => array(
+            'className' => 'Message',
+            'foreignKey' => 'from_id',
+            'dependent' => true
+        ),
+        'ReceivedMessage' => array(
+            'className' => 'Message',
+            'foreignKey' => 'to_id',
+            'dependent' => true
         )
+        
     );
     
      public $validate = array(

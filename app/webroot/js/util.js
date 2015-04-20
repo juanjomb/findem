@@ -17,6 +17,7 @@ $(document).ready(function ($) {
         $('.js-add-skill').on('click', showPopup);
         $('.js-search-skill').on('keyup',searchSkill);
         $('.js-removeSkill').on('click', removeSkill);
+        $('.js-singlem').on('click', showMessageBody);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -82,6 +83,20 @@ $(document).ready(function ($) {
 
 
             }
+        }
+        
+        function showMessageBody(){
+           var id = $(this).attr('data-id');
+            $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/showMessageBody/",
+                    success: function (data) {
+                        $(".js-msgbodycontainer").html(data);
+                        
+                    },
+                    dataType: 'html'
+                });
         }
         function scrollToTop() {
             $("html, body").animate({
