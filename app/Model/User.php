@@ -62,11 +62,6 @@ class User extends AppModel {
             'className' => 'Message',
             'foreignKey' => 'from_id',
             'dependent' => true
-        ),
-        'ReceivedMessage' => array(
-            'className' => 'Message',
-            'foreignKey' => 'to_id',
-            'dependent' => true
         )
         
     );

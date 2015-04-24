@@ -5,36 +5,53 @@
     </div>
 </section>
 <section id="about" class="dos">
-    <h3>¿Qué es Findem?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+    <h3 class="home-title-info">¿Qué es Findem?</h3>
+    <div class="info-Block">
+        <div class="info-round">
+            <i class="fa fa-briefcase fa-5x"></i>
+        </div>
+<p>
+Findem es un servicio de empleo para profesionales del sector informático. Con nuestro buscador podrás encontrar al profesional que mejor se adecúe a tus necesidades            </p>
+    </div>
+    <div class="info-Block">
+        <div class="info-round">
+            <i class="fa fa-code fa-5x"></i>
+        </div>
+<p>
+Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabajo ni candidaturas. Findem actúa de nexo entre empresas y profesionales, sin tediosos procesos de selección.            </p>
+    </div>
+    <div class="info-Block">
+        <div class="info-round">
+            <i class="fa fa-puzzle-piece fa-5x"></i>
+        </div>
+            <p>
+            En Findem sabemos que para que un proyecto llegue a buen término todo debe encajar. Queremos ayudarte a encontrar la pieza que te falta para completar el puzzle.
+            </p>
+    </div>
     <span id="emp"></span>
-    <h3>¿Cómo puedo registrarme?</h3>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </p>
-    <div class="botones"><button class="alta js-us">Alta profesional</button> <button class="alta js-com">Alta empresa</button></div>
-
 </section>
-<section id="prof" class="tres color-primary-2">
-    <article>
-        <div class="redondo"></div>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>
-        <button class="btn-art">Action</button>
-    </article>
-    <article><div class="redondo"></div>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>
-        <button class="btn-art">Action</button>
-    </article>
-    <article><div class="redondo"></div>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>
-        <button class="btn-art">Action</button>
-    </article>
-
+<section id="prof" class="tres">
+    <div class="info-Register">
+        <h4>Soy una empresa<h4>
+        <p>Soy una empresa y busco un profesional del sector de la informática.</p>
+        <button class="alta js-com">Registrarme</button>
+    </div>
+<div class="info-Register">
+        <h4>Soy un profesional<h4>
+        <p>Soy un profesional del mundo de la informática y busco trabajo.</p>
+        <button class="alta js-us">Registrarme</button>
+    </div>
 </section>
-<div class="bgopacity"></div>
-    <div class="loginForm js-loginformuser">
-<i class="fa fa-close"></i>
-        <h4>Registro de usuario</h4>
-        <?php echo $this->Form->create('User'); 
+<section id="reg" class="cuatro">
+    
+</section>
+<div class="popupBg">  
+        <div class="popup js-loginformuser">
+            <i class="fa fa-close closePopup"></i>
+            <h4>Registro de usuario</h4>
+               <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
+            'label' => false,
             'class'=>'loginInput',
             'placeholder'=>"Username"
             
@@ -43,28 +60,29 @@
             'value'=>'user'
         ));
         echo $this->Form->input('password',array(
+            'label' => false,
             'class'=>'loginInput',
             'placeholder'=>"Password"
             
         ));
          $options = array(
             'label' => 'Register',
-            'class' => 'btn btn-default register',
-            'div'=>'col-xs-12 col-md-12'
+            'class' => 'register'
         );
     ?>
 <?php echo $this->Form->end($options); ?>
 <br>
         <div class="registermessage"></div>
-    </div>
+        </div>
+    </div> 
 
-
-
-    <div class="loginForm js-loginformcompany">
-<i class="fa fa-close"></i>
-        <h4>Registro de empresa</h4>
-        <?php echo $this->Form->create('User'); 
+<div class="popupBg">  
+        <div class="popup js-loginformcompany">
+            <i class="fa fa-close closePopup"></i>
+            <h4>Registro de empresa</h4>
+            <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
+            'label' => false,
             'class'=>'loginInput',
             'placeholder'=>"Username"
         ));
@@ -72,12 +90,23 @@
             'value'=>'company'
         ));
         echo $this->Form->input('password',array(
+            'label' => false,
             'class'=>'loginInput',
             'placeholder'=>"Password"
         ));
     ?>
-<?php echo $this->Form->end(__('Registro')); ?>
+<?php 
+$options = array(
+            'label' => 'Register',
+            'class' => 'register'
+        );
+
+echo $this->Form->end($options); ?>
 <br>
         <div class="registermessage"></div>
+        </div>
+    </div> 
 
-    </div>
+
+
+

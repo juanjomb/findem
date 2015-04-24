@@ -1,0 +1,24 @@
+<div class="dataBlock firstelement">
+    <h2>Contacta con nosotros</h2>
+    <p>¿Alguna duda, queja o sugerencia? No dudes en contactar con nosotros, el equipo de Findem estará encantado de atenderte y ayudarte en lo que necesites.</p>
+ <?php echo $this->Form->create('Feedbacks'); 
+        echo $this->Form->input('email',array(
+            'label' => false,
+            'type' => 'mail',
+            'class'=>'feedbackInput',
+            'placeholder'=>"Tu email"
+            
+        ));
+        echo $this->Form->input('message',array(
+            'label' => false,
+            'type' => 'textarea',
+            'rows' => '8',
+            'cols' => '8',
+            'class'=>'feedbackTextarea',
+            'placeholder'=>"Escribe aquí tu mensaje"
+            
+        ));
+         $options = array('label' => 'Enviar','class'=>'feedbackBtn');
+    ?>
+<?php echo $this->Form->end($options); ?>
+</div>

@@ -42,7 +42,7 @@ class UsersController extends AppController {
     public function inbox(){
         $message = $this->User->SentMessage->find('first',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
      $sent = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
-     $received = $this->User->ReceivedMessage->find('all',array('conditions' => array('ReceivedMessage.to_id' => $this->Session->read('Auth.User.id'))));
+     $received = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.to_id' => $this->Session->read('Auth.User.id'))));
      $this->set(compact('message','sent','received'));
     }
     
