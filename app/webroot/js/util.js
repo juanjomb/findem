@@ -230,7 +230,7 @@ $(document).ready(function ($) {
                     url: "/users/getCities/" + province,
                     success: function (data) {
                         $(".js-city").html("");
-                        $(".js-province").append("<option>Selecciona ciudad</option>");
+                        $(".js-city").append("<option>Selecciona ciudad</option>");
                         $.each(data, function (item, value) {
                             var row = "<option value=\"" + item + "\">" + value + "</option>";
                             $(row).appendTo(".js-city");

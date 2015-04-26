@@ -22,10 +22,15 @@ $user = $this->Session->read('user'); ?>
     <a href="/skills/index/"><i class="fa fa-institution"></i>     Skills</a>
             <?php
         }
-    }
-    ?>
-<?php if ($user) { ?>
+        if ($user['User']['role'] == 'company') {
+            ?>
+    <a href="/users/search/"><i class="fa fa-search"></i>    Búsqueda</a>
+    <a href="/users/selected/"><i class="fa fa-bookmark"></i>     Candidatos</a>
+            <?php
+        }
+       ?>
     <a href="/users/logout"><i class="fa fa-close"></i>     Cerrar sesión</a>
+  
     <?php } else { ?>
     <a href="/users/login"><i class="fa fa-send"></i>     Inicia sesión</a>
     <a href="#about"><i class="fa fa-info-circle"></i>     Sobre Findem</a>

@@ -1,7 +1,9 @@
 <div class="dataBlock firstelement">
     <h2>Contacta con nosotros</h2>
     <p>¿Alguna duda, queja o sugerencia? No dudes en contactar con nosotros, el equipo de Findem estará encantado de atenderte y ayudarte en lo que necesites.</p>
- <?php echo $this->Form->create('Feedbacks'); 
+ <?php echo $this->Form->create(null,array(
+    'url' => array('controller' => 'feedbacks', 'action' => 'add')
+)); 
         echo $this->Form->input('email',array(
             'label' => false,
             'type' => 'mail',

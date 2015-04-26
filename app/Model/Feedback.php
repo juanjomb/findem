@@ -2,6 +2,7 @@
 App::uses('AppModel', 'Model');
 class Feedback extends AppModel {
      var $name = 'Feedback';
+     public $useTable = 'feedbacks';
    public $validate = array(
         'email' => array(
             'required' => array(

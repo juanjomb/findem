@@ -27,9 +27,8 @@ class FeedbacksController extends AppController {
         $this->set('feedback', $feedback);
     }
 
-    public function add() {
-
-            $this->getLists();
+    public function add() {    
+        $this->autoRender=false;
             $this->Feedback->create();
             if(!empty($this->request->data)){
                 if(!isset($item)){
@@ -37,7 +36,7 @@ class FeedbacksController extends AppController {
                 }
             if ($this->Feedback->save($item)) {
                 $this->Session->setFlash(__('Your feedback has been saved.'));
-                return $this->redirect(array('action' => '/'));
+                return $this->redirect($this->referer());
             }
             $this->Session->setFlash(__('Unable to add your feedback.'));
         }

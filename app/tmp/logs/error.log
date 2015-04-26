@@ -4269,3 +4269,130 @@ Stack Trace:
 #3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-04-26 18:33:52 Error: [MissingPluginException] Plugin Controllers could not be found.
+Exception Attributes: array (
+  'plugin' => 'Controllers',
+)
+Request URL: /pages/contact
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(227): CakePlugin::path('Controllers')
+#1 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(549): App::path('Model', 'Controllers')
+#2 [internal function]: App::load('Feedback')
+#3 [internal function]: spl_autoload_call('Feedback')
+#4 C:\xampp\htdocs\findem\lib\Cake\Utility\ClassRegistry.php(146): class_exists('Feedback')
+#5 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(171): ClassRegistry::init('Controllers.Fee...', true)
+#6 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(204): FormHelper->_getModel('Controllers.Fee...')
+#7 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(354): FormHelper->_introspectModel('Controllers.Fee...', 'key')
+#8 C:\xampp\htdocs\findem\app\View\Pages\contact.ctp(4): FormHelper->create('Controllers.Fee...')
+#9 C:\xampp\htdocs\findem\lib\Cake\View\View.php(961): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\findem\lib\Cake\View\View.php(923): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\findem\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('contact', NULL)
+#13 C:\xampp\htdocs\findem\app\Controller\PagesController.php(59): Controller->render('contact')
+#14 [internal function]: PagesController->display('contact')
+#15 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#16 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#18 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-04-26 18:42:56 Error: [MissingTableException] Table feedback for model Feedback was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'feedback',
+  'class' => 'Feedback',
+  'ds' => 'default',
+)
+Request URL: /pages/contact
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('feedback')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Feedback', 'fields')
+#4 C:\xampp\htdocs\findem\app\View\Pages\contact.ctp(4): FormHelper->create('Feedback')
+#5 C:\xampp\htdocs\findem\lib\Cake\View\View.php(961): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\findem\lib\Cake\View\View.php(923): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('contact', NULL)
+#9 C:\xampp\htdocs\findem\app\Controller\PagesController.php(59): Controller->render('contact')
+#10 [internal function]: PagesController->display('contact')
+#11 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-04-26 18:54:16 Error: [MissingTableException] Table feedback for model Feedback was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'feedback',
+  'class' => 'Feedback',
+  'ds' => 'default',
+)
+Request URL: /pages/contact
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('feedback')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\findem\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Feedback', 'fields')
+#4 C:\xampp\htdocs\findem\app\View\Pages\contact.ctp(6): FormHelper->create('Feedback', Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\View\View.php(961): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\findem\lib\Cake\View\View.php(923): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('contact', NULL)
+#9 C:\xampp\htdocs\findem\app\Controller\PagesController.php(59): Controller->render('contact')
+#10 [internal function]: PagesController->display('contact')
+#11 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-04-26 18:55:45 Error: [MissingTableException] Table feedback for model Feedback was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'feedback',
+  'class' => 'Feedback',
+  'ds' => 'default',
+)
+Request URL: /feedbacks/add
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('feedback')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1571): Model->schema()
+#3 C:\xampp\htdocs\findem\app\Controller\FeedbacksController.php(31): Model->create()
+#4 [internal function]: FeedbacksController->add()
+#5 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FeedbacksController), Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
+#8 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-04-26 19:00:07 Error: [MissingViewException] View file "Feedbacks\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Feedbacks\\index.ctp',
+)
+Request URL: /feedbacks
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-04-26 21:06:48 Error: [MissingActionException] Action UsersController::search() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'search',
+)
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-26 22:48:53 Error: [MissingViewException] View file "Feedbacks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Feedbacks\\add.ctp',
+)
+Request URL: /feedbacks/add
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

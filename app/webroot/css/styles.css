@@ -232,6 +232,10 @@ html,body{
     padding: 5%;
     list-style: none;
     cursor: pointer;
+    border-bottom: 1px solid #F4FFFD;
+}
+.inbox-single-tab:first-child{
+    border-right: 1px solid #F4FFFD;
 }
 .inbox-single-tab.active{
     background-color: #58959D;
@@ -412,7 +416,14 @@ a i{
     font-family:'Raleway',sans-serif;
     height: 40px;
 }
-
+.searchinput{
+    font-size: 1.2rem;
+    border: 1px solid #0A3238;
+    border-radius: 5px;
+    color: #0A3238;
+    font-family:'Raleway',sans-serif;
+    height: 40px;
+}
     .feedbackBtn{
     border: 5px solid #0A3238;
     background-color: Transparent;

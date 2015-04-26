@@ -258,6 +258,10 @@ class UsersController extends AppController {
         } 
     }
 
+    public function search() {
+$this->getLists();
+	}
+        
     public function register() {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
