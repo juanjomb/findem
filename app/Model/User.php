@@ -15,6 +15,10 @@ class User extends AppModel {
         'City' => array(
             'className' => 'City',
             'foreignKey' => 'city_id'
+        ),
+        'Category' => array(
+            'className' => 'Category',
+            'foreignKey' => 'category_id'
         )
     );
     public $hasAndBelongsToMany = array(
@@ -36,9 +40,9 @@ class User extends AppModel {
                 'unique' => true,
                 
             ),
-        'Suitable' => array(
-                'className' => 'User',
-                'with' => 'UserSuitable',
+        'UserSuitable' => array(
+                'className' => 'UserSuitable',
+                'with' => 'User',
                 'joinTable' => 'user_suitables',
                 'foreignKey' => 'user_id',
                 'associationForeignKey' => 'suitable_id',

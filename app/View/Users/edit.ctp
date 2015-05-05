@@ -5,17 +5,23 @@
         <?php
         
         echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-3'
+            'div' => 'col-xs-12 col-md-2'
         )); 
        
         echo $this->Form->input('name', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-3'));
+            'div' => 'col-xs-12 col-md-2'));
 
         echo $this->Form->input('surname1', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-3'
+            'div' => 'col-xs-12 col-md-2'
         ));
         echo $this->Form->input('surname2', array('class' => 'col-xs-12 col-md-12 form-control',
-            'div' => 'col-xs-12 col-md-3'
+            'div' => 'col-xs-12 col-md-2'
+        ));
+        echo $this->Form->input('category_id', array(
+            'options' => $categories,
+            'empty' => '(Selecciona una categoría)',
+            'class' => 'col-xs-12 col-md-12 form-control',
+            'div' => 'col-xs-12 col-md-4'
         ));
         ?>
     </div>

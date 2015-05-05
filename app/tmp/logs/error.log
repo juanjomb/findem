@@ -4396,3 +4396,1016 @@ Stack Trace:
 #3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FeedbacksController), Object(CakeRequest))
 #4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-04-27 22:42:47 Error: [MissingActionException] Action UsersController::selected() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'selected',
+)
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-04-28 16:51:53 Error: [MissingViewException] View file "Users\Elements\userresults.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\Elements\\userresults.ctp',
+)
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName('Elements/userre...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('Elements/userre...', NULL)
+#2 C:\xampp\htdocs\findem\app\Controller\UsersController.php(286): Controller->render('Elements/userre...')
+#3 [internal function]: UsersController->search()
+#4 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-04-28 16:52:39 Error: [MissingViewException] View file "Users\Elements\userresults.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\Elements\\userresults.ctp',
+)
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName('Elements/userre...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('Elements/userre...', NULL)
+#2 C:\xampp\htdocs\findem\app\Controller\UsersController.php(285): Controller->render('Elements/userre...')
+#3 [internal function]: UsersController->search()
+#4 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-04-28 16:53:10 Error: [MissingViewException] View file "Users\Elements\userresults.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\Elements\\userresults.ctp',
+)
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName('Elements/userre...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('Elements/userre...', NULL)
+#2 C:\xampp\htdocs\findem\app\Controller\UsersController.php(286): Controller->render('Elements/userre...')
+#3 [internal function]: UsersController->search()
+#4 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-04-28 16:53:16 Error: [MissingViewException] View file "Users\Elements\userresults.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\Elements\\userresults.ctp',
+)
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\View\View.php(470): View->_getViewFileName('Elements/userre...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(959): View->render('Elements/userre...', NULL)
+#2 C:\xampp\htdocs\findem\app\Controller\UsersController.php(286): Controller->render('Elements/userre...')
+#3 [internal function]: UsersController->search()
+#4 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2015-04-29 00:10:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 00:11:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 00:11:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 00:14:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:40:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:42:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:42:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:44:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:46:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:50:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:50:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:52:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 17:52:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:20:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:27:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:31:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:32:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:38:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 18:38:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-29 20:16:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-04 17:19:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-04 17:59:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-04 18:06:03 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\findem\app\View\Elements\userresults.ctp, line 10]
+2015-05-04 18:06:03 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-04 18:06:08 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\findem\app\View\Elements\userresults.ctp, line 10]
+2015-05-04 18:06:08 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-04 18:06:20 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\findem\app\View\Elements\userresults.ctp, line 10]
+2015-05-04 18:06:20 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-04 18:11:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-04 18:55:23 Error: [MissingTableException] Table categories for model Category was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categories',
+  'class' => 'Category',
+  'ds' => 'default',
+)
+Request URL: /users/login
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('categories')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(2516): Model->schema()
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1741): DboSource->fields(Object(Category), 'Category', '')
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1093): DboSource->generateAssociationQuery(Object(User), Object(Category), 'belongsTo', 'Category', Array, Array, false)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(130): Model->find('first', Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(79): BaseAuthenticate->_findUser('admin', 'admin')
+#9 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\AuthComponent.php(762): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\AuthComponent.php(607): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\findem\app\Controller\UsersController.php(14): AuthComponent->login()
+#12 [internal function]: UsersController->login()
+#13 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-05-04 19:04:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.category_id' in 'on clause'
+Request URL: /users/login
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(130): Model->find('first', Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(79): BaseAuthenticate->_findUser('admin', 'admin')
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\AuthComponent.php(762): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#9 C:\xampp\htdocs\findem\lib\Cake\Controller\Component\AuthComponent.php(607): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\htdocs\findem\app\Controller\UsersController.php(14): AuthComponent->login()
+#11 [internal function]: UsersController->login()
+#12 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#13 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-05-04 19:05:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+Request URL: /categories/index/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(Category), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\CategoriesController.php(14): Model->find('all', Array)
+#7 [internal function]: CategoriesController->index()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-04 19:25:33 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\findem\app\View\Categories\index.ctp, line 63]
+2015-05-04 19:25:33 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /categories
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 63, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-04 22:45:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-04 22:49:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:05:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:10:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:13:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:14:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:14:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:15:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:16:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:16:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:16:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:17:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:17:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:19:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:19:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:22:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:22:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:23:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:24:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:27:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:28:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:28:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:32:54 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\findem\app\View\Elements\userresults.ctp, line 12]
+2015-05-05 16:32:54 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-05 16:33:18 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\findem\app\View\Elements\userresults.ctp, line 12]
+2015-05-05 16:33:18 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 12, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-05 16:33:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:34:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:35:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:35:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:37:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:38:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:38:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:38:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:39:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:40:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 16:40:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:12:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:18:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:26:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:27:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:32:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:37:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:43:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:51:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:53:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 22:53:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:29:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:29:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserSuitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:30:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:30:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Suitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:31:59 Error: Fatal Error (64): Cannot redeclare class UserSkill in [C:\xampp\htdocs\findem\app\Model\UserSuitable.php, line 14]
+2015-05-05 23:31:59 Error: [FatalErrorException] Cannot redeclare class UserSkill
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 14, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 14, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-05 23:32:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:32:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Suitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:34:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:34:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Suitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:39:27 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(User), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 1, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\findem\app\Controller\UsersController.php(293): Model->find('all', Array)
+#9 [internal function]: UsersController->search()
+#10 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-05-05 23:40:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:40:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:45:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-05 23:45:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:49:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Suitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:56:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Suitable.user_id' in 'where clause'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-05 23:56:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

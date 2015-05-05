@@ -22,6 +22,8 @@ $(document).ready(function ($) {
         $('.js-single-received').on('click', showMessageBody);
         $('.js-sent-tab').on('click',showSent);
         $('.js-received-tab').on('click',showReceived);
+        $('.js-search-sm').on('click',searchUsers);
+        $('.js-bookmark').on('click',bookmarkUser);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -358,7 +360,39 @@ $(document).ready(function ($) {
             });
 
         }
-
+function searchUsers(){
+     event.preventDefault();
+            var formData = {
+                'region_id': $('.js-region').val(),
+                'city_id': $('.js-city').val(),
+                'province_id': $('.js-province').val(),
+                'skills': $('.js-skills-input').val(),
+            };
+            $.ajax({
+                type: "POST",
+                url: "/users/search/",
+                data: formData,
+                success: function (data) {
+                            $('.js-results-container').html(data);
+                            $('.js-bookmark').on('click',bookmarkUser);
+                },
+                dataType: 'html'
+            });
+}
+function bookmarkUser(){
+     event.preventDefault();
+            var block = $(this).closest('.user-result-block');
+            var user_id = $(this).closest('.user-result-block').attr('data');
+            $.ajax({
+                type: "POST",
+                url: "/users/bookmarkuser/",
+                data: {user_id:user_id},
+                success: function (data) {
+                           block.remove(); 
+                },
+                dataType: 'json'
+            });
+}
 
 
 

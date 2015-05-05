@@ -171,10 +171,12 @@ class UsersController extends AppController {
         }
         $this->User->UserSkill->unBindModel(array('belongsTo' => array('User')));
         $skills = $this->User->Skill->find('list');
+        $languages = $this->User->Language->find('list');
+        $categories = $this->User->Category->find('list');
         $userskills = $this->User->UserSkill->find('all',array('conditions' => array('UserSkill.user_id' => $user['User']['id'])));
         $experiences = $this->User->Experience->find('all', array('conditions' => array('Experience.user_id' => $user['User']['id'])));
         $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
-        $this->set(compact('regions','experiences','years','userskills','skills', 'educations'));
+        $this->set(compact('categories','regions','experiences','years','userskills','skills', 'educations','languages'));
     }
 
     public function getProvinces($region_id) {
@@ -259,7 +261,43 @@ class UsersController extends AppController {
     }
 
     public function search() {
-$this->getLists();
+            $this->getLists();
+		if($this->request->is('ajax')){
+                     
+            $this->autoRender=false;
+            if (!empty($this->request->data)) {
+                $conditions = array();
+                if(!empty($this->request->data['skills'])){
+                    foreach ($this->request->data['skills'] as $skill){
+                        $conditions['and']['UserSkill.skill_id'] =  $skill;
+                    }
+                    $fields=array('UserSkill.user_id');
+            		$users=$this->User->UserSkill->find('list',  compact('fields','conditions'));
+                        $conditions = array();
+                        $conditions['and']['User.id']=$users;
+            	}
+            	
+            	if(!empty($this->request->data['region_id'])){
+            		$conditions['and']['User.region_id'] =$this->request->data['region_id'];
+            	}
+                if(!empty($this->request->data['province_id'])){
+            		$conditions['and']['User.province_id'] =$this->request->data['province_id'];
+            	}
+                if(!empty($this->request->data['city_id'])){
+            		$conditions['and']['User.city_id'] =$this->request->data['city_id'];
+            	}
+		
+				
+             }
+             $this->User->recursive=2;
+            $users = $this->User->find('all',  compact('conditions'));
+            
+           	$this->set(compact('users'));
+			
+			
+            $this->render('/Elements/userresults','ajax');    
+        }
+	
 	}
         
     public function register() {
@@ -279,6 +317,32 @@ $this->getLists();
                 $result['ko']='Username already exists';
                 echo json_encode($result);
             }
+        }
+    }
+    
+     public function bookmarkuser() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $conditions= array(
+                'UserSuitable.user_id'=>$this->Session->read('Auth.User.id'),
+                'UserSuitable.suitable_id'=>$this->request->data['user_id']
+            );
+            $suitable = $this->User->UserSuitable->find('all',compact('conditions'));
+            if(empty($suitable)){
+                $this->User->UserSuitable->create();
+                $data['user_id']= $this->Session->read('Auth.User.id');
+                $data['suitable_id']= $this->request->data['user_id'];
+                if ($this->User->UserSuitable->save($data)) {
+                    $result['ok']='Usuario añadido a favoritos';
+                    echo json_encode($result);
+                } else {
+                    $result['ko']='Error al añadir el usuario a favoritos';
+                    echo json_encode($result);
+                }
+        }else{
+             $result['ko']='El usuario ya está en favoritos';
+                    echo json_encode($result);
+        }
         }
     }
 
