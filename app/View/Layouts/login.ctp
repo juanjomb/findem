@@ -31,7 +31,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
                 echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css');
                 echo $this->Html->css('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
-                echo $this->Html->css('http://fonts.googleapis.com/css?family=Quattrocento+Sans');
+                echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,500');
                 echo $this->Html->css('styles');
                 echo $this->Html->css('http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css'); 
                 
@@ -49,10 +49,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <body class="cbp-spmenu-push">
            <?php
     echo $this->element('header');
-    echo $this->element('menu');
-    echo $this->element('navbuttons');
     echo $this->Session->flash(); 
-    echo $this->fetch('content'); 
-    echo $this->element('footer');?>
+    echo $this->fetch('content'); ?>
     </body>
 </html>

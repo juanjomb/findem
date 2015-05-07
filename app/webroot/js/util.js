@@ -24,6 +24,7 @@ $(document).ready(function ($) {
         $('.js-received-tab').on('click',showReceived);
         $('.js-search-sm').on('click',searchUsers);
         $('.js-bookmark').on('click',bookmarkUser);
+        $('.js-unbookmark').on('click',unbookmarkUser);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -393,7 +394,20 @@ function bookmarkUser(){
                 dataType: 'json'
             });
 }
-
+function unbookmarkUser(){
+     event.preventDefault();
+            var block = $(this).closest('.user-result-block');
+            var user_id = $(this).closest('.user-result-block').attr('data');
+            $.ajax({
+                type: "POST",
+                url: "/users/unbookmarkuser/",
+                data: {user_id:user_id},
+                success: function (data) {
+                           block.remove(); 
+                },
+                dataType: 'json'
+            });
+}
 
 
 

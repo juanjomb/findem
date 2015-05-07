@@ -40,9 +40,8 @@ class User extends AppModel {
                 'unique' => true,
                 
             ),
-        'UserSuitable' => array(
+        'SuitableUser' => array(
                 'className' => 'UserSuitable',
-                'with' => 'User',
                 'joinTable' => 'user_suitables',
                 'foreignKey' => 'user_id',
                 'associationForeignKey' => 'suitable_id',

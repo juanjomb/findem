@@ -5409,3 +5409,468 @@ Stack Trace:
 #10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2015-05-06 16:05:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.user_id' in 'on clause'
+Request URL: /users/login
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(UserSuitable), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(827): DboSource->query('findByUsername', Array, Object(User))
+#10 C:\xampp\htdocs\findem\app\Controller\UsersController.php(15): Model->__call('findByUsername', Array)
+#11 C:\xampp\htdocs\findem\app\Controller\UsersController.php(15): User->findByUsername('company')
+#12 [internal function]: UsersController->login()
+#13 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-05-06 16:06:31 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/login
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(UserSuitable), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(827): DboSource->query('findByUsername', Array, Object(User))
+#10 C:\xampp\htdocs\findem\app\Controller\UsersController.php(15): Model->__call('findByUsername', Array)
+#11 C:\xampp\htdocs\findem\app\Controller\UsersController.php(15): User->findByUsername('company')
+#12 [internal function]: UsersController->login()
+#13 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-05-06 16:10:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 16:10:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:10:16 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/bookmarkuser/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(330): Model->find('all', Array)
+#7 [internal function]: UsersController->bookmarkuser()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:21:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:22:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:22:58 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:24:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:25:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:26:22 Error: Fatal Error (1): Call to a member function find() on null in [C:\xampp\htdocs\findem\app\Controller\UsersController.php, line 361]
+2015-05-06 16:26:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 361)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 361, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 361, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-06 16:31:57 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/edit/54e389d5-71bc-47d2-814c-12bc4fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(UserSuitable), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 0, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('first', Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(599): Model->find('first', Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(827): DboSource->query('findById', Array, Object(User))
+#10 C:\xampp\htdocs\findem\app\Controller\UsersController.php(105): Model->__call('findById', Array)
+#11 C:\xampp\htdocs\findem\app\Controller\UsersController.php(105): User->findById('54e389d5-71bc-4...')
+#12 [internal function]: UsersController->edit('54e389d5-71bc-4...')
+#13 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-05-06 16:32:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(UserSuitable), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 1, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\findem\app\Controller\UsersController.php(293): Model->find('all', Array)
+#9 [internal function]: UsersController->search()
+#10 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-05-06 16:32:34 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(UserSuitable), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 1, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\findem\app\Controller\UsersController.php(293): Model->find('all', Array)
+#9 [internal function]: UsersController->search()
+#10 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-05-06 16:33:13 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'UserSuitable'
+Request URL: /users/search/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserSui...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserSui...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1467): DboSource->fetchAll('SELECT `UserSui...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1316): DboSource->_fetchHasAndBelongsToMany(Object(User), 'SELECT `UserSui...', Array, 'UserSuitable')
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(User), 'hasAndBelongsTo...', 'UserSuitable', Array, Array, true, Array, 1, Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#7 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#8 C:\xampp\htdocs\findem\app\Controller\UsersController.php(293): Model->find('all', Array)
+#9 [internal function]: UsersController->search()
+#10 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#11 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#13 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-05-06 16:33:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 16:33:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:34:28 Error: [MissingTableException] Table suitables for model Suitable was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'suitables',
+  'class' => 'Suitable',
+  'ds' => 'default',
+)
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3640): Model->setSource('suitables')
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): Model->getDataSource()
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#4 [internal function]: UsersController->selected()
+#5 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-05-06 16:36:12 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Suitable'
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Suitabl...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Suitabl...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Suitabl...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(UserSuitable), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(361): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 16:50:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /users/selected/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(3018): DboSource->read(Object(User), Array)
+#5 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(2990): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\findem\app\Controller\UsersController.php(365): Model->find('all', Array)
+#7 [internal function]: UsersController->selected()
+#8 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-05-06 17:08:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 17:08:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:09:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:10:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:10:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:10:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:19:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:20:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-06 20:20:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-07 16:49:45 Error: [MissingActionException] Action UsersController::send_message() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'send_message',
+)
+Request URL: /users/send_message/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-05-07 17:14:07 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\findem\app\View\Users\send_message.ctp, line 6]
+2015-05-07 17:14:07 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /users/send_message/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-07 17:15:10 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\findem\app\View\Users\send_message.ctp, line 6]
+2015-05-07 17:15:10 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /users/send_message/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-07 17:19:33 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\findem\app\View\Users\send_message.ctp, line 7]
+2015-05-07 17:19:33 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /users/send_message/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-07 17:19:52 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\findem\app\View\Users\send_message.ctp, line 7]
+2015-05-07 17:19:52 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /users/send_message/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-07 21:32:43 Error: Fatal Error (1): Call to undefined method UsersController::layout() in [C:\xampp\htdocs\findem\app\Controller\UsersController.php, line 13]
+2015-05-07 21:32:43 Error: [FatalErrorException] Call to undefined method UsersController::layout()
+Request URL: /users/login
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 13)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 13, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 13, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -10,6 +10,7 @@ class UsersController extends AppController {
     }
 
     public function login() {
+        $this->layout = 'login';
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $user = $this->User->findByUsername($this->request->data['User']['username']);
@@ -324,15 +325,15 @@ class UsersController extends AppController {
         if ($this->request->is('ajax')) {
             $this->autoRender = false;
             $conditions= array(
-                'UserSuitable.user_id'=>$this->Session->read('Auth.User.id'),
-                'UserSuitable.suitable_id'=>$this->request->data['user_id']
+                'SuitableUser.user_id'=>$this->Session->read('Auth.User.id'),
+                'SuitableUser.suitable_id'=>$this->request->data['user_id']
             );
-            $suitable = $this->User->UserSuitable->find('all',compact('conditions'));
+            $suitable = $this->User->SuitableUser->find('all',compact('conditions'));
             if(empty($suitable)){
-                $this->User->UserSuitable->create();
+                $this->User->SuitableUser->create();
                 $data['user_id']= $this->Session->read('Auth.User.id');
                 $data['suitable_id']= $this->request->data['user_id'];
-                if ($this->User->UserSuitable->save($data)) {
+                if ($this->User->SuitableUser->save($data)) {
                     $result['ok']='Usuario añadido a favoritos';
                     echo json_encode($result);
                 } else {
@@ -345,6 +346,20 @@ class UsersController extends AppController {
         }
         }
     }
+    
+      public function unbookmarkuser() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+           if ($this->User->SuitableUser->deleteAll(array('SuitableUser.user_id' => $this->Session->read('Auth.User.id'),
+                'SuitableUser.suitable_id' => $this->request->data['user_id']))) {
+                $data['ok']=1;
+                echo json_encode($data);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        }
+    }
 
     public function getCities($province_id) {
         if ($this->request->is('ajax')) {
@@ -354,6 +369,34 @@ class UsersController extends AppController {
                 'fields' => array('City.municipio')
             ));
             echo json_encode($cities);
+        }
+    }
+    
+    public function selected(){
+        $fields=array('SuitableUser.suitable_id');
+        $conditions = array('SuitableUser.user_id' =>$this->Session->read('Auth.User.id'));
+        $selected = $this->User->SuitableUser->find('list',compact('fields','conditions'));
+        $conditions = array('User.id' =>$selected);
+        $users = $this->User->find('all',compact('conditions'));
+        
+        $this->set(compact('users'));
+    }
+    
+    public function send_message($user_id=null){
+        if($user_id){
+            $user = $this->User->findById($user_id);
+            $this->set(compact('user'));
+        }
+            $this->User->SentMessage->create();
+            if(!empty($this->request->data)){
+                if(!isset($item)){
+                    $item=$this->request->data;
+                }
+            if ($this->User->SentMessage->save($item)) {
+                $this->Session->setFlash(__('Your message has been sent.'));
+                return $this->redirect(array('action' => 'inbox'));
+            }
+            $this->Session->setFlash(__('Unable to send your message.'));
         }
     }
 
