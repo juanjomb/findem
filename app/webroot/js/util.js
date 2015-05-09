@@ -64,6 +64,9 @@ $(document).ready(function ($) {
                     transform:'rotate(180deg)'
                 },500);
                 $(this).removeClass('fa-close');
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    $('html').css('overflow-y','auto');
+                }
                 $(this).addClass('fa-bars');
                 $(this).removeClass('active');
             } else {
@@ -72,6 +75,9 @@ $(document).ready(function ($) {
                 },500);
                 $(this).removeClass('fa-bars');
                 $(this).addClass('fa-close');
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    $('html').css('overflow-y','hidden');
+                }
                 $(this).addClass('active');
             }
             if ($('body').hasClass('cbp-spmenu-push-toright')) {
