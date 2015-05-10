@@ -43,7 +43,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
     </div>
 </section>
 <section id="reg" class="cuatro">
-    
+     <?php echo $this->element('popular'); ?>
 </section>
 <div class="popupBg">  
         <div class="popup js-loginformuser">

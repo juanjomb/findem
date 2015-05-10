@@ -14,6 +14,7 @@
             <p><?php echo h($user['User']['email']); ?></p>
         </div>
     </div>
+    <?php if($user['User']['role']=='user'){ ?>
     <div class="dataBlock row">
         <div class="col-xs-12 col-md-8">
             <h3>Education</h3>
@@ -71,6 +72,7 @@
 
 
     </div>
+    <?php } ?>
 </div>
 
 

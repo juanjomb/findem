@@ -61,6 +61,12 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid user'));
         }
         $this->set('user', $user);
+        if($user['User']['id']!= $this->Session->read('Auth.User.id')){
+             $this->User->updateAll(array(
+                'User.views' => 'User.views + 1'),
+                array('User.id' => $user['User']['id']
+            ));
+        }
     }
 
     public function add() {

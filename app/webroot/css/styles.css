@@ -29,6 +29,49 @@ html,body{
 .js-removeSkill{
     cursor: pointer;
 }
+
+@keyframes animatedBackground {
+    from { background-position: 0 100%; }
+	to { background-position: 958px 100%; }
+}
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 100%; }
+	to { background-position: 958px 100%; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 100%; }
+	to { background-position: 958px 100%; }
+}
+@-o-keyframes animatedBackground {
+	from { background-position: 0 100%; }
+	to { background-position: 958px 100%; }
+}
+.error-wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding-top: 20%;
+    background-image: url(../img/findem404.png);
+	background-position: 0px 100%;
+	background-repeat: repeat-x;
+        background-color: #F4FFFD;
+         -webkit-animation: animatedBackground 25s linear infinite;
+}
+.compass-error{
+    width: 100%;
+    font-size: 22rem;
+    text-align: center;
+    color: #276169;
+}
+.error-page-message{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 30px;
+    padding-right:  30px;
+}
+
+
+
 .popup{
     position: fixed;
     margin-left: 25%;
@@ -39,6 +82,7 @@ html,body{
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 3px 3px 15px #888888;
+    padding: 5%;
     
 }
 .js-search-skill{
