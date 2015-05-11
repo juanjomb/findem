@@ -29,7 +29,19 @@ html,body{
 .js-removeSkill{
     cursor: pointer;
 }
-
+.js-removeLanguage {
+  cursor: pointer;
+}
+.copy{
+    position: absolute;
+    color: #fff;
+    bottom: 5px;
+    left: 40%;
+    text-align: center;
+}
+.wrapper{
+    min-height: 100%;
+}
 @keyframes animatedBackground {
     from { background-position: 0 100%; }
 	to { background-position: 958px 100%; }
@@ -94,9 +106,26 @@ html,body{
 .js-optionSkills{
     position: relative;
     border: 1px solid #276169;
-    top: 0;
+    top: -2px;
     width: 70%;
     margin-left: 15%;
+}
+.profileadd{
+    border: 2px solid #0A3238;
+    background-color: Transparent;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color:#0A3238;
+    width: 50%;
+    height: 40px;
+    outline:none;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+.profileadd:hover{
+    border:none;
+    background-color: #276169;
+    outline:none;
+    color: white;
 }
 .completion{
     font-size: 1.5rem;
@@ -298,6 +327,7 @@ html,body{
 .profileContainer{
     margin-top: 100px;
     width: 100%;
+    min-height: 100%;
 }
 .content{
     margin-top: 100px;

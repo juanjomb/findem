@@ -11,7 +11,12 @@ class SkillsController extends AppController {
 
 
     public function index() {
-        $this->set('skills', $this->Skill->find('all'));
+       $this->paginate = array(
+            'limit' => 10,
+            'order' => array('title' => 'desc')
+        );
+        $skills = $this->paginate('Skill');
+        $this->set('skills', $skills);
     }
 
     public function view($id) {

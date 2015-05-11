@@ -13,10 +13,15 @@ $(document).ready(function ($) {
         $('.closePopup').on('click', closePopup);
         $('.register').on('click', register);
         $('.js-add-skill').on('click', showPopup);
+        $('.js-add-language').on('click', showPopup);
+        $('.js-add-education').on('click', showPopup);
+        $('.js-add-experience').on('click', showPopup);
         $('.js-us').on('click', showPopup);
         $('.js-com').on('click', showPopup);
         $('.js-search-skill').on('keyup',searchSkill);
+        $('.js-search-language').on('keyup',searchLanguage);
         $('.js-removeSkill').on('click', removeSkill);
+        $('.js-removeLanguage').on('click', removeLanguage);
         $('.js-single-sent').on('click', showMessageBody);
         $('.js-single-received').on('click', showMessageBody);
         $('.js-single-received').on('click', showMessageBody);
@@ -211,6 +216,63 @@ $(document).ready(function ($) {
                     dataType: 'json'
                 });
         }
+        
+        function searchLanguage(event) {
+                sk = $(this).val();
+                if(sk.length > 0){
+                $.ajax({
+                    type: "POST",
+                    data: {sk:sk},
+                    url: "/languages/getLanguage/",
+                    success: function (data) {
+                        $(".js-optionLanguages").empty();
+                        $.each(data, function (item, value) {
+                            var pill = '<p class="completion" data="'+value.Language.id+'">'+ value.Language.title + "</p>";
+                            $(pill).appendTo(".js-optionLanguages");
+                            $('.completion').on('click',addLanguage);
+                        });
+                    },
+                    dataType: 'json'
+                });
+                   
+                }else{
+                    $(".js-optionLanguages").empty();
+                }
+           
+        }
+        function addLanguage(){
+            var id = $(this).attr('data');
+            var title = $(this).text();
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/saveLanguage/",
+                    success: function (data) {
+                        if(!data.ko){
+                            pill ='<p class="skillPill" data="' + data.language_id + '">' + title + '<span class="fa fa-trash js-removeLanguage"></span></p>';
+                            $('.js-languages-block').append(pill);
+                            $('.js-removeLanguage').on('click', removeLanguage);
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
+        
+        function removeLanguage(){
+            var id = $(this).closest('.skillPill').attr('data');
+            var pill = $(this).closest('.skillPill');
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/removeLanguage/",
+                    success: function (data) {
+                        if(data.ok === 1){
+                            pill.remove();
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
         function getProvinces() {
             region = $(this).val();
             if (region != '') {
@@ -255,31 +317,50 @@ $(document).ready(function ($) {
         function saveEducation() {
             event.preventDefault();
             var formData = {
-                'title': $('#EducationTitle').val(),
-                'description': $('#EducationDescription').val(),
-                'start_date': $('#EducationStartDate').val(),
-                'end_date': $('#EducationEndDate').val(),
-                'user_id': $('#EducationUserId').val()
+                'title': $('.js-educationtitle').val(),
+                'description': $('.js-educationdescription').val(),
+                'start_date': $('.js-educationstart').val(),
+                'end_date': $('.js-educationend').val(),
+                'user_id': $('.js-educationuser').val()
             };
             $.ajax({
                 type: "POST",
-                url: "/findem/users/saveEducation/",
+                url: "/users/saveEducation/",
                 data: formData,
                 success: function (data) {
-                    $('#EducationTitle').val('');
-                    $('#EducationDescription').val('');
-                    $('#EducationStartDate').val('');
-                    $('#EducationEndDate').val('');
+                    $('.js-educationtitle').val('');
+                   $('.js-educationdescription').val('');
+                    $('.js-educationstart').val('');
+                    $('.js-educationend').val('');
                     ed = '<div class="singleEducation col-xs-12 col-md-12">';
                     ed += '<p>' + data.title + '</p>';
                     ed += '<p>' + data.description + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                     ed += '</div>';
                     $('.educationData').append(ed);
+                    $('.js-educationend').closest('.popup').find('.closePopup').trigger('click');
                 },
                 dataType: 'json'
             });
 
         }
+        // Replace the search result table on load.
+if (('localStorage' in window) && window['localStorage'] !== null) {
+    if ('results' in localStorage && window.location.hash=="") {
+        $(".js-results-container").html(localStorage.getItem('results'));
+    }
+}
+
+// Save the search result table when leaving the page.
+$(window).unload(function () {
+    if (('localStorage' in window) && window['localStorage'] !== null) {
+        if($(".js-results-container").length > 0){
+           var form = $(".js-results-container").html();
+        localStorage.setItem('results', form); 
+        }
+        
+    }
+});
+        
         
           function saveExperience() {
             event.preventDefault();
@@ -317,12 +398,24 @@ $(document).ready(function ($) {
                 $('.js-popup-skills').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
             }
+            if($(this).hasClass('js-add-language')){
+                $('.js-popup-languages').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
+            }
             if($(this).hasClass('js-com')){
                 $('.js-loginformcompany').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
             }
             if($(this).hasClass('js-us')){
                 $('.js-loginformuser').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
+            }
+            if($(this).hasClass('js-add-education')){
+                $('.js-popup-add-education').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
+            }
+            if($(this).hasClass('js-add-experience')){
+                $('.js-popup-add-experience').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
             }
         }

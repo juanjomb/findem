@@ -11,7 +11,12 @@ class LanguagesController extends AppController {
 
 
     public function index() {
-        $this->set('languages', $this->Language->find('all'));
+        $this->paginate = array(
+            'limit' => 10,
+            'order' => array('title' => 'desc')
+        );
+        $languages = $this->paginate('Language');
+        $this->set('languages', $languages);
     }
 
     public function view($id) {
@@ -84,7 +89,14 @@ class LanguagesController extends AppController {
 
         return $this->redirect(array('action' => 'index'));
     }
-
+    public function getLanguage(){
+        if ($this->request->is('ajax')) {           
+            $this->autoRender = false;
+            $languages = $this->Language->find('all', array(
+                'conditions'=>array('Language.title LIKE ' => $this->request->data['sk'].'%')));
+            return json_encode($languages);
+         }
+    }
     private function getLists($language = null) {
 
        

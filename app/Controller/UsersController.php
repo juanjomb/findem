@@ -29,7 +29,12 @@ class UsersController extends AppController {
     }
 
     public function index() {
-        $this->set('users', $this->User->find('all'));
+        $this->paginate = array(
+            'limit' => 10,
+            'order' => array('name' => 'desc')
+        );
+        $users = $this->paginate('User');
+        $this->set('users', $users);
     }
 
     public function isAdmin($user) {
@@ -41,9 +46,10 @@ class UsersController extends AppController {
     }
     
     public function inbox(){
-        $message = $this->User->SentMessage->find('first',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
-     $sent = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id'))));
-     $received = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.to_id' => $this->Session->read('Auth.User.id'))));
+        $order=array('SentMessage.created'=>'DESC');
+        $message = $this->User->SentMessage->find('first',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id')),'order'=>array('SentMessage.created'=>'DESC')));
+     $sent = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id')),'order'=>array('SentMessage.created'=>'DESC')));
+     $received = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.to_id' => $this->Session->read('Auth.User.id')),'order'=>array('SentMessage.created'=>'DESC')));
      $this->set(compact('message','sent','received'));
     }
     
@@ -181,9 +187,10 @@ class UsersController extends AppController {
         $languages = $this->User->Language->find('list');
         $categories = $this->User->Category->find('list');
         $userskills = $this->User->UserSkill->find('all',array('conditions' => array('UserSkill.user_id' => $user['User']['id'])));
+        $userlanguages = $this->User->UserLanguage->find('all',array('conditions' => array('UserLanguage.user_id' => $user['User']['id'])));
         $experiences = $this->User->Experience->find('all', array('conditions' => array('Experience.user_id' => $user['User']['id'])));
         $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
-        $this->set(compact('categories','regions','experiences','years','userskills','skills', 'educations','languages'));
+        $this->set(compact('categories','regions','experiences','years','userskills','skills', 'educations','languages','userlanguages'));
     }
 
     public function getProvinces($region_id) {
@@ -198,7 +205,7 @@ class UsersController extends AppController {
     }
 
     public function saveEducation() {
-        if ($this->request->is('ajax')) {
+        if ($this->request->is('ajax')) { 
             $this->autoRender = false;
             $this->User->Education->create();
             if ($this->User->Education->save($this->request->data)) {
@@ -240,6 +247,29 @@ class UsersController extends AppController {
             }
     }
     
+      public function saveLanguage() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            $conditions = array(
+                'UserLanguage.user_id'=>$this->Session->read('Auth.User.id'),
+                'UserLanguage.language_id'=>$this->request->data['id']
+                );
+            $userskill=$this->User->UserLanguage->find('all',  compact('conditions'));
+            if(!$userskill){
+            $this->User->UserLanguage->create();
+            $datos['user_id'] = $this->Session->read('Auth.User.id');
+            $datos['language_id'] = $this->request->data['id'];
+            if ($this->User->UserLanguage->save($datos)) {
+                echo json_encode($datos);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+            }
+            
+            }
+    }
+    
     
        public function saveExperience() {
         if ($this->request->is('ajax')) {
@@ -266,6 +296,20 @@ class UsersController extends AppController {
             }
         } 
     }
+    
+    public function removeLanguage(){
+       if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            if ($this->User->UserLanguage->deleteAll(array('UserLanguage.user_id' => $this->Session->read('Auth.User.id'),
+                'UserLanguage.language_id' => $this->request->data['id']))) {
+                $data['ok']=1;
+                echo json_encode($data);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        } 
+    }
 
     public function search() {
             $this->getLists();
@@ -280,7 +324,7 @@ class UsersController extends AppController {
                     }
                     $fields=array('UserSkill.user_id');
             		$users=$this->User->UserSkill->find('list',  compact('fields','conditions'));
-                        $conditions = array();
+                        $conditions = array('User.role'=>'user');
                         $conditions['and']['User.id']=$users;
             	}
             	

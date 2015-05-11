@@ -15,16 +15,17 @@
         </div>
     </div>
     <?php if($user['User']['role']=='user'){ ?>
-    <div class="dataBlock row">
+    <div class="dataBlock educationData row">
         <div class="col-xs-12 col-md-8">
-            <h3>Education</h3>
+            <h3>Formación</h3>
         </div>
+        <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
         <div class="col-xs-12 col-md-4">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary addAjax" data-toggle="modal" data-target="#educationModal">
-                <i class="fa fa-plus"></i> Add education
+            <button type="button" class="profileadd js-add-education">
+                <i class="fa fa-institution"></i> Añadir formación
             </button>
         </div>
+        <?php  } ?>
         <?php
         foreach ($educations as $education) {
             ?>
@@ -34,16 +35,17 @@
             </div>
         <?php } ?>
     </div>
-    <div class="dataBlock row">
+    <div class="dataBlock experienceData row">
         <div class="col-xs-12 col-md-8">
-            <h3>Experience</h3>
+            <h3>Experiencia</h3>
         </div>
+        <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
         <div class="col-xs-12 col-md-4">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary addAjax" data-toggle="modal" data-target="#experienceModal">
-                <i class="fa fa-plus"></i> Add experience
+            <button type="button" class="profileadd js-add-experience">
+                <i class="fa fa-briefcase"></i> Añadir experiencia
             </button>
         </div>
+        <?php  } ?>
         <?php
         foreach ($experiences as $experience) {
             ?>
@@ -54,90 +56,103 @@
             </div>
         <?php } ?>
     </div>
-    <div class="dataBlock row js-skills-block">
-        <h3>Skills
+    <div class="dataBlock row">
+        <div class="col-xs-12 col-md-8">
+            <h3>Habilidades</h3>
+        </div>
            <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
-            <i class="fa fa-plus-circle addSkill js-add-skill"></i>
+            <div class="col-xs-12 col-md-4">
+            <button type="button" class="profileadd js-add-skill">
+                <i class="fa fa-cubes"></i> Añadir habilidad
+            </button>
+        </div>
             <?php } ?>
-        </h3>
+        <div class="col-md-12 js-skills-block">
         <?php
+        
         foreach ($userskills as $skill) {
             ?>
-            <p class="skillPill" data="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title'].' '; 
+            <p class="skillPill" data="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title'].'   '; 
             if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeSkill"></span>
          <?php   }
 ?> </p>
         <?php } ?>
 
+</div>
+    </div>
+        <div class="dataBlock row">
+        <div class="col-xs-12 col-md-8">
+            <h3>Idiomas</h3>
+        </div>
+           <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+            <div class="col-xs-12 col-md-4">
+            <button type="button" class="profileadd js-add-language">
+                <i class="fa fa-language"></i> Añadir Idioma
+            </button>
+        </div>
+            <?php } ?>
+        <div class="col-md-12 js-languages-block">
+        <?php
+        
+        foreach ($userlanguages as $languages) {
+            ?>
+            <p class="skillPill" data="<?php print $languages['Language']['id']?>"><?php print $languages['Language']['title'].'   '; 
+            if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+                <span class="fa fa-trash js-removeLanguage"></span>
+         <?php   }
+?> </p>
+        <?php } ?>
 
+</div>
     </div>
     <?php } ?>
 </div>
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="Add Education" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add education</h4>
-            </div>
-
-            <?php echo $this->Form->create('Education') ?>
-
+<div class="popupBg">  
+        <div class="popup js-popup-add-education">
+            <i class="fa fa-close closePopup"></i>
+            <h3>Añadir educación</h3>
             <div class="form-group">
                 <?php
-                echo $this->Form->hidden('user_id', array('value' => $user['User']['id']));
-                echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control',
+                echo $this->Form->hidden('user_id', array('value' => $user['User']['id'],'class'=>'js-educationuser'));
+                echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-educationtitle',
                     'div' => 'col-xs-12 col-md-12'
                 ));
                 echo $this->Form->input('description', array('rows' => '3',
-                    'class' => 'col-xs-12 col-md-12 form-control',
+                    'class' => 'col-xs-12 col-md-12 form-control js-educationdescription',
                     'div' => 'col-xs-12 col-md-12'
                 ));
                 echo $this->Form->input('start_date', array(
                     'type' => 'select',
                     'options' => $years,
-                    'class' => 'col-xs-12 col-md-12 form-control js-startdate',
+                    'class' => 'col-xs-12 col-md-12 form-control js-startdate js-educationstart',
                     'div' => 'col-xs-12 col-md-6'
                 ));
                 echo $this->Form->input('end_date', array(
                     'type' => 'select',
-                    'class' => 'col-xs-12 col-md-12 form-control js-enddate',
+                    'class' => 'col-xs-12 col-md-12 form-control js-enddate js-educationend',
                     'div' => 'col-xs-12 col-md-6 '
                 ));
+                echo '<div class="col-xs-4 col-md-8 "></div>';
                 $options = array(
                     'label' => 'Save Education',
-                    'class' => 'btn btn-default saveEducation',
+                    'class' => 'btn btn-default col-xs-8 col-md-4 saveEducation',
                     'div' => false
                 );
+                echo $this->Form->end($options);
                 ?>
 
             </div>
-
-            <div class="modal-footer">
-<?php
-echo $this->Form->end($options);
-?>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
         </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="Add Experience" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add education</h4>
-            </div>
-
-<?php echo $this->Form->create('Experience') ?>
+    </div> 
+<div class="popupBg">  
+        <div class="popup js-popup-add-experience">
+            <i class="fa fa-close closePopup"></i>
+            <h3>Añadir experiencia</h3>
+           <?php echo $this->Form->create('Experience') ?>
 
             <div class="form-group">
 <?php
@@ -164,21 +179,19 @@ echo $this->Form->input('end_date', array(
     'class' => 'col-xs-12 col-md-12 form-control js-enddate',
     'div' => 'col-xs-12 col-md-6 '
 ));
+echo '<div class="col-xs-4 col-md-8 "></div>';
 $options = array(
     'label' => 'Save Experience',
-    'class' => 'btn btn-default saveExperience',
+    'class' => 'btn btn-default col-xs-8 col-md-4 saveExperience',
     'div' => false
 );
-?>
-
-            </div>
-
-            <div class="modal-footer">
-<?php
 echo $this->Form->end($options);
 ?>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            </div>
+
+
             </div>
         </div>
-    </div>
-</div>
+    </div> 
+

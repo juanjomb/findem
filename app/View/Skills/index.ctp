@@ -1,3 +1,4 @@
+<?php $paginator = $this->Paginator;?>
 <div class="container">
     <div class="row">
 
@@ -40,5 +41,22 @@
                     <?php } ?>
                     <?php unset($skill); ?>
         </table>
+         <div class='paging'>
+ 
+        <?php echo $paginator->first("Primera");
+         
+        
+        if($paginator->hasPrev()){
+            echo $paginator->prev("Anterior");
+        }
+         
+        echo $paginator->numbers(array('modulus' => 2));
+         
+        if($paginator->hasNext()){
+            echo $paginator->next("Siguiente");
+        }
+        echo $paginator->last("Última");?>
+     
+    </div>  
     </div>
 </div>
