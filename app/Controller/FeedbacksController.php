@@ -11,7 +11,12 @@ class FeedbacksController extends AppController {
 
 
     public function index() {
-        $this->set('feedbacks', $this->Feedback->find('all'));
+        $this->paginate = array(
+            'limit' => 10,
+            'order' => array('created' => 'desc')
+        );
+        $feedbacks = $this->paginate('Feedback');
+        $this->set('feedbacks', $feedbacks);
     }
 
     public function view($id) {

@@ -16,6 +16,7 @@ $(document).ready(function ($) {
         $('.js-add-language').on('click', showPopup);
         $('.js-add-education').on('click', showPopup);
         $('.js-add-experience').on('click', showPopup);
+        $('.js-reply-feedback').on('click', showPopup);
         $('.js-us').on('click', showPopup);
         $('.js-com').on('click', showPopup);
         $('.js-search-skill').on('keyup',searchSkill);
@@ -30,6 +31,7 @@ $(document).ready(function ($) {
         $('.js-search-sm').on('click',searchUsers);
         $('.js-bookmark').on('click',bookmarkUser);
         $('.js-unbookmark').on('click',unbookmarkUser);
+        $('.js-send-reply').on('click',sendReply);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -418,6 +420,10 @@ $(window).unload(function () {
                 $('.js-popup-add-experience').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
             }
+            if($(this).hasClass('js-reply-feedback')){
+                $('.js-popup-reply-feedback').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
+            }
         }
         
         function closePopup() {
@@ -508,7 +514,22 @@ function unbookmarkUser(){
             });
 }
 
-
+function sendReply(){
+    event.preventDefault();
+            var message = $('#ResponseMessage').val();
+            var mail = $('#ResponseEmail').val();
+            $.ajax({
+                type: "POST",
+                url: "/feedbacks/sendReply/",
+                data: {
+                    message:message,
+                    mail:mail
+                },
+                success: function (data) {
+                },
+                dataType: 'json'
+            });
+}
 
 
 

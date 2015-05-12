@@ -18,9 +18,10 @@ $user = $this->Session->read('user'); ?>
         if ($user['User']['role'] == 'admin') {
             ?>
     <a href="/users/index/"><i class="fa fa-users"></i>     Usuarios</a>
+    <a href="/feedbacks/index/"><i class="fa fa-bullhorn"></i>     Feedbacks</a>
     <a href="/languages/index/"><i class="fa fa-inbox"></i>    Idiomas</a>
     <a href="/skills/index/"><i class="fa fa-institution"></i>     Habilidades</a>
-    <a href="/categories/index/"><i class="fa fa-institution"></i>     Categorías</a>
+    <a href="/categories/index/"><i class="fa fa-tags"></i>     Categorías</a>
             <?php
         }
         if ($user['User']['role'] == 'company') {

@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-xs-12 col-md-12"> <h2>Languages</h2></div>
+        <div class="col-xs-12 col-md-12"> <h2>Idiomas</h2></div>
     </div>
 
     <div class="row">
@@ -17,8 +17,9 @@
     <div class="row">
         <table class="table table-hover">
             <tr>
-                <th>Title</th>
-                <th>Actions</th>
+                <th>Nombre</th>
+                <th>Fecha de creación</th>
+                <th>Acciones</th>
 
             </tr>
 
@@ -29,6 +30,7 @@
                         <?php echo $this->Html->link($language['Language']['title'], array('controller' => 'languages', 'action' => 'view', $language['Language']['id']));
                         ?>
                     </td>
+                    <td><?php echo $language['Language']['created'] ;?></td>
                     <td>
                         <?php
                         echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'languages', 'action' => 'edit', $language['Language']['id']), array('escape' => false)
