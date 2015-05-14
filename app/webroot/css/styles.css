@@ -92,8 +92,19 @@ html,body{
     padding-right:  30px;
 }
 
-
-
+.profile-category{
+    font-size: 2rem;
+    text-align: center;
+}
+.profile-data{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 40%;
+    float: left;
+}
+.js-location{
+    cursor: pointer;
+}
 .popup{
     position: fixed;
     margin-left: 25%;
@@ -107,6 +118,12 @@ html,body{
     padding: 5%;
     
 }
+.user-map{
+    width: 90%;
+    height: 500px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 .js-search-skill{
     font-size: 1.5rem;
     color: #276169;
@@ -114,6 +131,13 @@ html,body{
     margin-top: 5%;
 }
 .js-optionSkills{
+    position: relative;
+    border: 1px solid #276169;
+    top: -2px;
+    width: 70%;
+    margin-left: 15%;
+}
+.js-optionLanguages{
     position: relative;
     border: 1px solid #276169;
     top: -2px;
@@ -132,6 +156,26 @@ html,body{
     margin-top: 5%;
 }
 .profileadd:hover{
+    border:none;
+    background-color: #276169;
+    outline:none;
+    color: white;
+}
+
+.reply-feedback-btn{
+    border: 2px solid #0A3238;
+    background-color: Transparent;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color:#0A3238;
+    width: 20%;
+    margin-left: 40%;
+    height: 40px;
+    outline:none;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-bottom:5%;
+}
+.reply-feedback-btn:hover{
     border:none;
     background-color: #276169;
     outline:none;
@@ -199,12 +243,7 @@ html,body{
     border-radius: 5px;
     box-shadow: 3px 3px 15px #888888;
 }
-.profileContainer p{
-    color: #0A3238;
-    font-size: 1rem;
 
-
-}
 .dataBlock .skillPill{
     padding: 1%;
     width: auto;

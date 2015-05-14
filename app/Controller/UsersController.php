@@ -449,5 +449,7 @@ class UsersController extends AppController {
             $this->Session->setFlash(__('Unable to send your message.'));
         }
     }
+    
+   
 
 }

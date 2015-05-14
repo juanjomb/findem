@@ -1,7 +1,6 @@
 $(document).ready(function ($) {
     $(window).load(function () {
 
-
         $("#showLeftPush").on('click', showMenu);
         $(document).on('scroll', resizeHeader);
         $('.js-region').on('change', getProvinces);
@@ -16,7 +15,8 @@ $(document).ready(function ($) {
         $('.js-add-language').on('click', showPopup);
         $('.js-add-education').on('click', showPopup);
         $('.js-add-experience').on('click', showPopup);
-        $('.js-reply-feedback').on('click', showPopup);
+        $('.js-location').on('click', showPopup);
+        $('.js-reply-feedback').on('click', showReplyForm);
         $('.js-us').on('click', showPopup);
         $('.js-com').on('click', showPopup);
         $('.js-search-skill').on('keyup',searchSkill);
@@ -37,6 +37,8 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
+        $('body').niceScroll({mousescrollstep: 100});
+        $('.js-msgbodycontainer').niceScroll();
       
         $(document).on("scroll", function () {
             if ($(window).scrollTop() > $(window).height() / 2) {
@@ -399,39 +401,51 @@ $(window).unload(function () {
             if($(this).hasClass('js-add-skill')){
                 $('.js-popup-skills').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-language')){
                 $('.js-popup-languages').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-com')){
                 $('.js-loginformcompany').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-us')){
                 $('.js-loginformuser').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-education')){
                 $('.js-popup-add-education').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-experience')){
                 $('.js-popup-add-experience').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
-            if($(this).hasClass('js-reply-feedback')){
-                $('.js-popup-reply-feedback').closest('.popupBg').show();
+            if($(this).hasClass('js-location')){
+               
+                $('.js-popup-view-map').closest('.popupBg').show();
+                 google.maps.event.trigger(map, 'resize');
                 $('body').css('overflow-y','hidden');
+                 $("body").getNiceScroll().hide();
             }
         }
         
         function closePopup() {
             $(this).closest('.popupBg').hide();
             $('body').css('overflow-y','auto');
+            $("body").getNiceScroll().show();
         }
         
-        
+        function showReplyForm(){
+            $('.reply-feedback').toggle(500);
+        }
         
         function populateYears() {
             for ($i = $(this).val(); $i <= 2022; $i++) {

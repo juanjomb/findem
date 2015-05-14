@@ -43,6 +43,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
                 echo $this->Html->script('https://code.jquery.com/ui/1.11.2/jquery-ui.min.js');
                 echo $this->Html->script('util');
+                echo $this->Html->script('jquery.nicescroll.min');
                 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

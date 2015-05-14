@@ -1,5 +1,5 @@
 <?php
-
+App::uses('CakeEmail', 'Network/Email');
 class FeedbacksController extends AppController {
 
     public $helpers = array('Html', 'Form');
@@ -91,6 +91,21 @@ class FeedbacksController extends AppController {
     }
 
 
+        
+        public function sendReply(){
+            if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            	try {
+                        $email = new CakeEmail('gmail');
+                        $email->from('no_reply@findem.es','Findem');
+                        $email->to($this->request->data['mail']);
+                        $email->subject('Respuesta a su consulta');
+                        $success = $email->send($this->request->data['message']);
+                    } catch (SocketException $e) {
+                        $this->log(sprintf('Error enviando mail : %s', $e->getMessage()));
+                    }
+        }
+        }
   
 
 }

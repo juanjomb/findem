@@ -9,9 +9,13 @@
         </div>
         <div class="col-xs-12 col-md-8">
             <h2><?php echo h($user['User']['name']) . " " . h($user['User']['surname1']) . " " . h($user['User']['surname2']); ?></h2>
-            <p><?php echo h($user['User']['description']); ?></p>
-            <p><?php echo h($user['User']['phone']); ?></p>
-            <p><?php echo h($user['User']['email']); ?></p>
+            <p class="profile-category"><?php echo h($user['Category']['title']); ?></p>
+            <p class="profile-data"><?php echo h($user['User']['description']); ?></p>
+            <p class="profile-data"><?php echo h($user['User']['phone']); ?></p>
+            <p class="profile-data"><?php echo h($user['User']['email']); ?></p>
+            <p class="profile-data js-location" data-latitude="<?php echo h($user['City']['latitud']); ?>" data-longitude="<?php echo h($user['City']['longitud']); ?>"><i class="fa fa-map-marker"></i><?php echo ' '.h($user['City']['municipio']); ?></p>
+            <p class="profile-data"><?php echo h($user['Province']['province']); ?></p>
+            <p class="profile-data"><?php echo h($user['Region']['comunidad']); ?></p>
         </div>
     </div>
     <?php if($user['User']['role']=='user'){ ?>
@@ -31,7 +35,7 @@
             ?>
             <div class="singleEducation col-xs-12 col-md-12">
                 <p><?php print $education['Education']['title']; ?></p>
-                <p><?php print $education['Education']['description']; ?></p>
+                <p><?php print $education['Education']['description'] . ' ' . $education['Education']['start_date'] . ' - ' . $education['Education']['end_date']; ; ?></p>
             </div>
         <?php } ?>
     </div>
@@ -194,4 +198,16 @@ echo $this->Form->end($options);
             </div>
         </div>
     </div> 
+    
+    <div class="popupBg">  
+        <div class="popup js-popup-view-map">
+            <i class="fa fa-close closePopup"></i>
 
+            <div class="user-map" id="mapuser"></div>
+
+
+            </div>
+        </div>
+    </div> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<?php echo $this->Html->script('mapview', array('inline' => false));?>
