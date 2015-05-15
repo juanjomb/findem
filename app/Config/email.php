@@ -5,7 +5,7 @@ class EmailConfig {
         'port' => 465,
 		'timeout' => 3,
         'username' => 'juanjosteiger@gmail.com',
-        'password' => '17032007',
+        'password' => '',
         'transport' => 'Smtp',
 		'auth' => true,
 		'emailFormat' => 'html'
