@@ -5,7 +5,7 @@
         <?php
         echo $this->Form->input('title', array(
             'type' => 'text',
-            'class' => 'col-xs-12 col-md-12 form-control',
+            'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-6'
         ));
         $options = array(

@@ -2,6 +2,7 @@ $(document).ready(function ($) {
     $(window).load(function () {
 
         $("#showLeftPush").on('click', showMenu);
+        $('form').on('submit',validateForm);
         $(document).on('scroll', resizeHeader);
         $('.js-region').on('change', getProvinces);
         $('.js-province').on('change', getCities);
@@ -545,7 +546,53 @@ function sendReply(){
             });
 }
 
+function validateForm(){
+	
+		var noerror = true;
+		$('.error-message').hide();		
+		$(this).find('input').removeClass('error-input');
+		
+		
+		$(this).find('.js-required').each(function(index, value){
+		  if($(this).val() == ''){
+		  	
+                            $(this).addClass('error-input');
+                            $('.error-message.js-fill-inputs').show();
+		  	
+	  		
+	  		
+	  		noerror = false;
+		  }
+		}); 
+		
+		$(this).find('.js-email').each(function(index, value){
+		  if(!validateEmail($(this).val())){
+		  	$(this).addClass('error-input');
+		  	$('.error-message.js-email-inputs').show();
+		  	noerror = false;
+		  }
+		});	
+		if(!noerror){
+			return false;
+		}
+		$(this).find('.js-password').each(function(index, value){
+		  if($(this).val().length < 8){
+		  	$(this).addClass('error-input');
+		  	$('.error-message.js-password-length').show();
+		  	noerror = false;
+		  }
+		});	
+			
+		if(!noerror){
+			return false;
+		}
+		
+}
 
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
 
     });
 });

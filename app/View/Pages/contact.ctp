@@ -7,7 +7,7 @@
         echo $this->Form->input('email',array(
             'label' => false,
             'type' => 'mail',
-            'class'=>'feedbackInput',
+            'class'=>'feedbackInput js-required js-email',
             'placeholder'=>"Tu email"
             
         ));
@@ -16,7 +16,7 @@
             'type' => 'textarea',
             'rows' => '8',
             'cols' => '8',
-            'class'=>'feedbackTextarea',
+            'class'=>'feedbackTextarea js-required',
             'placeholder'=>"Escribe aquí tu mensaje"
             
         ));

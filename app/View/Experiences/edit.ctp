@@ -11,20 +11,20 @@
         echo $this->Form->input('start_date', array(
             'type' => 'select',
             'options' => $years,
-            'class' => 'col-xs-12 col-md-12 form-control js-startdate',
+            'class' => 'col-xs-12 col-md-12 form-control js-startdate js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('end_date', array(
             'type' => 'select',
-            'class' => 'col-xs-12 col-md-12 form-control js-enddate',
+            'class' => 'col-xs-12 col-md-12 form-control js-enddate js-required',
             'div' => 'col-xs-12 col-md-4 '
         ));
         echo $this->Form->input('company', array(
-            'class' => 'col-xs-12 col-md-12 form-control',
+            'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
          echo $this->Form->input('description', array('rows' => '3',
-            'class' => 'col-xs-12 col-md-12 form-control',
+            'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-8'
         ));
         $options = array(

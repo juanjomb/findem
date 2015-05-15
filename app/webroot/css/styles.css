@@ -85,6 +85,9 @@ html,body{
     text-align: center;
     color: #276169;
 }
+.error-input{
+    box-shadow: 3px 3px 15px indianred;
+}
 .error-page-message{
     font-size: 1.5rem;
     text-align: center;

@@ -96,14 +96,16 @@ class FeedbacksController extends AppController {
             if ($this->request->is('ajax')) {
             $this->autoRender = false;
             	try {
-                        $email = new CakeEmail('gmail');
-                        $email->from('no_reply@findem.es','Findem');
-                        $email->to($this->request->data['mail']);
-                        $email->subject('Respuesta a su consulta');
-                        $success = $email->send($this->request->data['message']);
-                    } catch (SocketException $e) {
-                        $this->log(sprintf('Error enviando mail : %s', $e->getMessage()));
+                    $email = new CakeEmail('gmail');
+                    $email->from('no-reply@gmail.com','Findem');
+                    $email->replyTo('no-reply@gmail.com','Findem');
+                    $email->to($this->request->data['mail']);
+                    $email->subject('Respuesta a su consulta');
+                    $success = $email->send($this->request->data['message']);
+                } catch (SocketException $e) {
+                    $this->log(sprintf('Error enviando mail : %s', $e->getMessage()));
                     }
+                    
         }
         }
   

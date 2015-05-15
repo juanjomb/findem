@@ -4,23 +4,23 @@
     <div class="form-group">
         <?php
         
-        echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'
         )); 
        
-        echo $this->Form->input('name', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('name', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'));
 
-        echo $this->Form->input('surname1', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('surname1', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'
         ));
-        echo $this->Form->input('surname2', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('surname2', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'
         ));
         echo $this->Form->input('category_id', array(
             'options' => $categories,
             'empty' => '(Selecciona una categoría)',
-            'class' => 'col-xs-12 col-md-12 form-control',
+            'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
         ?>
@@ -35,7 +35,7 @@
             'div' => 'col-xs-12 col-md-3'
         ));
         echo $this->Form->input('description', array('rows' => '3',
-            'class' => 'col-xs-12 col-md-12 form-control',
+            'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-6'
         ));
         ?>
@@ -43,9 +43,9 @@
     <div class="clearfix"></div>
     <div class="form-group">
         <?php
-        echo $this->Form->input('email', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('email', array('class' => 'col-xs-12 col-md-12 form-control js-required js-email',
             'div' => 'col-xs-12 col-md-4'));
-        echo $this->Form->input('phone', array('class' => 'col-xs-12 col-md-12 form-control',
+        echo $this->Form->input('phone', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'));
         echo $this->Form->hidden('image');
         echo $this->Form->input('upload', array('type' => 'file',
@@ -59,18 +59,18 @@
         echo $this->Form->input('region_id', array(
             'options' => $regions,
             'empty' => '(Selecciona tu comunidad)',
-            'class' => 'js-region col-xs-12 col-md-12 form-control',
+            'class' => 'js-region col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('province_id', array(
             'empty' => '(Selecciona tu provincia)',
-            'class' => 'js-province col-xs-12 col-md-12 form-control',
+            'class' => 'js-province col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
 
         echo $this->Form->input('city_id', array(
             'empty' => '(Selecciona tu ciudad)',
-            'class' => 'js-city col-xs-12 col-md-12 form-control',
+            'class' => 'js-city col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
 

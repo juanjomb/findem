@@ -61,6 +61,7 @@ class UsersController extends AppController {
         }
 
         $user = $this->User->findById($id);
+        
         $this->getLists($user);
 
         if (!$user) {
@@ -119,6 +120,8 @@ class UsersController extends AppController {
         if (!$user) {
             throw new NotFoundException(__('Invalid user'));
         }
+        if($user['User']['id']== $this->Session->read('Auth.User.id')||
+             $this->Session->read('Auth.User.role')=='admin'){
         $this->getLists($user);
         if ($this->request->is(array('post', 'put'))) {
             $this->User->id = $id;
@@ -153,6 +156,9 @@ class UsersController extends AppController {
         if (!$this->request->data) {
             $this->request->data = $user;
         }
+             }else{
+                 $this->redirect('/');
+             }
     }
 
     public function delete($id) {
@@ -190,6 +196,21 @@ class UsersController extends AppController {
         $userlanguages = $this->User->UserLanguage->find('all',array('conditions' => array('UserLanguage.user_id' => $user['User']['id'])));
         $experiences = $this->User->Experience->find('all', array('conditions' => array('Experience.user_id' => $user['User']['id'])));
         $educations = $this->User->Education->find('all', array('conditions' => array('Education.user_id' => $user['User']['id'])));
+        if($user){
+            if(!empty($user[$this->modelClass]['region_id'])){
+                $conditions = array('region_id' => $user[$this->modelClass]['region_id']);
+                $fields=array('Province.province');
+                $this->User->Province->recursive = -1;
+                $provinces = $this->User->Province->find('list',compact('conditions','fields'));        
+            }
+            if(!empty($user[$this->modelClass]['province_id'])){
+                $conditions = array('province_id' => $user[$this->modelClass]['province_id']);
+                $fields=array('City.municipio');
+                $this->User->City->recursive = -1;
+                $cities = $this->User->City->find('list',compact('conditions','fields'));        
+            }
+            $this->set(compact('provinces','cities'));
+        }  
         $this->set(compact('categories','regions','experiences','years','userskills','skills', 'educations','languages','userlanguages'));
     }
 
@@ -317,17 +338,16 @@ class UsersController extends AppController {
                      
             $this->autoRender=false;
             if (!empty($this->request->data)) {
-                $conditions = array();
+                
                 if(!empty($this->request->data['skills'])){
                     foreach ($this->request->data['skills'] as $skill){
                         $conditions['and']['UserSkill.skill_id'] =  $skill;
                     }
                     $fields=array('UserSkill.user_id');
             		$users=$this->User->UserSkill->find('list',  compact('fields','conditions'));
-                        $conditions = array('User.role'=>'user');
                         $conditions['and']['User.id']=$users;
             	}
-            	
+            	$conditions['and']['User.role'] = 'user';
             	if(!empty($this->request->data['region_id'])){
             		$conditions['and']['User.region_id'] =$this->request->data['region_id'];
             	}

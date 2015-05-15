@@ -25,7 +25,7 @@
             echo $this->Form->hidden('email', array('value' => $feedback['Feedback']['email']));
 
             echo $this->Form->input('message', array('rows' => '3',
-                'class' => 'col-xs-12 col-md-12 feedbackTextarea',
+                'class' => 'col-xs-12 col-md-12 feedbackTextarea js-required',
                 'div' => 'col-xs-12 col-md-12',
                 'label'=> false
             ));

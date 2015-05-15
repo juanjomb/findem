@@ -122,22 +122,22 @@
             <div class="form-group">
                 <?php
                 echo $this->Form->hidden('user_id', array('value' => $user['User']['id'],'class'=>'js-educationuser'));
-                echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-educationtitle',
+                echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-educationtitle js-required',
                     'div' => 'col-xs-12 col-md-12'
                 ));
                 echo $this->Form->input('description', array('rows' => '3',
-                    'class' => 'col-xs-12 col-md-12 form-control js-educationdescription',
+                    'class' => 'col-xs-12 col-md-12 form-control js-educationdescription js-required',
                     'div' => 'col-xs-12 col-md-12'
                 ));
                 echo $this->Form->input('start_date', array(
                     'type' => 'select',
                     'options' => $years,
-                    'class' => 'col-xs-12 col-md-12 form-control js-startdate js-educationstart',
+                    'class' => 'col-xs-12 col-md-12 form-control js-startdate js-educationstart js-required',
                     'div' => 'col-xs-12 col-md-6'
                 ));
                 echo $this->Form->input('end_date', array(
                     'type' => 'select',
-                    'class' => 'col-xs-12 col-md-12 form-control js-enddate js-educationend',
+                    'class' => 'col-xs-12 col-md-12 form-control js-enddate js-educationend js-required',
                     'div' => 'col-xs-12 col-md-6 '
                 ));
                 echo '<div class="col-xs-4 col-md-8 "></div>';
@@ -161,29 +161,30 @@
             <div class="form-group">
 <?php
 echo $this->Form->hidden('user_id', array('value' => $user['User']['id']));
-echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control',
+echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-required',
     'div' => 'col-xs-12 col-md-12'
 ));
 echo $this->Form->input('company', array('rows' => '3',
-    'class' => 'col-xs-12 col-md-12 form-control',
+    'class' => 'col-xs-12 col-md-12 form-control js-required',
     'div' => 'col-xs-12 col-md-12'
 ));
 echo $this->Form->input('description', array('rows' => '3',
-    'class' => 'col-xs-12 col-md-12 form-control',
+    'class' => 'col-xs-12 col-md-12 form-control js-required',
     'div' => 'col-xs-12 col-md-12'
 ));
 echo $this->Form->input('start_date', array(
     'type' => 'select',
     'options' => $years,
-    'class' => 'col-xs-12 col-md-12 form-control js-startdate',
+    'class' => 'col-xs-12 col-md-12 form-control js-startdate js-required',
     'div' => 'col-xs-12 col-md-6'
 ));
 echo $this->Form->input('end_date', array(
     'type' => 'select',
-    'class' => 'col-xs-12 col-md-12 form-control js-enddate',
+    'class' => 'col-xs-12 col-md-12 form-control js-enddate js-required',
     'div' => 'col-xs-12 col-md-6 '
 ));
 echo '<div class="col-xs-4 col-md-8 "></div>';
+echo '<p class="error-message"> </p>';
 $options = array(
     'label' => 'Save Experience',
     'class' => 'btn btn-default col-xs-8 col-md-4 saveExperience',

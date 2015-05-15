@@ -52,7 +52,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
                <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
             'label' => false,
-            'class'=>'loginInput',
+            'class'=>'loginInput js-required',
             'placeholder'=>"Username"
             
         ));
@@ -61,7 +61,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
         ));
         echo $this->Form->input('password',array(
             'label' => false,
-            'class'=>'loginInput',
+            'class'=>'loginInput js-required',
             'placeholder'=>"Password"
             
         ));
@@ -83,7 +83,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
             <?php echo $this->Form->create('User'); 
         echo $this->Form->input('username',array(
             'label' => false,
-            'class'=>'loginInput',
+            'class'=>'loginInput js-required',
             'placeholder'=>"Username"
         ));
         echo $this->Form->hidden('role',array(
@@ -91,7 +91,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
         ));
         echo $this->Form->input('password',array(
             'label' => false,
-            'class'=>'loginInput',
+            'class'=>'loginInput js-required',
             'placeholder'=>"Password"
         ));
     ?>
