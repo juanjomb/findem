@@ -8375,3 +8375,306 @@ Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
 Stack Trace:
 #0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-05-16 10:38:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:38:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:38:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:41:26 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:41:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:47:25 Error: Fatal Error (4): syntax error, unexpected 'get' (T_STRING) in [C:\xampp\htdocs\findem\app\Controller\UsersController.php, line 165]
+2015-05-16 10:47:25 Error: [FatalErrorException] syntax error, unexpected 'get' (T_STRING)
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 165)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 165, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 165, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-16 10:47:39 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:50:08 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:50:58 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:51:50 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:51:54 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:52:11 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/554bd9db-9394-4b9c-975e-1d884fb7e87d
+Stack Trace:
+#0 [internal function]: UsersController->edit('554bd9db-9394-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:52:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:53:31 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/f34e17cb-e836-11e4-83d0-6c626dbc9f30
+Stack Trace:
+#0 [internal function]: UsersController->edit('f34e17cb-e836-1...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:53:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:54:46 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/f34e17cb-e836-11e4-83d0-6c626dbc9f30
+Stack Trace:
+#0 [internal function]: UsersController->edit('f34e17cb-e836-1...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:54:48 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/f34e17cb-e836-11e4-83d0-6c626dbc9f30
+Stack Trace:
+#0 [internal function]: UsersController->edit('f34e17cb-e836-1...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:56:17 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/f34e17cb-e836-11e4-83d0-6c626dbc9f30
+Stack Trace:
+#0 [internal function]: UsersController->edit('f34e17cb-e836-1...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:56:20 Error: [NotFoundException] Invalid user
+Request URL: /users/edit/f34e17cb-e836-11e4-83d0-6c626dbc9f30
+Stack Trace:
+#0 [internal function]: UsersController->edit('f34e17cb-e836-1...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-05-16 10:56:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:57:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:57:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 10:58:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 11:55:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 12:00:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 12:03:18 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\findem\app\Controller\CategoriesController.php, line 82]
+2015-05-16 12:03:18 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /categories/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 82)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 82, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 82, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-16 12:03:45 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\findem\app\Controller\CategoriesController.php, line 105]
+2015-05-16 12:03:45 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /categories/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-16 12:03:47 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\findem\app\Controller\CategoriesController.php, line 105]
+2015-05-16 12:03:47 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /categories/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 105, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-16 12:30:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 12:30:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 12:30:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-16 12:37:32 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\findem\app\View\Users\view.ctp, line 67]
+2015-05-16 12:37:32 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /users/view/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 67, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 67, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-16 12:37:56 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\findem\app\View\Users\view.ctp, line 119]
+2015-05-16 12:37:56 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /users/view/54e38bb1-f964-4777-a1c0-14154fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 119)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 119, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 119, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

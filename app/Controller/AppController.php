@@ -56,4 +56,9 @@ class AppController extends Controller {
         $this->Auth->allow(array('controller' => 'users', 'action' => 'register'));
         $this->Auth->allow('index', 'view','edit','add');
     }
+    function beforeRender() {
+    if($this->name == 'CakeError') {
+        $this->layout = 'error';
+    }
+}
 }

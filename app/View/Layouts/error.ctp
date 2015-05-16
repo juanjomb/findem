@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -14,46 +15,45 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$findemtitle = __d('cake_dev', 'Findem, red de profesionales informáticos');
+$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
+        <title>
+		<?php echo $findemtitle ?>:
 		<?php echo $this->fetch('title'); ?>
-	</title>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<?php
+        
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-
+                echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css');
+                echo $this->Html->css('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css');
+                echo $this->Html->css('http://fonts.googleapis.com/css?family=Quattrocento+Sans');
+                echo $this->Html->css('styles');
+                echo $this->Html->css('http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css'); 
+                
+                
+                echo $this->Html->script('http://code.jquery.com/ui/1.11.3/jquery-ui.js'); 
+                echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
+                echo $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js');
+                echo $this->Html->script('https://code.jquery.com/ui/1.11.2/jquery-ui.min.js');
+                echo $this->Html->script('util');
+                echo $this->Html->script('jquery.nicescroll.min');
+                
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-</head>
-<body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
-</body>
+    </head>
+    <body class="cbp-spmenu-push">
+           <?php
+    echo $this->element('header');
+    echo $this->Session->flash(); 
+    echo $this->fetch('content');?>
+    </body>
 </html>

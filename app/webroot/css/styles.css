@@ -39,6 +39,12 @@ html,body{
 .js-removeSkill{
     cursor: pointer;
 }
+.js-removeExperience{
+    cursor: pointer;
+}
+.js-removeEducation{
+    cursor: pointer;
+}
 .js-removeLanguage {
   cursor: pointer;
 }

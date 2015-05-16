@@ -23,6 +23,8 @@ $(document).ready(function ($) {
         $('.js-search-skill').on('keyup',searchSkill);
         $('.js-search-language').on('keyup',searchLanguage);
         $('.js-removeSkill').on('click', removeSkill);
+        $('.js-removeEducation').on('click', removeEducation);
+        $('.js-removeExperience').on('click', removeExperience);
         $('.js-removeLanguage').on('click', removeLanguage);
         $('.js-single-sent').on('click', showMessageBody);
         $('.js-single-received').on('click', showMessageBody);
@@ -278,6 +280,37 @@ $(document).ready(function ($) {
                     dataType: 'json'
                 });
         }
+        
+         function removeEducation(){
+            var id = $(this).closest('p').attr('data-education');
+            var education = $(this).closest('.singleEducation');
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/removeEducation/",
+                    success: function (data) {
+                        if(data.ok === 1){
+                            education.remove();
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
+        function removeExperience(){
+            var id = $(this).closest('p').attr('data-experience');
+            var experience = $(this).closest('.singleExperience');
+             $.ajax({
+                    type: "POST",
+                    data: {id:id},
+                    url: "/users/removeExperience/",
+                    success: function (data) {
+                        if(data.ok === 1){
+                            experience.remove();
+                        }
+                    },
+                    dataType: 'json'
+                });
+        }
         function getProvinces() {
             region = $(this).val();
             if (region != '') {
@@ -338,11 +371,12 @@ $(document).ready(function ($) {
                     $('.js-educationstart').val('');
                     $('.js-educationend').val('');
                     ed = '<div class="singleEducation col-xs-12 col-md-12">';
-                    ed += '<p>' + data.title + '</p>';
+                    ed += '<p data-education="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeEducation"></span></p>';
                     ed += '<p>' + data.description + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                     ed += '</div>';
                     $('.educationData').append(ed);
                     $('.js-educationend').closest('.popup').find('.closePopup').trigger('click');
+                     $('.js-removeEducation').on('click', removeEducation);
                 },
                 dataType: 'json'
             });
@@ -384,14 +418,17 @@ $(window).unload(function () {
                 success: function (data) {
                     $('#ExperienceTitle').val('');
                     $('#ExperienceDescription').val('');
+                    $('#ExperienceCompany').val('');
                     $('#ExperienceStartDate').val('');
                     $('#ExperienceEndDate').val('');
                     ed = '<div class="singleExperience col-xs-12 col-md-12">';
-                    ed += '<p>' + data.title + '</p>';
+                    ed += '<p data-experience="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeExperience"></span></p>';
                     ed += '<p>' + data.company + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                      ed += '<p>' + data.description + '</p>';
                     ed += '</div>';
                     $('.experienceData').append(ed);
+                    $('#ExperienceEndDate').closest('.popup').find('.closePopup').trigger('click');
+                    $('.js-removeExperience').on('click', removeExperience);
                 },
                 dataType: 'json'
             });

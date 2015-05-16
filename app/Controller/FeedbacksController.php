@@ -11,15 +11,20 @@ class FeedbacksController extends AppController {
 
 
     public function index() {
+         if($this->Session->read('Auth.User.role')=='admin'){
         $this->paginate = array(
             'limit' => 10,
             'order' => array('created' => 'desc')
         );
         $feedbacks = $this->paginate('Feedback');
         $this->set('feedbacks', $feedbacks);
+         } else {
+            $this->redirect('/pages/denied');
+        }
     }
 
     public function view($id) {
+         if($this->Session->read('Auth.User.role')=='admin'){
         if (!$id) {
             throw new NotFoundException(__('Invalid feedback'));
         }
@@ -30,9 +35,13 @@ class FeedbacksController extends AppController {
             throw new NotFoundException(__('Invalid feedback'));
         }
         $this->set('feedback', $feedback);
+         } else {
+            $this->redirect('/pages/denied');
+        }
     }
 
-    public function add() {    
+    public function add() {   
+         if($this->Session->read('Auth.User.role')=='admin'){
         $this->autoRender=false;
             $this->Feedback->create();
             if(!empty($this->request->data)){
@@ -45,9 +54,13 @@ class FeedbacksController extends AppController {
             }
             $this->Session->setFlash(__('Unable to add your feedback.'));
         }
+         } else {
+            $this->redirect('/pages/denied');
+        }
     }
 
     public function edit($id = null) {
+         if($this->Session->read('Auth.User.role')=='admin'){
         if (!$id) {
             throw new NotFoundException(__('Invalid feedback'));
         }
@@ -69,10 +82,14 @@ class FeedbacksController extends AppController {
         if (!$this->request->data) {
             $this->request->data = $feedback;
         }
+         } else {
+            $this->redirect('/pages/denied');
+        }
     }
     private function getLists($feedback = null) {
     }
     public function delete($id) {
+         if($this->Session->read('Auth.User.role')=='admin'){
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
@@ -88,6 +105,9 @@ class FeedbacksController extends AppController {
         }
 
         return $this->redirect(array('action' => 'index'));
+    } else {
+            $this->redirect('/pages/denied');
+        }
     }
 
 

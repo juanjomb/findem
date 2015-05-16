@@ -77,7 +77,7 @@ class UsersController extends AppController {
     }
 
     public function add() {
-
+    if($this->Session->read('Auth.User.role')=='admin'){
         //echo '<pre>';print_r($this->request->data);die();
         $this->getLists();
         $this->User->create();
@@ -109,6 +109,9 @@ class UsersController extends AppController {
             }
             $this->Session->setFlash(__('Unable to add your user.'));
         }
+         }else{
+                 $this->redirect('/pages/denied');
+             }
     }
 
     public function edit($id = null) {
@@ -157,7 +160,7 @@ class UsersController extends AppController {
             $this->request->data = $user;
         }
              }else{
-                 $this->redirect('/');
+                 $this->redirect('/pages/denied');
              }
     }
 
@@ -230,6 +233,8 @@ class UsersController extends AppController {
             $this->autoRender = false;
             $this->User->Education->create();
             if ($this->User->Education->save($this->request->data)) {
+                $id=$this->User->Education->getLastInsertID();
+                $this->request->data['id']=$id;
                 echo json_encode($this->request->data);
             } else {
                 $data['ko']=0;
@@ -297,6 +302,8 @@ class UsersController extends AppController {
             $this->autoRender = false;
             $this->User->Experience->create();
             if ($this->User->Experience->save($this->request->data)) {
+                $id=$this->User->Experience->getLastInsertID();
+                $this->request->data['id']=$id;
                 echo json_encode($this->request->data);
             } else {
                 $data['ko']=0;
@@ -331,8 +338,33 @@ class UsersController extends AppController {
             }
         } 
     }
+    public function removeExperience(){
+       if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            if ($this->User->Experience->deleteAll(array('Experience.id' => $this->request->data['id'] ))) {
+                $data['ok']=1;
+                echo json_encode($data);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        } 
+    }
+   public function removeEducation(){
+       if ($this->request->is('ajax')) {
+            $this->autoRender = false;
+            if ($this->User->Education->deleteAll(array('Education.id' => $this->request->data['id'] ))) {
+                $data['ok']=1;
+                echo json_encode($data);
+            } else {
+                $data['ko']=0;
+                echo json_encode($data);
+            }
+        } 
+    }
 
     public function search() {
+        if($this->Session->read('Auth.User.role')!='user'){
             $this->getLists();
 		if($this->request->is('ajax')){
                      
@@ -368,7 +400,9 @@ class UsersController extends AppController {
 			
             $this->render('/Elements/userresults','ajax');    
         }
-	
+	}else{
+                 $this->redirect('/pages/denied');
+             }
 	}
         
     public function register() {

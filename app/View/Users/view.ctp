@@ -34,7 +34,10 @@
         foreach ($educations as $education) {
             ?>
             <div class="singleEducation col-xs-12 col-md-12">
-                <p><?php print $education['Education']['title']; ?></p>
+                <p data-education="<?php print $education['Education']['id']; ?>"><?php print $education['Education']['title']; ?><?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+                <span class="fa fa-trash js-removeEducation"></span>
+         <?php   }
+?> </p> 
                 <p><?php print $education['Education']['description'] . ' ' . $education['Education']['start_date'] . ' - ' . $education['Education']['end_date']; ; ?></p>
             </div>
         <?php } ?>
@@ -54,7 +57,9 @@
         foreach ($experiences as $experience) {
             ?>
             <div class="singleExperience col-xs-12 col-md-12">
-                <p><?php echo $experience['Experience']['title']; ?></p>
+                <p data-experience="<?php echo $experience['Experience']['id']; ?>"><?php echo $experience['Experience']['title']; ?><?php if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+                <span class="fa fa-trash js-removeExperience"></span>
+         <?php   } ?></p>  
                 <p><?php echo $experience['Experience']['company'] . ' ' . $experience['Experience']['start_date'] . ' - ' . $experience['Experience']['end_date']; ?></p>
                 <p><?php echo $experience['Experience']['description']; ?></p>
             </div>
