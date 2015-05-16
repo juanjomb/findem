@@ -42,6 +42,10 @@ $(document).ready(function ($) {
         });
         $('body').niceScroll({mousescrollstep: 100});
         $('.js-msgbodycontainer').niceScroll();
+        $('.cbp-spmenu').niceScroll();
+        $('.inbox-messages').niceScroll();
+        
+        
       
         $(document).on("scroll", function () {
             if ($(window).scrollTop() > $(window).height() / 2) {

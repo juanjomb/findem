@@ -49,6 +49,9 @@ $page = $subpage = $title_for_layout = null;
 if (!empty($path[0])) {
 $page = $path[0];
 }
+if($page=='denied'){
+    $this->layout = 'error';
+}
 if (!empty($path[1])) {
 $subpage = $path[1];
 }

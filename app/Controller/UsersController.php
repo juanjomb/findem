@@ -504,6 +504,28 @@ class UsersController extends AppController {
         }
     }
     
+    public function stats(){
+        $fields=array('count(UserSkill.skill_id) as count','Skill.title');
+        $group=array('UserSkill.skill_id');
+        $limit=10;
+        $order=array('count(UserSkill.skill_id)'=> 'DESC');
+        $skills= $this->User->UserSkill->find('all',compact('fields','group','order','limit'));
+        
+        $fields=array('count(UserLanguage.language_id) as count','Language.title');
+        $group=array('UserLanguage.language_id');
+        $limit=10;
+        $order=array('count(UserLanguage.language_id)'=> 'DESC');
+        $languages= $this->User->UserLanguage->find('all',compact('fields','group','order','limit'));
+        
+        $order=array('User.views'=> 'DESC');
+        $fields=array('User.name','User.surname1','User.views');
+        
+        $this->User->recursive=-1;
+         $users= $this->User->find('all',compact('fields','order','limit'));
+         
+         $this->set(compact('users','skills','languages'));
+         
+    }
    
 
 }

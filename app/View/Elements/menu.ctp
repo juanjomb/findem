@@ -22,6 +22,8 @@ $user = $this->Session->read('user'); ?>
     <a href="/languages/index/"><i class="fa fa-inbox"></i>    Idiomas</a>
     <a href="/skills/index/"><i class="fa fa-institution"></i>     Habilidades</a>
     <a href="/categories/index/"><i class="fa fa-tags"></i>     Categorías</a>
+    <a href="/users/stats/"><i class="fa fa-bar-chart "></i>     Estadísticas</a>
+    
             <?php
         }
         if ($user['User']['role'] == 'company') {

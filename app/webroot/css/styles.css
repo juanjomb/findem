@@ -280,7 +280,6 @@ html,body{
     box-shadow: 3px 3px 15px #888888;
 }
 .inbox-messages{
-    overflow-y: scroll;
     display: inline-block;
     width: 20%;
     height: 100%;
