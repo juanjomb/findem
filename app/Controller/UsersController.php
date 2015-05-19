@@ -46,6 +46,7 @@ class UsersController extends AppController {
     }
     
     public function inbox(){
+        $this->layout='home';
         $order=array('SentMessage.created'=>'DESC');
         $message = $this->User->SentMessage->find('first',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id')),'order'=>array('SentMessage.created'=>'DESC')));
      $sent = $this->User->SentMessage->find('all',array('conditions' => array('SentMessage.from_id' => $this->Session->read('Auth.User.id')),'order'=>array('SentMessage.created'=>'DESC')));
@@ -370,13 +371,14 @@ class UsersController extends AppController {
                      
             $this->autoRender=false;
             if (!empty($this->request->data)) {
-                
+                $conditions=array();
                 if(!empty($this->request->data['skills'])){
                     foreach ($this->request->data['skills'] as $skill){
                         $conditions['and']['UserSkill.skill_id'] =  $skill;
                     }
                     $fields=array('UserSkill.user_id');
             		$users=$this->User->UserSkill->find('list',  compact('fields','conditions'));
+                         $conditions=array();
                         $conditions['and']['User.id']=$users;
             	}
             	$conditions['and']['User.role'] = 'user';

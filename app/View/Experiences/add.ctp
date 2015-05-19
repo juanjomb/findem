@@ -3,8 +3,7 @@
     <h2 class="formHeader">Edit Experience</h2>
     <div class="form-group">
         <?php
-        echo $this->Form->hidden('id',array('value'=> $experience['Experience']['id']));
-        echo $this->Form->hidden('user_id',array('value'=> $experience['User']['id']));
+        echo $this->Form->hidden('user_id',array('value'=> $user_id));
         echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control',
             'div' => 'col-xs-12 col-md-4'
         ));

@@ -148,7 +148,7 @@
                 echo '<div class="col-xs-4 col-md-8 "></div>';
                 $options = array(
                     'label' => 'Save Education',
-                    'class' => 'btn btn-default col-xs-8 col-md-4 saveEducation',
+                    'class' => 'btn btn-default col-xs-8 col-md-4 profileadd saveEducation',
                     'div' => false
                 );
                 echo $this->Form->end($options);
@@ -192,7 +192,7 @@ echo '<div class="col-xs-4 col-md-8 "></div>';
 echo '<p class="error-message"> </p>';
 $options = array(
     'label' => 'Save Experience',
-    'class' => 'btn btn-default col-xs-8 col-md-4 saveExperience',
+    'class' => 'btn btn-default col-xs-8 col-md-4  profileadd saveExperience',
     'div' => false
 );
 echo $this->Form->end($options);

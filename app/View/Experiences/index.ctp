@@ -7,7 +7,7 @@
 <div class="row">
 
         <div class="col-xs-12 col-md-12"> <?php 
-                        echo $this->Html->link('<span class="btn btn-success">Create experience</span>', array('controller' => 'experiences', 'action' => 'add'),
+                        echo $this->Html->link('<span class="btn btn-success">Create experience</span>', array('controller' => 'experiences', 'action' => 'add',$user_id),
                                 array('escape' => false)
                                 );?>
         </div>

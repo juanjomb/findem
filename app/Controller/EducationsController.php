@@ -13,7 +13,7 @@ class EducationsController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $conditions = array('user_id' => $user_id);
             $educations = $this->Education->find('all', compact('conditions'));
-            $this->set(compact('educations'));
+            $this->set(compact('educations','user_id'));
         } else {
             $this->redirect('/pages/denied');
         }
@@ -32,7 +32,7 @@ class EducationsController extends AppController {
         $this->set('education', $education);
     }
 
-    public function add() {
+    public function add($user_id) {
         if ($this->Session->read('Auth.User.role') == 'admin') {
 
 
@@ -44,10 +44,11 @@ class EducationsController extends AppController {
                 }
                 if ($this->Education->save($item)) {
                     $this->Session->setFlash(__('Your education has been saved.'));
-                    return $this->redirect(array('action' => 'index'));
+                    return $this->redirect(array('action' => 'index',$user_id));
                 }
                 $this->Session->setFlash(__('Unable to add your education.'));
             }
+            $this->set(compact('user_id'));
         } else {
             $this->redirect('/pages/denied');
         }

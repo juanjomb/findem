@@ -40,10 +40,11 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
-        $('body').niceScroll({mousescrollstep: 100});
-        $('.js-msgbodycontainer').niceScroll();
-        $('.cbp-spmenu').niceScroll();
-        $('.inbox-messages').niceScroll();
+        
+        //$('body').mCustomScrollbar();
+        $('.js-msgbodycontainer').mCustomScrollbar();
+        $('.cbp-spmenu').mCustomScrollbar();
+        $('.inbox-messages').mCustomScrollbar();
         
         
       

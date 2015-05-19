@@ -13,7 +13,7 @@ class ExperiencesController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $conditions = array('user_id' => $user_id);
             $experiences = $this->Experience->find('all', compact('conditions'));
-            $this->set(compact('experiences'));
+            $this->set(compact('experiences','user_id'));
         } else {
             $this->redirect('/pages/denied');
         }
@@ -32,7 +32,7 @@ class ExperiencesController extends AppController {
         $this->set('experience', $experience);
     }
 
-    public function add() {
+    public function add($user_id) {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $this->getLists();
             $this->Experience->create();
@@ -42,10 +42,11 @@ class ExperiencesController extends AppController {
                 }
                 if ($this->Experience->save($item)) {
                     $this->Session->setFlash(__('Your experience has been saved.'));
-                    return $this->redirect(array('action' => 'index'));
+                    return $this->redirect(array('action' => 'index',$user_id));
                 }
                 $this->Session->setFlash(__('Unable to add your experience.'));
             }
+            $this->set(compact('user_id'));
         } else {
             $this->redirect('/pages/denied');
         }

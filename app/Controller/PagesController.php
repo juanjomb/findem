@@ -52,6 +52,9 @@ $page = $path[0];
 if($page=='denied'){
     $this->layout = 'error';
 }
+if($page=='home'){
+    $this->layout = 'home';
+}
 if (!empty($path[1])) {
 $subpage = $path[1];
 }

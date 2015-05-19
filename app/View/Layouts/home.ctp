@@ -55,16 +55,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <body class="cbp-spmenu-push">
            <?php
     echo $this->element('header');
-    ?>
-        <div class="wrapper">
-            <?php
     echo $this->element('menu');
     echo $this->element('navbuttons');
     echo $this->Session->flash(); 
     echo $this->fetch('content'); 
-    ?>
-        </div>
-            <?php
     echo $this->element('footer');?>
     </body>
 </html>

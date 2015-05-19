@@ -87,6 +87,7 @@
       legend: {
         verticalAlign: "bottom",
         horizontalAlign: "center"
+        
       },
       theme: "theme2",
       data: [

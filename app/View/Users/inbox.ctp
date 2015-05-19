@@ -7,8 +7,9 @@
             <li class="inbox-single-tab active js-sent-tab"><i class="fa fa-arrow-up"></i> Enviados</li>
             <li class="inbox-single-tab js-received-tab"><i class="fa fa-arrow-down"></i> Recibidos</li>
         </ul>
-        <?php if(!empty($sent)){ ?>
         <ul class="ul-messages">
+        <?php if(!empty($sent)){ ?>
+        
             <?php foreach($sent as $message){
                 $d = new DateTime($message['SentMessage']['created']);?>
             <li class="single-Message js-single-sent" data-id="<?php echo $message['SentMessage']['id'];?>">
@@ -20,7 +21,7 @@
             </li>
             
         <?php } }?>
-            <?php if(!empty($received)){ ?>
+            <?php if(!empty($received)){  ?>
             <?php foreach($received as $message){
                 $d = new DateTime($message['SentMessage']['created']);?>
             <li class="single-Message js-single-received hidden" data-id="<?php echo $message['SentMessage']['id'];?>">

@@ -1,10 +1,9 @@
 <?php echo $this->Form->create('Education'); ?>
 <div class="container content">
-    <h2 class="formHeader">Edit Education</h2>
+    <h2 class="formHeader">Añadir formación</h2>
     <div class="form-group">
         <?php
-        echo $this->Form->hidden('id',array('value'=>$education['Education']['id']));
-        echo $this->Form->hidden('user_id',array('value'=>$education['User']['id']));
+        echo $this->Form->hidden('user_id',array('value'=>$user_id));
         echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-12'
         ));
@@ -25,7 +24,7 @@
         ));
         $options = array(
             'label' => 'Save Education',
-            'class' => 'btn btn-default',
+            'class' => 'btn btn-default send',
             'div'=>false
         );
         
@@ -33,10 +32,7 @@
     
 </div>
      
-      <div class="modal-footer">
           <?php
           echo $this->Form->end($options);
           ?>
-        ?>
-    </div>
 </div>
