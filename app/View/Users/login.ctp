@@ -33,12 +33,14 @@ function showGoogleMaps() {
     var styledMap = new google.maps.StyledMapType(styles,
     {name: "Styled Map"});
     var mapOptions = {
-        zoom: 4, // initialize zoom level - the max value is 21
-        streetViewControl: false, // hide the yellow Street View pegman
-        scaleControl: true, // allow users to zoom the Google Map
+        zoom: 4, 
+        streetViewControl: false, 
         mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     },
+    mapTypeControl : false,
+    scrollwheel: false,
+        scaleControl: false,
         center: latLng
     };
     position = [38.417000, -3.703584];

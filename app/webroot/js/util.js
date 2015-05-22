@@ -1,6 +1,17 @@
 $(document).ready(function ($) {
     $(window).load(function () {
-
+        $.cookieBar({
+            message: 'Este sitio utiliza cookies para almacenar usos y preferencias',
+            acceptButton: true,
+            acceptText: 'Entiendo',
+            expireDays: 365,
+            fixed: true,
+            bottom: true,
+            zindex: '9999',
+            redirect: '/',
+            
+            
+        });
         $("#showLeftPush").on('click', showMenu);
         $('form').on('submit',validateForm);
         $(document).on('scroll', resizeHeader);
@@ -40,12 +51,15 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
+        if($('.js-profilecompleted').attr('data')==="0"){
+            showPopup(true);
+        }
+        
         
         //$('body').mCustomScrollbar();
         $('.js-msgbodycontainer').mCustomScrollbar();
         $('.cbp-spmenu').mCustomScrollbar();
         $('.inbox-messages').mCustomScrollbar();
-        
         
       
         $(document).on("scroll", function () {
@@ -206,7 +220,6 @@ $(document).ready(function ($) {
                         if(!data.ko){
                             pill ='<p class="skillPill" data="' + data.skill_id + '">' + title + '<span class="fa fa-trash js-removeSkill"></span></p>';
                             $('.js-skills-block').append(pill);
-                            $('.js-removeSkill').on('click', removeSkill);
                         }
                     },
                     dataType: 'json'
@@ -242,6 +255,7 @@ $(document).ready(function ($) {
                             var pill = '<p class="completion" data="'+value.Language.id+'">'+ value.Language.title + "</p>";
                             $(pill).appendTo(".js-optionLanguages");
                             $('.completion').on('click',addLanguage);
+                            $('.js-optionLanguages').mCustomScrollbar();
                         });
                     },
                     dataType: 'json'
@@ -324,7 +338,7 @@ $(document).ready(function ($) {
                     url: "/users/getProvinces/" + region,
                     success: function (data) {
                         $(".js-province").html("");
-                        $(".js-province").append("<option>Selecciona provincia</option>");
+                        $(".js-province").append('<option value="">Selecciona provincia</option>');
                         $.each(data, function (item, value) {
                             var row = "<option value=\"" + item + "\">" + value + "</option>";
                             $(row).appendTo(".js-province");
@@ -344,7 +358,7 @@ $(document).ready(function ($) {
                     url: "/users/getCities/" + province,
                     success: function (data) {
                         $(".js-city").html("");
-                        $(".js-city").append("<option>Selecciona ciudad</option>");
+                        $(".js-city").append('<option value="">Selecciona ciudad</option>');
                         $.each(data, function (item, value) {
                             var row = "<option value=\"" + item + "\">" + value + "</option>";
                             $(row).appendTo(".js-city");
@@ -358,6 +372,8 @@ $(document).ready(function ($) {
         }
 
         function saveEducation() {
+            var valid = validateForm($('.js-educationtitle').closest('form'))
+           if(valid){
             event.preventDefault();
             var formData = {
                 'title': $('.js-educationtitle').val(),
@@ -385,7 +401,7 @@ $(document).ready(function ($) {
                 },
                 dataType: 'json'
             });
-
+        }
         }
         // Replace the search result table on load.
 if (('localStorage' in window) && window['localStorage'] !== null) {
@@ -407,6 +423,8 @@ $(window).unload(function () {
         
         
           function saveExperience() {
+              var valid = validateForm($('#ExperienceTitle').closest('form'))
+           if(valid){
             event.preventDefault();
             var formData = {
                 'title': $('#ExperienceTitle').val(),
@@ -437,53 +455,50 @@ $(window).unload(function () {
                 },
                 dataType: 'json'
             });
+        }
 
         }
 
-        function showPopup(){
+        function showPopup(complete){
             if($(this).hasClass('js-add-skill')){
                 $('.js-popup-skills').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-language')){
                 $('.js-popup-languages').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-com')){
                 $('.js-loginformcompany').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-us')){
                 $('.js-loginformuser').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-education')){
                 $('.js-popup-add-education').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-add-experience')){
                 $('.js-popup-add-experience').closest('.popupBg').show();
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
             }
             if($(this).hasClass('js-location')){
                
                 $('.js-popup-view-map').closest('.popupBg').show();
                  google.maps.event.trigger(map, 'resize');
                 $('body').css('overflow-y','hidden');
-                 $("body").getNiceScroll().hide();
+            }
+            if(complete){
+                $('.js-popup-complete').closest('.popupBg').show();
+                $('body').css('overflow-y','hidden');
             }
         }
         
         function closePopup() {
             $(this).closest('.popupBg').hide();
             $('body').css('overflow-y','auto');
-            $("body").getNiceScroll().show();
         }
         
         function showReplyForm(){
@@ -497,6 +512,8 @@ $(window).unload(function () {
             }
         }
         function register() {
+             var valid = validateForm($(this).closest('form'))
+           if(valid){
             event.preventDefault();
             var formData = {
                 'username': $('#UserUsername').val(),
@@ -521,7 +538,7 @@ $(window).unload(function () {
                 },
                 dataType: 'json'
             });
-
+        }
         }
 function searchUsers(){
      event.preventDefault();
@@ -571,6 +588,55 @@ function unbookmarkUser(){
             });
 }
 
+
+
+function validateForm(form){
+	
+        if(form.length<1){
+            form = $(this)
+        }
+		var noerror = true;
+		$('.error-message').hide();		
+		form.find('input').removeClass('error-input');
+		
+		
+		form.find('.js-required').each(function(index, value){
+		  if($(this).val() == ''){
+		  	
+                            $(this).addClass('error-input');
+                            $('.error-message.js-fill-inputs').show();
+		  	
+	  		
+	  		
+	  		noerror = false;
+		  }
+		}); 
+		
+		form.find('.js-email').each(function(index, value){
+		  if(!validateEmail($(this).val())){
+		  	$(this).addClass('error-input');
+		  	$('.error-message.js-email-inputs').show();
+		  	noerror = false;
+		  }
+		});	
+		if(!noerror){
+			return false;
+		}
+		form.find('.js-password').each(function(index, value){
+		  if($(this).val().length < 8){
+		  	$(this).addClass('error-input');
+		  	$('.error-message.js-password-length').show();
+		  	noerror = false;
+		  }
+		});	
+			
+		if(!noerror){
+			return false;
+		}else{
+                    return true;
+                }
+		
+}
 function sendReply(){
     event.preventDefault();
             var message = $('#ResponseMessage').val();
@@ -587,50 +653,6 @@ function sendReply(){
                 dataType: 'json'
             });
 }
-
-function validateForm(){
-	
-		var noerror = true;
-		$('.error-message').hide();		
-		$(this).find('input').removeClass('error-input');
-		
-		
-		$(this).find('.js-required').each(function(index, value){
-		  if($(this).val() == ''){
-		  	
-                            $(this).addClass('error-input');
-                            $('.error-message.js-fill-inputs').show();
-		  	
-	  		
-	  		
-	  		noerror = false;
-		  }
-		}); 
-		
-		$(this).find('.js-email').each(function(index, value){
-		  if(!validateEmail($(this).val())){
-		  	$(this).addClass('error-input');
-		  	$('.error-message.js-email-inputs').show();
-		  	noerror = false;
-		  }
-		});	
-		if(!noerror){
-			return false;
-		}
-		$(this).find('.js-password').each(function(index, value){
-		  if($(this).val().length < 8){
-		  	$(this).addClass('error-input');
-		  	$('.error-message.js-password-length').show();
-		  	noerror = false;
-		  }
-		});	
-			
-		if(!noerror){
-			return false;
-		}
-		
-}
-
 function validateEmail(email) { 
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);

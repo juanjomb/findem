@@ -37,7 +37,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->css('styles');
                 echo $this->Html->css('jquery.mCustomScrollbar');
                 echo $this->Html->css('http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css'); 
-                
+                echo $this->Html->css('jquery.cookiebar');
                 
                 echo $this->Html->script('http://code.jquery.com/ui/1.11.3/jquery-ui.js'); 
                 echo $this->Html->script('http://code.jquery.com/jquery-1.11.0.min.js');
@@ -46,6 +46,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->script('util');
                 echo $this->Html->script('jquery.mCustomScrollbar');
                 echo $this->Html->script('canvasjs.min');
+                echo $this->Html->script('jquery.cookiebar');
                 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

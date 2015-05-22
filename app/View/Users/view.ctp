@@ -124,6 +124,7 @@
         <div class="popup js-popup-add-education">
             <i class="fa fa-close closePopup"></i>
             <h3>Añadir educación</h3>
+            <?php echo $this->Form->create('Education') ?>
             <div class="form-group">
                 <?php
                 echo $this->Form->hidden('user_id', array('value' => $user['User']['id'],'class'=>'js-educationuser'));
@@ -215,5 +216,7 @@ echo $this->Form->end($options);
             </div>
         </div>
     </div> 
+    
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<?php echo $this->Html->script('mapview', array('inline' => false));?>
+<?php
+echo $this->Html->script('mapview', array('inline' => false));?>

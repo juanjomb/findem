@@ -37,10 +37,10 @@ $user = $this->Session->read('user'); ?>
   
     <?php } else { ?>
     <a href="/users/login"><i class="fa fa-send"></i>     Inicia sesión</a>
-    <a href="#about"><i class="fa fa-info-circle"></i>     Sobre Findem</a>
-    <a href="#emp"><i class="fa fa-institution"></i>     Empresas</a>
-    <a href="#prof"><i class="fa fa-briefcase"></i>     Profesionales</a>
-    <a href="#"><i class="fa fa-desktop"></i>     Contacto</a>
+    <a href="#about"><i class="fa fa-info-circle"></i>     ¿Qué es Findem?</a>
+    <a href="#prof"><i class="fa fa-briefcase"></i>     Quiero registrarme</a>
+    <a href="/pages/terms"><i class="fa fa-warning"></i>     Términos y condiciones</a>
+    <a href="/pages/contact"><i class="fa fa-desktop"></i>     Contacto</a>
     <?php } ?>
 
 

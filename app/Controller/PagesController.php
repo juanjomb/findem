@@ -49,7 +49,7 @@ $page = $subpage = $title_for_layout = null;
 if (!empty($path[0])) {
 $page = $path[0];
 }
-if($page=='denied'){
+if($page=='denied'||$page=='contact'||$page=='terms'){
     $this->layout = 'error';
 }
 if($page=='home'){

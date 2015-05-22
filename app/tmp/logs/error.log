@@ -10213,3 +10213,138 @@ Request URL: /img/uploads/users/ibakvFNDOcatnB.gif
 Stack Trace:
 #0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-05-20 16:03:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-20 16:15:24 Error: Error enviando mail : stream_socket_client(): SSL: Handshake timed out
+stream_socket_client(): Failed to enable crypto
+stream_socket_client(): unable to connect to ssl://smtp.gmail.com:465 (Unknown error)
+2015-05-20 16:20:35 Error: Error enviando mail : SMTP server did not accept the password.
+2015-05-20 16:21:54 Error: Error enviando mail : SMTP server did not accept the password.
+2015-05-20 19:12:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-21 19:44:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-21 19:45:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-21 19:47:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-21 23:48:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\findem\app\View\Elements\header.ctp, line 29]
+2015-05-21 23:48:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /users/view/54e38964-e0e4-4024-9fd1-12bf4fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-21 23:48:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-21 23:48:16 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\findem\app\View\Elements\header.ctp, line 29]
+2015-05-21 23:48:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-21 23:48:29 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 51064832 bytes) in [C:\xampp\htdocs\findem\lib\Cake\basics.php, line 279]
+2015-05-21 23:48:29 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 51064832 bytes)
+Request URL: /users/view/54e38964-e0e4-4024-9fd1-12bf4fb7e87d
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 279)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 279, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\xampp\\htdocs...', 279, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-21 23:48:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 16:15:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 16:45:06 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\findem\app\View\Users\edit.ctp, line 6]
+2015-05-22 16:45:06 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /users/edit/555878be-9dcc-4016-af1b-51fcc0a80189
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-05-22 16:47:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-22 16:48:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

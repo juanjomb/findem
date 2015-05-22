@@ -57,6 +57,7 @@ class UsersController extends AppController {
     
 
     public function view($id) {
+        
         if (!$id) {
             throw new NotFoundException(__('Invalid user'));
         }
@@ -104,8 +105,10 @@ class UsersController extends AppController {
             if (!isset($item)) {
                 $item = $this->request->data;
             }
+            
             if ($this->User->save($item)) {
                 $this->Session->setFlash(__('Your user has been saved.'));
+                 
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Session->setFlash(__('Unable to add your user.'));
@@ -151,7 +154,13 @@ class UsersController extends AppController {
             }
             if ($this->User->save($item)) {
                 $this->Session->setFlash(__('Your user has been updated.'));
-                
+                    if($this->request->data['User']['id'] == AuthComponent::User('id')){ //if current logged in user  update user session data
+
+                  $this->Session->write('Auth.User.name', $this->request->data['User']['name']);           
+
+                  $this->Session->write('Auth.User', array_merge(AuthComponent::User(), $this->request->data['User']) );   //updating all user session data
+
+                }
                 return $this->redirect(array('action' => 'view',$id));
             }
             $this->Session->setFlash(__('Unable to update your user.'));

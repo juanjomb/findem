@@ -141,12 +141,20 @@ html,body{
     width: 70%;
     margin-top: 5%;
 }
+.js-search-language{
+    font-size: 1.5rem;
+    color: #276169;
+    width: 70%;
+    margin-top: 5%;
+}
 .js-optionSkills{
     position: relative;
     border: 1px solid #276169;
     top: -2px;
     width: 70%;
     margin-left: 15%;
+    max-height: 300px;
+    overflow-y: hidden;
 }
 .js-optionLanguages{
     position: relative;
@@ -154,6 +162,8 @@ html,body{
     top: -2px;
     width: 70%;
     margin-left: 15%;
+      max-height: 300px;
+  overflow-y: hidden;
 }
 .profileadd{
     border: 2px solid #0A3238;
@@ -605,6 +615,12 @@ a i{
     text-align: center;
     color: #0A3238;
 }
+.user-result-data-location{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #0A3238;
+}
 .user-result-viewprofile{
     width: 50px;
     padding: 10px;
@@ -842,9 +858,12 @@ h4{
     outline:none;
     border-radius: 10px;
     font-size: 1.5rem;
-    margin-left: 5%;
     margin-top: 5%;
     font-weight: bold;
+}
+.centered-25{
+    margin-left: 25%;
+    
 }
 .alta:hover{
     border:none;
@@ -1243,7 +1262,7 @@ width: 80%;
 }
 .inbox-messages {
 width: 100%;
-height: auto;
+max-height: 30% ;
 }
 .inbox-body {
 display: block;

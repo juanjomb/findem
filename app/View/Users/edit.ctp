@@ -3,7 +3,7 @@
     <h2 class="formHeader">Edit User</h2>
     <div class="form-group">
         <?php
-        
+        echo $this->Form->hidden('id');
         echo $this->Form->input('username', array('class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'
         )); 
