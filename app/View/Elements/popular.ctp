@@ -11,7 +11,7 @@ $professionals=$Model->find('all',compact('conditions','order', 'limit'));
     <?php
    foreach ($professionals as $user){ 
        ?>
-<div class="user-result-block col-md-3 col-xs-11" data="<?php echo $user['User']['id']; ?>">
+<div class="user-result-block col-md-3 col-xs-10" data="<?php echo $user['User']['id']; ?>">
     <?php if(!empty($user['User']['image'])){ 
                echo $this->Html->image('/img/uploads/users/'.$user['User']['image'], array('alt' => 'User image','class'=>'user-result-image'));
                 } ?>

@@ -107,6 +107,7 @@ html,body{
     font-size: 2rem;
     text-align: center;
 }
+
 .profile-data{
     font-size: 1.5rem;
     text-align: center;
@@ -119,7 +120,7 @@ html,body{
 .popup{
     position: fixed;
     margin-left: 25%;
-    margin-top: 10%;
+    margin-top: 20%;
     width: 50%;
     min-height: 300px;
     z-index: 1000;
@@ -1238,9 +1239,9 @@ margin-left: 23%;
 }
 .popup {
 position: fixed;
-margin-left: 10%;
+margin-left: 5%;
 margin-top: 15%;
-width: 80%;
+width: 90%;
 }
 .firstelement {
 margin-top: 25%;
@@ -1275,5 +1276,32 @@ width: 100%;
 .ul-messages {
 padding-top: 14%;
 }
-
+.user-result-block{
+   margin-left: 8%;
+   margin-bottom: 5%;
+}
+.profile-data{
+    width: 90%;
+}
+.profileadd{
+    width: 95%;
+}
+.js-search-language{
+    margin-left: 15%;
+}
+.js-search-skill{
+    margin-left: 15%;
+}
+.js-popup-skills h3{
+    font-size: 1.5rem;
+}
+.js-popup-languages h3{
+    font-size: 1.5rem;
+}
+.dataBlock {
+margin-bottom: 5%;
+}
+.dataBlock .skillPill {
+padding: 5%;
+}
 }

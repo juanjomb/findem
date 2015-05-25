@@ -7,6 +7,9 @@
             <div class="js-optionSkills"></div>
         </div>
     </div> 
+<?php 
+if($this->Session->check('Auth.User')&& $this->params['action']!='edit'){
+if($this->Session->read('Auth.User.name')==''){?>
 <div class="popupBg">  
         <div class="popup js-popup-complete">
             <i class="fa fa-close closePopup"></i>
@@ -17,6 +20,9 @@
                                 );?>
         </div>
     </div> 
+<?php }
+}?>
+
 <div class="popupBg">  
         <div class="popup js-popup-languages">
             <i class="fa fa-close closePopup"></i>
