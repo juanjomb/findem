@@ -67,17 +67,7 @@
  * A key/value array of driver specific connection options.
  */
 class DATABASE_CONFIG {
-	/*public $default = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'k2a_findem',
-		'password' => 'Ix2ea11F',
-		'database' => 'k2a_findem',
-		'prefix' => '',
-		'encoding' => 'UTF8',
-		'port' => '',
-	);*/
+	
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
