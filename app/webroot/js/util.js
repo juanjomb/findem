@@ -12,6 +12,9 @@ $(document).ready(function ($) {
             
             
         });
+       $( document ).tooltip({
+            track: true
+          });
         $("#showLeftPush").on('click', showMenu);
         $('form').on('submit',validateForm);
         $(document).on('scroll', resizeHeader);
@@ -90,26 +93,20 @@ $(document).ready(function ($) {
         });
 
         function showMenu() {
-            if ($(this).hasClass('active')) {
-                $(this).animate({
-                    transform:'rotate(180deg)'
-                },500);
-                $(this).removeClass('fa-close');
+            if ($(this).find('i').hasClass('active')) {
+                $(this).find('i').removeClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                     $('html').css('overflow-y','auto');
                 }
-                $(this).addClass('fa-bars');
-                $(this).removeClass('active');
+                $(this).find('i').addClass('fa-bars');
+                $(this).find('i').removeClass('active');
             } else {
-                $(this).animate({
-                    transform:'rotate(-180deg)'
-                },500);
-                $(this).removeClass('fa-bars');
-                $(this).addClass('fa-close');
+                $(this).find('i').removeClass('fa-bars');
+                $(this).find('i').addClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                     $('html').css('overflow-y','hidden');
                 }
-                $(this).addClass('active');
+                $(this).find('i').addClass('active');
             }
             if ($('body').hasClass('cbp-spmenu-push-toright')) {
                 $('body').removeClass('cbp-spmenu-push-toright');
@@ -546,7 +543,9 @@ function searchUsers(){
                 'region_id': $('.js-region').val(),
                 'city_id': $('.js-city').val(),
                 'province_id': $('.js-province').val(),
+                'category_id': $('.js-category').val(),
                 'skills': $('.js-skills-input').val(),
+                'languages': $('.js-languages-input').val(),
             };
             $.ajax({
                 type: "POST",

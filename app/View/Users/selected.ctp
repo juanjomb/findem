@@ -11,9 +11,9 @@ if(isset($users)){
                 <p class="user-result-data-category"><?php echo $user['Category']['title']; ?></p>
                 <p class="user-result-data-description"><?php echo $user['User']['description']; ?></p>
                 <p class="user-result-data-location"><?php echo $user['City']['municipio']; ?></p>
-                <i class="fa fa-bookmark fa-2x user-result-unbookmark js-unbookmark"></i>
-                <?php echo $this->Html->link('<i class="fa fa-paper-plane fa-2x user-result-contact"></i>', array('controller' => 'users', 'action' => 'send_message',$user['User']['id']), array('escape' => false));?>
-                <?php echo $this->Html->link('<i class="fa fa-eye fa-2x user-result-viewprofile"></i>', array('controller' => 'users', 'action' => 'view',$user['User']['id']), array('escape' => false));?>
+                <i class="fa fa-bookmark fa-2x user-result-unbookmark js-unbookmark" title="Eliminar candidato"></i>
+                <?php echo $this->Html->link('<i class="fa fa-paper-plane fa-2x user-result-contact" title="Enviar mensaje"></i>', array('controller' => 'users', 'action' => 'send_message',$user['User']['id']), array('escape' => false));?>
+                <?php echo $this->Html->link('<i class="fa fa-eye fa-2x user-result-viewprofile" title="Ver perfil"></i>', array('controller' => 'users', 'action' => 'view',$user['User']['id']), array('escape' => false));?>
 </div>
     <?php
 } 

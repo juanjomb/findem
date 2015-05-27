@@ -33,13 +33,14 @@ function showGoogleMaps() {
     var styledMap = new google.maps.StyledMapType(styles,
     {name: "Styled Map"});
     var mapOptions = {
-        zoom: 4, 
+        zoom: 5, 
         streetViewControl: false, 
         mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     },
     mapTypeControl : false,
     scrollwheel: false,
+    disableDoubleClickZoom: true,
         scaleControl: false,
         center: latLng
     };

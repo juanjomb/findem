@@ -381,15 +381,59 @@ class UsersController extends AppController {
             $this->autoRender=false;
             if (!empty($this->request->data)) {
                 $conditions=array();
+                $usersarray=array();
                 if(!empty($this->request->data['skills'])){
-                    foreach ($this->request->data['skills'] as $skill){
-                        $conditions['and']['UserSkill.skill_id'] =  $skill;
-                    }
+                    
+                    $userskills=array();
                     $fields=array('UserSkill.user_id');
+                    foreach ($this->request->data['skills'] as $skill){
+                        $conditions['UserSkill.skill_id'] =  $skill;
             		$users=$this->User->UserSkill->find('list',  compact('fields','conditions'));
+                    foreach ($users as $key=>$value){
+                              $userskills[]=$value;  
+                    }
+                    }
+                    $recuento=array_count_values ( $userskills );
+                    foreach ($recuento as $key => $value) {
+                        if($value==count($this->request->data['skills'])){
+                           $usersarray[]=$key; 
+                        }
+                    }
                          $conditions=array();
-                        $conditions['and']['User.id']=$users;
+                         $conditions['and']['User.id']=$usersarray;
+                        
             	}
+                if(!empty($this->request->data['languages'])){
+                    
+                    $userlanguages=array();
+                    $fields=array('UserLanguage.user_id');
+                    foreach ($this->request->data['languages'] as $language){
+                        $conditions['UserLanguage.language_id'] =  $language;
+            		$users=$this->User->UserLanguage->find('list',  compact('fields','conditions'));
+                    foreach ($users as $key=>$value){
+                              $userlanguages[]=$value;  
+                    }
+                    }
+                    $recuento=array_count_values ( $userlanguages );
+                    $langs=array();
+                    foreach ($recuento as $key => $value) {
+                        if($value==count($this->request->data['languages'])){
+                           $langs[]=$key;
+                        }
+                    }
+                    if(!empty($this->request->data['skills'])){
+                        foreach ($usersarray as $key => $value) {
+                           if(!in_array($value, $langs)){
+                               unset($usersarray[$key]);
+                           } 
+                        }
+                    }else{
+                        $usersarray=$langs;
+                    }
+                         $conditions=array();
+                        $conditions['and']['User.id']=$usersarray;
+            	}
+                
             	$conditions['and']['User.role'] = 'user';
             	if(!empty($this->request->data['region_id'])){
             		$conditions['and']['User.region_id'] =$this->request->data['region_id'];
@@ -400,12 +444,21 @@ class UsersController extends AppController {
                 if(!empty($this->request->data['city_id'])){
             		$conditions['and']['User.city_id'] =$this->request->data['city_id'];
             	}
+                if(!empty($this->request->data['category_id'])){
+            		$conditions['and']['User.category_id'] =$this->request->data['category_id'];
+            	}
 		
 				
              }
+             
              $this->User->recursive=2;
+             $this->User->unBindModel(array(
+                 'belongsTo' => array('Province','Region'),
+                 'hasMany'=>array('Education','SentMessage','Experience'),
+                 'hasAndBelongsToMany'=>array('Skill','Language','SuitableUser')
+                 
+                 ));
             $users = $this->User->find('all',  compact('conditions'));
-            
            	$this->set(compact('users'));
 			
 			
