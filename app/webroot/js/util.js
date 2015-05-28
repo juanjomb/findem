@@ -404,6 +404,8 @@ $(document).ready(function ($) {
 if (('localStorage' in window) && window['localStorage'] !== null) {
     if ('results' in localStorage && window.location.hash=="") {
         $(".js-results-container").html(localStorage.getItem('results'));
+        $('.js-bookmark').on('click',bookmarkUser);
+        
     }
 }
 

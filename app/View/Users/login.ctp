@@ -23,8 +23,12 @@
 <script type="text/javascript">
  
 // The latitude and longitude of your business / place
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    var position=[46.95402660265127, -4.046287429687478];
+                }else{
+                 var position=[42.68648922089851, -20.1742171171875];   
+                }
 
-var position=[42.68648922089851, -20.1742171171875];
  
 function showGoogleMaps() {
  

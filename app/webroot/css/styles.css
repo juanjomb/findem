@@ -120,7 +120,7 @@ html,body{
 .popup{
     position: fixed;
     margin-left: 25%;
-    margin-top: 20%;
+    margin-top: 10%;
     width: 50%;
     min-height: 300px;
     z-index: 1000;
@@ -410,9 +410,6 @@ html,body{
 .content{
     margin-top: 100px;
 }
-.visible{
-    display: block!important;
-}
 .content .form-group div{
     margin-bottom: 20px!important;
 }
@@ -486,7 +483,7 @@ html,body{
     font-size: 2rem;
 }
 
-div.loginForm form{
+.loginForm form{
     margin:0 auto;
     text-align:center;
 }
@@ -502,21 +499,19 @@ div.loginForm form{
     margin: 5px;
 }
 .loginForm {
-    display: none;
     z-index: 20;
     text-align: center;
     border-radius: 5px;
     background-color: #F4FFFD!important;
     color: #0A3238;
-    width: 400px;
+    width: 30%;
     min-height: 350px;
     height: auto;
     padding: 20px;
     background-color: white;
-    position:fixed;
-    left:38%;
-    top:30%;
-    margin-left:-202px;
+    margin-left:15%;
+    margin-top: 20%;
+    position: absolute;
 }
 header{
     position:fixed;
@@ -1239,9 +1234,7 @@ h1{
 .smaller h1{
     margin-left: 32%;
 }
-.loginForm{
-    left: 50%;
-}
+
 .info-round {
 width: 55%;
 margin-left: 23%;
@@ -1288,6 +1281,7 @@ padding-top: 14%;
 .user-result-block{
    margin-left: 8%;
    margin-bottom: 5%;
+   min-height: 350px;
 }
 .profile-data{
     width: 90%;
@@ -1312,5 +1306,10 @@ margin-bottom: 5%;
 }
 .dataBlock .skillPill {
 padding: 5%;
+}
+.loginForm{
+    margin-left: 5%;
+        margin-top: 25%;
+        width: 90%;
 }
 }

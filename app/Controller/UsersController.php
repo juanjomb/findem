@@ -404,7 +404,9 @@ class UsersController extends AppController {
                         
             	}
                 if(!empty($this->request->data['languages'])){
-                    
+                    if(!empty($this->request->data['skills'])){
+                        $conditions=array();
+                    }
                     $userlanguages=array();
                     $fields=array('UserLanguage.user_id');
                     foreach ($this->request->data['languages'] as $language){
