@@ -48,6 +48,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->script('jquery.mCustomScrollbar');
                 echo $this->Html->script('canvasjs.min');
                 echo $this->Html->script('jquery.cookiebar');
+                echo $this->Html->script('/ckeditor/ckeditor');
                 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

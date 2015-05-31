@@ -36,6 +36,11 @@
  */
 	CakePlugin::routes();
 
+        Router::connect('/perfil/:id', array('controller' => 'users', 'action' => 'view'),array('pass' => array('id')));
+        Router::connect('/candidatos', array('controller' => 'users', 'action' => 'selected'));
+        Router::connect('/iniciar-sesion', array('controller' => 'users', 'action' => 'login'));
+        Router::connect('/inbox', array('controller' => 'users', 'action' => 'inbox'));
+        Router::connect('/estadisticas', array('controller' => 'users', 'action' => 'stats'));
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use
  * the built-in default routes.

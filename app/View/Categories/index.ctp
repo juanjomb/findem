@@ -32,9 +32,9 @@
                     </td>
                     <td>
                         <?php
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'languages', 'action' => 'edit', $category['Category']['id']), array('escape' => false)
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'categories', 'action' => 'edit', $category['Category']['id']), array('escape' => false)
                         );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'languages', 'action' => 'delete', $category['Category']['id']), array('escape' => false), array('confirm' => '¿Está seguro?')
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'categories', 'action' => 'delete', $category['Category']['id']), array('escape' => false), array('confirm' => '¿Está seguro?')
                         );
                         ?>
                     </td>
