@@ -43,6 +43,7 @@ function showGoogleMaps() {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
     },
     mapTypeControl : false,
+    disableDefaultUI: true,
     scrollwheel: false,
     disableDoubleClickZoom: true,
         scaleControl: false,

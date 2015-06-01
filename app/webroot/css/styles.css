@@ -69,8 +69,8 @@ html,body{
     border-bottom: 1px #276169 dashed;
 }
 .single-post{
-    width: 70%;
   margin-bottom: 30px; 
+  display: inline-block;
 }
 .post-view-link{
     font-size: 1.5rem;
@@ -99,6 +99,8 @@ html,body{
 }
 .single-post-body{
     font-size: 1.6rem;
+    border-bottom: 1px #276169 solid;
+    
 }
 .single-post-data{
     text-align: center;
@@ -115,6 +117,53 @@ font-size: 1.2rem;
     width: 20%;
     margin-left: 5%;
     margin-top: 100px;
+}
+.comment-block{
+    display: inline-block;
+    width: 65%;
+    display: inline-block;
+    margin-left: 5%;
+}
+.single-comment{
+    margin-bottom: 20px;
+}
+.single-comment-data{
+    font-size:1.2rem;
+}
+.single-comment-comment{
+    font-size:1.5rem;
+}
+.sendComment{
+    border: 2px solid #0A3238;
+    background-color: Transparent;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color:#0A3238;
+    width: 20%;
+    height: 40px;
+    outline:none;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-left: 60%;
+}
+.sendComment:hover{
+    border:none;
+    background-color: #276169;
+    outline:none;
+    color: white;
+}
+.most-viewed-posts{
+    vertical-align:top;
+    display: inline-block;
+    background-color: #F4FFFD;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px #888888;
+    width: 25%;
+    margin-left: 3%;
+    padding-left: 2%;
+}
+.single-post-wrapper{
+    width: 70%;
+    display: inline-block;
 }
 .post-author-image{
     width:90%;
@@ -227,12 +276,14 @@ float: right;
     font-size: 1.5rem;
     color: #276169;
     width: 70%;
+    margin-left: 15%;
     margin-top: 5%;
 }
 .js-search-language{
     font-size: 1.5rem;
     color: #276169;
     width: 70%;
+    margin-left: 15%;
     margin-top: 5%;
 }
 .js-optionSkills{
@@ -782,7 +833,6 @@ a i{
     min-height: 80%;
 }
 .paging{
-    
     width: 20%;
     margin-left: 30%;
     margin-bottom: 3%;
@@ -1398,5 +1448,26 @@ padding: 5%;
     margin-left: 5%;
         margin-top: 25%;
         width: 90%;
+}
+.single-post-wrapper{
+    width: 95%;
+}
+.most-viewed-posts{
+    width: 95%;
+}
+.single-post-container{
+    width: 95%;
+}
+.post-author{
+    display: none;
+}
+.comment-block{
+    width: 95%;
+    margin-bottom: 20px;
+}
+.sendComment{
+    width: 80%;
+    margin-left: 10%;
+        
 }
 }

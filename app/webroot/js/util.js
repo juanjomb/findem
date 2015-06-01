@@ -49,6 +49,7 @@ $(document).ready(function ($) {
         $('.js-bookmark').on('click',bookmarkUser);
         $('.js-unbookmark').on('click',unbookmarkUser);
         $('.js-send-reply').on('click',sendReply);
+        $('.js-post-comment').on('click',postComment);
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -209,6 +210,7 @@ $(document).ready(function ($) {
         function addSkill(){
             var id = $(this).attr('data');
             var title = $(this).text();
+            var btn = $(this);
              $.ajax({
                     type: "POST",
                     data: {id:id},
@@ -217,6 +219,7 @@ $(document).ready(function ($) {
                         if(!data.ko){
                             pill ='<p class="skillPill" data="' + data.skill_id + '">' + title + '<span class="fa fa-trash js-removeSkill"></span></p>';
                             $('.js-skills-block').append(pill);
+                            btn.closest('.popup').find('.closePopup').trigger('click')
                         }
                     },
                     dataType: 'json'
@@ -266,6 +269,7 @@ $(document).ready(function ($) {
         function addLanguage(){
             var id = $(this).attr('data');
             var title = $(this).text();
+            var btn = $(this);
              $.ajax({
                     type: "POST",
                     data: {id:id},
@@ -275,6 +279,7 @@ $(document).ready(function ($) {
                             pill ='<p class="skillPill" data="' + data.language_id + '">' + title + '<span class="fa fa-trash js-removeLanguage"></span></p>';
                             $('.js-languages-block').append(pill);
                             $('.js-removeLanguage').on('click', removeLanguage);
+                            btn.closest('.popup').find('.closePopup').trigger('click')
                         }
                     },
                     dataType: 'json'
@@ -587,6 +592,27 @@ function unbookmarkUser(){
                 },
                 dataType: 'json'
             });
+}
+function postComment(){
+    event.preventDefault();
+      var valid = validateForm($('.js-userid').closest('form'))
+           if(valid){
+            var formData = {
+                'user_id': $('.js-userid').val(),
+                'post_id': $('.js-postid').val(),
+                'comment': $('.js-comment').val(),
+            };
+            $.ajax({
+                type: "POST",
+                url: "/comments/postComment/",
+                data: formData,
+                success: function (data) {
+                            $('.js-comments-container').html(data);
+                            $('.js-post-comment').on('click',postComment);
+                },
+                dataType: 'html'
+            });
+        }
 }
 
 

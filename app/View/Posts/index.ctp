@@ -24,7 +24,7 @@
             </tr>
 
 
-            <?php foreach ($categories as $post) { ?>
+            <?php foreach ($posts as $post) { ?>
                 <tr>
                     <td>
                         <?php echo $this->Html->link($post['Post']['title'], array('controller' => 'categories', 'action' => 'view', $post['Post']['id']));
@@ -33,6 +33,8 @@
                     <td>
                         <?php
                         echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'posts', 'action' => 'edit', $post['Post']['id']), array('escape' => false)
+                        );
+                        echo $this->Html->link('<i class="fa fa-comment editIcon"></i>', array('controller' => 'comments', 'action' => 'index', $post['Post']['id']), array('escape' => false)
                         );
                         echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('escape' => false), array('confirm' => '¿Está seguro?')
                         );

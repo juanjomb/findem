@@ -1,6 +1,7 @@
 <footer class="color-primary-4">
      <a href="/" class="nolink"><h2>Findem <?php echo $this->Html->image('findemw_1.png', array('alt' => 'Logo findem'));?></h2></a>
 	<ul>
+            <li><?php echo $this->Html->link('Blog', array('controller' => 'blog'),array('class'=>'footerlink'));?></li>
             <li><?php echo $this->Html->link('Contacto', array('controller' => 'pages', 'action' => 'contact'),array('class'=>'footerlink'));?></li>
             <li><?php echo $this->Html->link('Términos y condiciones', array('controller' => 'pages', 'action' => 'terms'),array('class'=>'footerlink'));?></li>
             <li><?php echo $this->Html->link('Iniciar sesión', array('controller' => 'users', 'action' => 'login'),array('class'=>'footerlink'));?></li>

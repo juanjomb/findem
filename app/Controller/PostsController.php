@@ -6,7 +6,7 @@ class PostsController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('blog','view');
     }
 
     public function index($user_id) {
@@ -26,12 +26,20 @@ class PostsController extends AppController {
         if (!$slug) {
             throw new NotFoundException(__('Invalid post'));
         }
-
+        
+        $this->Post->recursive=2;
+        $this->Post->Comment->unBindModel(array(
+                 'belongsTo' => array('Post')
+                 ));
         $post = $this->Post->findBySlug($slug);
         $this->getLists();
         if (!$post) {
             throw new NotFoundException(__('Invalid post'));
         }
+        $this->Post->updateAll(array(
+                'Post.views' => 'Post.views + 1'),
+                array('Post.id' => $post['Post']['id']
+            ));
         $this->set('post', $post);
     }
 
@@ -120,11 +128,16 @@ class PostsController extends AppController {
     
      public function blog() {
             $this->paginate = array(
-            'limit' => 10,
+            'limit' => 5,
             'order' => array('created' => 'asc')
         );
         $posts = $this->paginate('Post');
-        $this->set('posts', $posts);
+        
+        $order=array('Post.views'=>'DESC');
+        $limit=10;
+        $mostviewed=$this->Post->find('all',compact('limit','order'));
+        
+        $this->set(compact('posts','mostviewed'));
         
     }
 

@@ -1,25 +1,21 @@
 <?php
 App::uses('AppModel', 'Model');
 
-class Post extends AppModel {
-    var $name = 'Post';
+class Comment extends AppModel {
+    var $name = 'Comment';
     
     public $belongsTo = array(
         'User' => array(
             'className' => 'User',
             'foreignKey' => 'user_id'
+        ),
+        'Post' => array(
+            'className' => 'Post',
+            'foreignKey' => 'post_id'
         )
-    );
-     public $hasMany = array(
-        'Comment' => array(
-            'className' => 'Comment',
-            'foreignKey' => 'post_id',
-            'dependent' => true
-        )
-        
     );
     public $validate = array(
-        'title' => array(
+        'comment' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'A title is required'

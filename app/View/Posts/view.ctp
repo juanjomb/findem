@@ -11,5 +11,9 @@
                 <?php echo $this->Html->link('<i class="fa fa-eye fa-2x post-author-viewprofile" title="Ver perfil"></i>', array('controller' => 'users', 'action' => 'view',$post['User']['id']), array('escape' => false));?>
 </div>
 
+<div class="comment-block js-comments-container">
+    <?php echo $this->Element('comments');?>
+    
+</div>
 
 

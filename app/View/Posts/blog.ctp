@@ -4,6 +4,7 @@
     <h2 class="blog-header">Blog de Findem</h2>
     <p class="blog-header-description">Aquí iremos publicando todas las noticias sobre findem o sobre tendencias del sector que creamos que os puedan resultar interesantes.</p>
    </div>
+    <div class="single-post-wrapper">
  <?php foreach ($posts as $post){?>
     <div class="single-post">
         <div class="post-title"><?php echo $post['Post']['title']; ?></div>
@@ -13,6 +14,20 @@
                         ?>
     </div>
     <?php }?>
+    </div>
+    <div class="most-viewed-posts">
+        <h3>Posts más leídos</h3>
+        
+        <?php
+        $count=1;
+        foreach ($mostviewed as $most){?>
+    <div class="most-viewed-item">
+        <?php echo $count.'. '.$this->Html->link($most['Post']['title'], array('controller' => 'posts', 'action' => 'view', $most['Post']['slug']),array('class'=>'post-view-link'));
+                        ?>
+    </div>
+    <?php $count++; }?>
+    </div>
+    
 </div>
 
         
