@@ -8,7 +8,7 @@
  <?php foreach ($posts as $post){?>
     <div class="single-post">
         <div class="post-title"><?php echo $post['Post']['title']; ?></div>
-        <div class="post-data"><?php echo 'Escrito por '.$post['User']['username'].' el '.date('d-m-Y H:i:s',strtotime($post['Post']['created'])); ?></div>
+        <div class="post-data"><?php echo 'Escrito por '.$post['User']['username'].' el '.date('d-m-Y H:i:s',strtotime($post['Post']['created'])); ?><span class="comment-count"><i class="fa fa-comment"></i><?php echo ' '.count($post['Comment']).' Comentarios'; ?></span></div>
         <div class="post-body"><?php echo substr($post['Post']['post'], 0, 250).'...'; ?></div>
          <?php echo $this->Html->link('Leer post', array('controller' => 'posts', 'action' => 'view', $post['Post']['slug']),array('class'=>'post-view-link'));
                         ?>

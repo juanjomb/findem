@@ -50,6 +50,11 @@ $(document).ready(function ($) {
         $('.js-unbookmark').on('click',unbookmarkUser);
         $('.js-send-reply').on('click',sendReply);
         $('.js-post-comment').on('click',postComment);
+         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                     $('body').on('swiperight',showMenu);
+                    $('body').on('swipeleft',showMenu);
+                }
+       
         $("#datepicker").datepicker({
             changeYear: true,
             minDate: "-80Y",
@@ -97,7 +102,7 @@ $(document).ready(function ($) {
             if ($(this).find('i').hasClass('active')) {
                 $(this).find('i').removeClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                    $('html').css('overflow-y','auto');
+                    $('body').css('overflow-y','auto');
                 }
                 $(this).find('i').addClass('fa-bars');
                 $(this).find('i').removeClass('active');
@@ -105,7 +110,7 @@ $(document).ready(function ($) {
                 $(this).find('i').removeClass('fa-bars');
                 $(this).find('i').addClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                    $('html').css('overflow-y','hidden');
+                    $('body').css('overflow-y','hidden');
                 }
                 $(this).find('i').addClass('active');
             }
