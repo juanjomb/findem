@@ -50,9 +50,21 @@ $(document).ready(function ($) {
         $('.js-unbookmark').on('click',unbookmarkUser);
         $('.js-send-reply').on('click',sendReply);
         $('.js-post-comment').on('click',postComment);
-         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                     $('body').on('swiperight',showMenu);
-                    $('body').on('swipeleft',showMenu);
+         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $('#cbp-spmenu-s1').length>0 ) {
+                   $(document).swipe({
+                        tap: function(event, target) {
+                        },
+                        swipe:function(event, direction, distance, duration, fingerCount){
+                                        //Handling swipe direction.
+                                        if (direction=="left") {
+                                          hideMenuSwipe();
+                                        } else {
+                                          showMenuSwipe();
+                                        }
+                                      },
+                                      allowPageScroll:"vertical",
+                                      threshold:120,
+                                    });
                 }
        
         $("#datepicker").datepicker({
@@ -97,7 +109,27 @@ $(document).ready(function ($) {
                 }
             });
         });
-
+        function showMenuSwipe() {
+           
+            if (!$('body').hasClass('cbp-spmenu-push-toright')) {
+                $('body').addClass('cbp-spmenu-push-toright');
+            }
+            if (!$('#cbp-spmenu-s1').hasClass('cbp-spmenu-open')) {
+                
+                $('#cbp-spmenu-s1').addClass('cbp-spmenu-open');
+            }
+            $('.pushmenu-bg').fadeIn();
+            $('.pushmenu-bg').on('click',hideMenuSwipe);
+        }
+        function hideMenuSwipe() {
+            $('.pushmenu-bg').fadeOut();
+            if ($('body').hasClass('cbp-spmenu-push-toright')) {
+                $('body').removeClass('cbp-spmenu-push-toright');
+            } 
+            if ($('#cbp-spmenu-s1').hasClass('cbp-spmenu-open')) {
+                $('#cbp-spmenu-s1').removeClass('cbp-spmenu-open');
+            }
+        }
         function showMenu() {
             if ($(this).find('i').hasClass('active')) {
                 $(this).find('i').removeClass('fa-close');
@@ -114,6 +146,7 @@ $(document).ready(function ($) {
                 }
                 $(this).find('i').addClass('active');
             }
+       
             if ($('body').hasClass('cbp-spmenu-push-toright')) {
                 $('body').removeClass('cbp-spmenu-push-toright');
             } else {
@@ -525,24 +558,30 @@ $(window).unload(function () {
            if(valid){
             event.preventDefault();
             var formData = {
-                'username': $('#UserUsername').val(),
-                'password': $('#UserPassword').val(),
-                'role': $('#UserRole').val()
+                'username': $(this).closest('form').find('#UserUsername').val(),
+                'password': $(this).closest('form').find('#UserPassword').val(),
+                'role': $(this).closest('form').find('#UserRole').val()
             };
             $.ajax({
                 type: "POST",
                 url: "/users/register/",
                 data: formData,
                 success: function (data) {
-                    if (data.ok) {
-                        html = data.ok;
-                        $('.registermessage').empty();
-                        $('.registermessage').append(html);
+                    if (data.ok==1) {
+                        window.location.assign("/iniciar-sesion")
 
                     } else {
-                        html = data.ko;
-                        $('.registermessage').empty();
-                        $('.registermessage').append(html);
+                        if(data.ko==0) {
+                            html = data.message; 
+                            $('.registermessage').empty();
+                            $('.registermessage').append(html);
+                        }else{
+                            html = data.ko; 
+                            $('.registermessage').empty();
+                            $('.registermessage').append(html);
+                        }
+                        
+                        
                     }
                 },
                 dataType: 'json'

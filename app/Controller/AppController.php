@@ -54,9 +54,6 @@ class AppController extends Controller {
 
     public function beforeFilter() {
         $this->Auth->allow(array('controller' => 'pages', 'action' => 'display', 'home'));
-        $this->Auth->allow(array('controller' => 'users', 'action' => 'register'));
-        $this->Auth->allow(array('controller' => 'users', 'action' => 'login'));
-        $this->Auth->allow(array('controller' => 'users', 'action' => 'view'));
     }
     function beforeRender() {
     if($this->name == 'CakeError') {

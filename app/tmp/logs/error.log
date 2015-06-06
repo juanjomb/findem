@@ -11477,3 +11477,116 @@ Request URL: /js/jquery.nicescroll.min.js
 Stack Trace:
 #0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-06-06 13:20:49 Error: [MissingControllerException] Controller class Recuperar-datosController could not be found.
+Exception Attributes: array (
+  'class' => 'Recuperar-datosController',
+  'plugin' => NULL,
+)
+Request URL: /recuperar-datos
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 13:20:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 13:26:29 Error: [MissingControllerException] Controller class Recuperar-datosController could not be found.
+Exception Attributes: array (
+  'class' => 'Recuperar-datosController',
+  'plugin' => NULL,
+)
+Request URL: /recuperar-datos
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 13:26:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 14:21:34 Error: Fatal Error (1): Call to protected method Security::_salt() from context 'UsersController' in [C:\xampp\htdocs\findem\app\Controller\UsersController.php, line 604]
+2015-06-06 14:21:34 Error: [FatalErrorException] Call to protected method Security::_salt() from context 'UsersController'
+Request URL: /recuperar-datos
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to protect...', 'C:\\xampp\\htdocs...', 604)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to protect...', 'C:\\xampp\\htdocs...', 604, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to protect...', 'C:\\xampp\\htdocs...', 604, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-06 14:21:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 16:49:10 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\xampp\htdocs\findem\app\View\Users\recover.ctp, line 33]
+2015-06-06 16:49:10 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /recuperar-datos
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 33, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 33, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-06 16:50:10 Error: Fatal Error (1): Class 'CakeEmail' not found in [C:\xampp\htdocs\findem\app\Controller\UsersController.php, line 609]
+2015-06-06 16:50:10 Error: [FatalErrorException] Class 'CakeEmail' not found
+Request URL: /recuperar-datos
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'CakeEmai...', 'C:\\xampp\\htdocs...', 609)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CakeEmai...', 'C:\\xampp\\htdocs...', 609, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'CakeEmai...', 'C:\\xampp\\htdocs...', 609, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-06 16:50:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 16:52:43 Error: Error enviando mail : You need to specify at least one destination for to, cc or bcc.
+2015-06-06 16:54:20 Error: Error enviando mail : You need to specify at least one destination for to, cc or bcc.
+2015-06-06 16:55:07 Error: Error enviando mail : You need to specify at least one destination for to, cc or bcc.
+2015-06-06 16:55:55 Error: Error enviando mail : stream_socket_client(): SSL: Handshake timed out
+stream_socket_client(): Failed to enable crypto
+stream_socket_client(): unable to connect to ssl://smtp.gmail.com:465 (Unknown error)
+2015-06-06 16:57:01 Error: [MissingControllerException] Controller class Recuperar-datosController could not be found.
+Exception Attributes: array (
+  'class' => 'Recuperar-datosController',
+  'plugin' => NULL,
+)
+Request URL: /recuperar-datos/55730a30845fb
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 16:57:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-06 17:00:11 Error: Error enviando mail : stream_socket_client(): SSL: Handshake timed out
+stream_socket_client(): Failed to enable crypto
+stream_socket_client(): unable to connect to ssl://smtp.gmail.com:465 (Unknown error)
+2015-06-06 17:06:55 Error: Error enviando mail : SMTP server did not accept the password.
+2015-06-06 17:08:10 Error: Error enviando mail : SMTP server did not accept the password.

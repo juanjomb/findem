@@ -43,7 +43,10 @@
         Router::connect('/blog', array('controller' => 'posts', 'action' => 'blog'));
         Router::connect('/estadisticas', array('controller' => 'users', 'action' => 'stats'));
         Router::connect('/contacto', array('controller' => 'pages', 'action' => 'display','contact'));
-/**
+        Router::connect('/recuperar-datos', array('controller' => 'users', 'action' => 'recover'));
+        Router::connect('/recuperar-datos/:reset', array('controller' => 'users', 'action' => 'recover'),array('pass' => array('reset')));
+
+        /**
  * Load the CakePHP default routes. Only remove this if you do not want to use
  * the built-in default routes.
  */

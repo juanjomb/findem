@@ -15,7 +15,8 @@
         ));
     ?>
 <?php echo $this->Form->end(__('Acceder')); ?>
-
+        <div class="clearfix"></div>
+    <a class="post-view-link" href="/recuperar-datos" >No recuerdo mis datos</a>    
     </div>
 <!-- Include the Google Maps API library - required for embedding maps -->
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>

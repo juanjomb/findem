@@ -1,12 +1,15 @@
 <?php
-
+App::uses('CakeEmail', 'Network/Email');
 class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form');
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        $this->Auth->allow('login');
+        $this->Auth->allow('register');
+        $this->Auth->allow('view');
+        $this->Auth->allow('recover');
     }
 
     public function login() {
@@ -17,7 +20,7 @@ class UsersController extends AppController {
                 $this->Session->write('user', $user);
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
-                $this->Session->setFlash(__('Invalid username or password, try again'));
+                $this->Session->setFlash(__('Nombre de usuario o contraseña incorrectos'));
                 return $this->redirect('/');
             }
         }
@@ -478,14 +481,15 @@ class UsersController extends AppController {
             if (empty($user)) {
                 $this->User->create();
                 if ($this->User->save($this->request->data)) {
-                    $result['ok']='Your account have been successfully registered';
+                    $result['ok']=1;
                     echo json_encode($result);
                 } else {
-                    $result['ko']='Error on registering';
+                    $result['ko']=0;
+                    $result['message']='Ha ocurrido un problema. Intentelo de nuevo o contacte con el administrador';
                     echo json_encode($result);
                 }
             } else {
-                $result['ko']='Username already exists';
+                $result['ko']='El nombre de usuario está en uso';
                 echo json_encode($result);
             }
         }
@@ -591,6 +595,53 @@ class UsersController extends AppController {
          
          $this->set(compact('users','skills','languages'));
          
+    }
+    
+     public function recover($reset=null){
+         if($this->request->data){
+          if (isset($this->request->data['User']['email'])) {
+            $user= $this->User->findByEmail($this->request->data['User']['email']);
+            if(!empty($user)){
+                $md5=uniqid(); 
+                $user['User']['reset_key']=$md5;
+                $this->User->save($user);
+                $message='<p>Hola, '.$user['User']['username'].', pulsa <a href="http://findem/recuperar-datos/'.$md5.'">aquí</a> para restablecer tu contraseña</p>';
+            	try {
+                    $email = new CakeEmail('gmail');
+                    $email->from('no-reply@gmail.com','Findem');
+                    $email->replyTo('no-reply@gmail.com','Findem');
+                    $email->to($this->request->data['User']['email']);
+                    $email->subject('Restablecer contraseña');
+                    $success = $email->send($message);
+                } catch (SocketException $e) {
+                    $this->log(sprintf('Error enviando mail : %s', $e->getMessage()));
+                    }
+                    $this->Session->setFlash(__('Te hemos enviado un email con los detalles para restablecer tu contraseña.'));
+                    }else{
+                       $this->Session->setFlash(__('No hay ningún usuario registrado con ese email.')); 
+                    }
+                    
+        }
+         if (isset($this->request->data['User']['password'])) {
+            $user= $this->User->findById($this->request->data['User']['id']);
+            $user['User']['password']=$this->request->data['User']['password'];
+            if(!empty($user)){
+                if($this->User->save($user)){
+                    $this->Session->setFlash(__('Su contraseña ha sido cambiada')); 
+                    $this->redirect(array('action' => 'login'));
+                }
+                
+                    }
+                    
+        }
+         }
+        if($reset){
+            $user= $this->User->findByResetKey($reset);
+             if(!empty($user)){
+               $id=$user['User']['id'];
+               $this->set(compact('id'));
+                    }
+        }
     }
    
 
