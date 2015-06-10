@@ -24,7 +24,7 @@ $prof=1;
 }else{
 $prof=0;
 }}?>
-<div class="js-profilecompleted" aria-data="<?php if(isset($prof)){echo $prof;}?>"></div>
+<div class="js-profilecompleted" aria-label="<?php if(isset($prof)){echo $prof;}?>"></div>
     <a href="/" class="nolink"><h1>Findem <?php echo $this->Html->image('findemw_1.png', array('alt' => 'Logo findem'));?></h1></a>
      
 </header>

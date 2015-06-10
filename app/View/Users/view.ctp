@@ -13,7 +13,7 @@
             <p class="profile-data"><?php echo h($user['User']['description']); ?></p>
             <p class="profile-data"><?php echo h($user['User']['phone']); ?></p>
             <p class="profile-data"><?php echo h($user['User']['email']); ?></p>
-            <p class="profile-data js-location" data-latitude="<?php echo h($user['City']['latitud']); ?>" data-longitude="<?php echo h($user['City']['longitud']); ?>"><i class="fa fa-map-marker"></i><?php echo ' '.h($user['City']['municipio']); ?></p>
+            <p class="profile-data js-location" data-latitude="<?php echo h($user['City']['latitud']); ?>" data-longitude="<?php echo h($user['City']['longitud']); ?>"><span class="fa fa-map-marker"></span><?php echo ' '.h($user['City']['municipio']); ?></p>
             <p class="profile-data"><?php echo h($user['Province']['province']); ?></p>
             <p class="profile-data"><?php echo h($user['Region']['comunidad']); ?></p>
         </div>
@@ -34,7 +34,7 @@
         foreach ($educations as $education) {
             ?>
             <div class="singleEducation col-xs-12 col-md-12">
-                <p data-education="<?php print $education['Education']['id']; ?>"><?php print $education['Education']['title']; ?><?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+                <p aria-label="<?php print $education['Education']['id']; ?>"><?php print $education['Education']['title']; ?><?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeEducation"></span>
          <?php   }
 ?> </p> 
@@ -57,7 +57,7 @@
         foreach ($experiences as $experience) {
             ?>
             <div class="singleExperience col-xs-12 col-md-12">
-                <p data-experience="<?php echo $experience['Experience']['id']; ?>"><?php echo $experience['Experience']['title']; ?><?php if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
+                <p aria-label="<?php echo $experience['Experience']['id']; ?>"><?php echo $experience['Experience']['title']; ?><?php if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeExperience"></span>
          <?php   } ?></p>  
                 <p><?php echo $experience['Experience']['company'] . ' ' . $experience['Experience']['start_date'] . ' - ' . $experience['Experience']['end_date']; ?></p>
@@ -81,7 +81,7 @@
         
         foreach ($userskills as $skill) {
             ?>
-            <p class="skillPill" data="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title'].'   '; 
+            <p class="skillPill" aria-label="<?php print $skill['Skill']['id']?>"><?php print $skill['Skill']['title'].'   '; 
             if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeSkill"></span>
          <?php   }
@@ -97,7 +97,7 @@
            <?php  if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
             <div class="col-xs-12 col-md-4">
             <button type="button" class="profileadd js-add-language">
-                <i class="fa fa-language"></i> Añadir Idioma
+                <span class="fa fa-language"></span> Añadir Idioma
             </button>
         </div>
             <?php } ?>
@@ -106,7 +106,7 @@
         
         foreach ($userlanguages as $languages) {
             ?>
-            <p class="skillPill" data="<?php print $languages['Language']['id']?>"><?php print $languages['Language']['title'].'   '; 
+            <p class="skillPill" aria-label="<?php print $languages['Language']['id']?>"><?php print $languages['Language']['title'].'   '; 
             if($user['User']['id']==$this->Session->read('Auth.User.id')){ ?>
                 <span class="fa fa-trash js-removeLanguage"></span>
          <?php   }
@@ -122,75 +122,90 @@
 
 <div class="popupBg">  
         <div class="popup js-popup-add-education">
-            <i class="fa fa-close closePopup"></i>
-            <h3>Añadir educación</h3>
+            <span class="fa fa-close closePopup"></span>
+            <h3>Añadir formación</h3>
             <?php echo $this->Form->create('Education') ?>
-            <div class="form-group">
                 <?php
                 echo $this->Form->hidden('user_id', array('value' => $user['User']['id'],'class'=>'js-educationuser'));
-                echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-educationtitle js-required',
+                echo $this->Form->input('title', array(
+                    'label'=>'Título',
+                    'class' => 'col-xs-12 col-md-12 form-control js-educationtitle js-required',
                     'div' => 'col-xs-12 col-md-12'
                 ));
-                echo $this->Form->input('description', array('rows' => '3',
+                echo $this->Form->input('description', array(
+                    'label'=>'Descripción',
+                    'rows' => '3',
                     'class' => 'col-xs-12 col-md-12 form-control js-educationdescription js-required',
                     'div' => 'col-xs-12 col-md-12'
                 ));
                 echo $this->Form->input('start_date', array(
+                    'label'=>'Fecha inicio',
                     'type' => 'select',
+                    'empty'=>'Selecciona una fecha de inicio',
                     'options' => $years,
                     'class' => 'col-xs-12 col-md-12 form-control js-startdate js-educationstart js-required',
                     'div' => 'col-xs-12 col-md-6'
                 ));
                 echo $this->Form->input('end_date', array(
+                    'label'=>'Fecha fin',
                     'type' => 'select',
+                    'empty'=>'Selecciona una fecha de fin',
                     'class' => 'col-xs-12 col-md-12 form-control js-enddate js-educationend js-required',
                     'div' => 'col-xs-12 col-md-6 '
                 ));
                 echo '<div class="col-xs-4 col-md-8 "></div>';
+                echo '<p class="error-message"></p>';
                 $options = array(
-                    'label' => 'Save Education',
+                    'label' => 'Guardar formación',
                     'class' => 'btn btn-default col-xs-8 col-md-4 profileadd saveEducation',
                     'div' => false
                 );
                 echo $this->Form->end($options);
                 ?>
-
-            </div>
         </div>
     </div> 
 <div class="popupBg">  
         <div class="popup js-popup-add-experience">
-            <i class="fa fa-close closePopup"></i>
+            <span class="fa fa-close closePopup"></span>
             <h3>Añadir experiencia</h3>
            <?php echo $this->Form->create('Experience') ?>
 
-            <div class="form-group">
 <?php
 echo $this->Form->hidden('user_id', array('value' => $user['User']['id']));
-echo $this->Form->input('title', array('class' => 'col-xs-12 col-md-12 form-control js-required',
-    'div' => 'col-xs-12 col-md-12'
-));
-echo $this->Form->input('company', array('rows' => '3',
+echo $this->Form->input('title', array(
+    'label'=>'Título',
     'class' => 'col-xs-12 col-md-12 form-control js-required',
     'div' => 'col-xs-12 col-md-12'
 ));
-echo $this->Form->input('description', array('rows' => '3',
+echo $this->Form->input('company', array(
+    'label'=>'Empresa',
+    'rows' => '3',
+    'class' => 'col-xs-12 col-md-12 form-control js-required',
+    'div' => 'col-xs-12 col-md-12'
+));
+echo $this->Form->input('description', array(
+    'label'=>'Descripción',
+    'rows' => '3',
     'class' => 'col-xs-12 col-md-12 form-control js-required',
     'div' => 'col-xs-12 col-md-12'
 ));
 echo $this->Form->input('start_date', array(
+    'label'=>'Fecha inicio',
     'type' => 'select',
     'options' => $years,
+    'empty'=>'Selecciona una fecha de inicio',
     'class' => 'col-xs-12 col-md-12 form-control js-startdate js-required',
     'div' => 'col-xs-12 col-md-6'
 ));
 echo $this->Form->input('end_date', array(
+    'label'=>'Fecha fin',
     'type' => 'select',
+    'empty'=>'Selecciona una fecha de fin',
     'class' => 'col-xs-12 col-md-12 form-control js-enddate js-required',
     'div' => 'col-xs-12 col-md-6 '
 ));
 echo '<div class="col-xs-4 col-md-8 "></div>';
-echo '<p class="error-message"> </p>';
+echo '<p class="error-message"></p>';
 $options = array(
     'label' => 'Save Experience',
     'class' => 'btn btn-default col-xs-8 col-md-4  profileadd saveExperience',
@@ -199,7 +214,6 @@ $options = array(
 echo $this->Form->end($options);
 ?>
 
-            </div>
 
 
             </div>
@@ -208,20 +222,24 @@ echo $this->Form->end($options);
     
     <div class="popupBg">  
         <div class="popup js-popup-view-map">
-            <i class="fa fa-close closePopup"></i>
+            <span class="fa fa-close closePopup"></span>
 
             <div class="user-map" id="mapuser"></div>
 
 
             </div>
         </div>
-    </div> 
+    
     
 <div class="popupBg">  
         <div class="popup js-popup-languages">
             <span class="fa fa-close closePopup"></span>
             <p class="popup-header">Búsqueda de idiomas</p>
-            <input type="text" class="js-search-language">
+            <form action="#" method="post">
+            <label for="searchlanguage"> </label>
+            <input id="searchlanguage" type="text" class="js-search-language">
+            <input type="submit" value="submit" style="display:none;" />
+            </form>
             <div class="js-optionLanguages"></div>
         </div>
     </div> 
@@ -229,11 +247,15 @@ echo $this->Form->end($options);
         <div class="popup js-popup-skills">
             <span class="fa fa-close closePopup"></span>
             <p class="popup-header">Búsqueda de habilidad</p>
-            <input type="text" name="ser" class="js-search-skill">
+            <form action="#" method="post">
+            <label for="searchskill"> </label>
+            <input id="searchskill" type="text" class="js-search-skill">
+            <input type="submit" value="submit" style="display:none;" />
+            </form>
             <div class="js-optionSkills"></div>
         </div>
     </div> 
     
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script><div>
 <?php
 echo $this->Html->script('mapview', array('inline' => false));?>

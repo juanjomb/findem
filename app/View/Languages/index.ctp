@@ -8,7 +8,7 @@
     <div class="row">
 
         <div class="col-xs-12 col-md-12"> <?php
-            echo $this->Html->link('<span class="btn btn-success">Create language</span>', array('controller' => 'languages', 'action' => 'add'), array('escape' => false)
+            echo $this->Html->link('<span class="btn btn-success">Crear idioma</span>', array('controller' => 'languages', 'action' => 'add'), array('escape' => false)
             );
             ?>
         </div>
@@ -27,15 +27,15 @@
             <?php foreach ($languages as $language) { ?>
                 <tr>
                     <td>
-                        <?php echo $this->Html->link($language['Language']['title'], array('controller' => 'languages', 'action' => 'view', $language['Language']['id']));
+                        <?php echo $language['Language']['title'];
                         ?>
                     </td>
                     <td><?php echo $language['Language']['created'] ;?></td>
                     <td>
                         <?php
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'languages', 'action' => 'edit', $language['Language']['id']), array('escape' => false)
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon" title="Editar idioma"></i>', array('controller' => 'languages', 'action' => 'edit', $language['Language']['id']), array('escape' => false)
                         );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'languages', 'action' => 'delete', $language['Language']['id']), array('escape' => false), array('confirm' => 'Are you sure?')
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar idioma"></i>', array('controller' => 'languages', 'action' => 'delete', $language['Language']['id']), array('escape' => false), array('confirm' => 'Está seguro?')
                         );
                         ?>
                     </td>

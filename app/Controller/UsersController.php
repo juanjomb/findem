@@ -21,7 +21,7 @@ class UsersController extends AppController {
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
                 $this->Session->setFlash(__('Nombre de usuario o contraseña incorrectos'));
-                return $this->redirect('/');
+                return $this->redirect('/iniciar-sesion');
             }
         }
     }
@@ -62,7 +62,7 @@ class UsersController extends AppController {
     public function view($id) {
         
         if (!$id) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('Usuario no válido'));
         }
 
         $user = $this->User->findById($id);
@@ -70,7 +70,7 @@ class UsersController extends AppController {
         $this->getLists($user);
 
         if (!$user) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('Usuario no válido'));
         }
         $this->set('user', $user);
         if($user['User']['id']!= $this->Session->read('Auth.User.id')){
@@ -110,11 +110,11 @@ class UsersController extends AppController {
             }
             
             if ($this->User->save($item)) {
-                $this->Session->setFlash(__('Your user has been saved.'));
+                $this->Session->setFlash(__('El usuario ha sido guardado.'));
                  
                 return $this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('Unable to add your user.'));
+            $this->Session->setFlash(__('No se ha podido guardar el usuario.'));
         }
          }else{
                  $this->redirect('/pages/denied');
@@ -123,12 +123,12 @@ class UsersController extends AppController {
 
     public function edit($id = null) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
+            throw new NotFoundException(__('Usuario no válido'));
         }
 
         $user = $this->User->findById($id);
         if (!$user) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('Usuario no válido'));
         }
         if($user['User']['id']== $this->Session->read('Auth.User.id')||
              $this->Session->read('Auth.User.role')=='admin'){
@@ -156,7 +156,7 @@ class UsersController extends AppController {
                 $item = $this->request->data;
             }
             if ($this->User->save($item)) {
-                $this->Session->setFlash(__('Your user has been updated.'));
+                $this->Session->setFlash(__('El usuario ha sido actualizado.'));
                     if($this->request->data['User']['id'] == AuthComponent::User('id')){ //if current logged in user  update user session data
 
                   $this->Session->write('Auth.User.name', $this->request->data['User']['name']);           
@@ -166,7 +166,7 @@ class UsersController extends AppController {
                 }
                 return $this->redirect(array('action' => 'view',$id));
             }
-            $this->Session->setFlash(__('Unable to update your user.'));
+            $this->Session->setFlash(__('No se ha podido actualizar el usuario.'));
         }
 
         if (!$this->request->data) {
@@ -184,11 +184,11 @@ class UsersController extends AppController {
 
         if ($this->User->delete($id)) {
             $this->Session->setFlash(
-                    __('The user with id: %s has been deleted.', h($id))
+                    __('El usuario con id: %s ha sido borrado.', h($id))
             );
         } else {
             $this->Session->setFlash(
-                    __('The user with id: %s could not be deleted.', h($id))
+                    __('El usuario con id: %s no ha podido ser borrado.', h($id))
             );
         }
 
@@ -567,10 +567,10 @@ class UsersController extends AppController {
                     $item=$this->request->data;
                 }
             if ($this->User->SentMessage->save($item)) {
-                $this->Session->setFlash(__('Your message has been sent.'));
+                $this->Session->setFlash(__('Su mensaje ha sido enviado.'));
                 return $this->redirect(array('action' => 'inbox'));
             }
-            $this->Session->setFlash(__('Unable to send your message.'));
+            $this->Session->setFlash(__('No se ha podido enviar el mensaje.'));
         }
     }
     

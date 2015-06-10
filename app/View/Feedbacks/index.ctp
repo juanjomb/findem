@@ -33,9 +33,9 @@
                     </td>
                     <td>
                         <?php
-                        echo $this->Html->link('<i class="fa fa-eye editIcon"></i>', array('controller' => 'feedbacks', 'action' => 'view', $feedback['Feedback']['id']), array('escape' => false)
+                        echo $this->Html->link('<i class="fa fa-eye editIcon" title="Ver feedback"></i>', array('controller' => 'feedbacks', 'action' => 'view', $feedback['Feedback']['id']), array('escape' => false)
                         );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'feedbacks', 'action' => 'delete', $feedback['Feedback']['id']), array('escape' => false), array('confirm' => 'Are you sure?')
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar feedback"></i>', array('controller' => 'feedbacks', 'action' => 'delete', $feedback['Feedback']['id']), array('escape' => false), array('confirm' => 'Are you sure?')
                         );
                         ?>
                     </td>

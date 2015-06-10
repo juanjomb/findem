@@ -5,6 +5,7 @@
         <?php
         echo $this->Form->input('id');
         echo $this->Form->input('title', array(
+            'label' => 'Título',
             'type' => 'text',
             'class' => 'col-xs-12 col-md-6 form-control js-required',
             'div' => 'col-xs-12 col-md-12'

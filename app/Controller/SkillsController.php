@@ -12,7 +12,7 @@ class SkillsController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $this->paginate = array(
                 'limit' => 10,
-                'order' => array('title' => 'desc')
+                'order' => array('title' => 'asc')
             );
             $skills = $this->paginate('Skill');
             $this->set('skills', $skills);

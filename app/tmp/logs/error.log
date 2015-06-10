@@ -11626,3 +11626,186 @@ Request URL: /js/jquery.nicescroll.min.js
 Stack Trace:
 #0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-06-10 19:12:24 Error: Error enviando mail : Invalid email: ""
+2015-06-10 19:12:28 Error: Error enviando mail : Invalid email: ""
+2015-06-10 20:52:21 Error: Fatal Error (4): syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\findem\app\View\Users\add.ctp, line 117]
+2015-06-10 20:52:21 Error: [FatalErrorException] syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /users/add
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 117, Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 117, Array)
+#3 C:\xampp\htdocs\findem\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-10 20:52:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 22:35:19 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /blog/Findem
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 22:35:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 22:41:05 Error: [NotFoundException] Invalid category
+Request URL: /categories/view/5578a0a7-0b94-4a89-97ff-32044fb7e87d
+Stack Trace:
+#0 [internal function]: CategoriesController->view('5578a0a7-0b94-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(CategoriesController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-10 22:41:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 22:41:38 Error: [NotFoundException] Invalid post
+Request URL: /posts/view/5578a0a7-0b94-4a89-97ff-32044fb7e87d
+Stack Trace:
+#0 [internal function]: PostsController->view('5578a0a7-0b94-4...')
+#1 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-10 22:41:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 23:15:03 Error: [MissingControllerException] Controller class FindemController could not be found.
+Exception Attributes: array (
+  'class' => 'FindemController',
+  'plugin' => NULL,
+)
+Request URL: /findem
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 23:15:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-10 23:52:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-06-10 23:52:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-06-10 23:52:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-06-10 23:53:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-06-10 23:53:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-06-10 23:53:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'skill_id' cannot be null
+Request URL: /users/saveSkill/
+Stack Trace:
+#0 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `fi...', Array)
+#2 C:\xampp\htdocs\findem\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `fi...')
+#3 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1924): DboSource->create(Object(UserSkill), Array, Array)
+#4 C:\xampp\htdocs\findem\lib\Cake\Model\Model.php(1747): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\findem\app\Controller\UsersController.php(278): Model->save(Array)
+#6 [internal function]: UsersController->saveSkill()
+#7 C:\xampp\htdocs\findem\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\findem\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

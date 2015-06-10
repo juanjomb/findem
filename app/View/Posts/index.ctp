@@ -27,16 +27,16 @@
             <?php foreach ($posts as $post) { ?>
                 <tr>
                     <td>
-                        <?php echo $this->Html->link($post['Post']['title'], array('controller' => 'categories', 'action' => 'view', $post['Post']['id']));
+                        <?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['slug']));
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'posts', 'action' => 'edit', $post['Post']['id']), array('escape' => false)
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon" title="Editar post"></i>', array('controller' => 'posts', 'action' => 'edit', $post['Post']['id']), array('escape' => false)
                         );
-                        echo $this->Html->link('<i class="fa fa-comment editIcon"></i>', array('controller' => 'comments', 'action' => 'index', $post['Post']['id']), array('escape' => false)
+                        echo $this->Html->link('<i class="fa fa-comment editIcon" title="Ver comentarios"></i>', array('controller' => 'comments', 'action' => 'index', $post['Post']['id']), array('escape' => false)
                         );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('escape' => false), array('confirm' => '¿Está seguro?')
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar post"></i>', array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('escape' => false), array('confirm' => '¿Está seguro?')
                         );
                         ?>
                     </td>

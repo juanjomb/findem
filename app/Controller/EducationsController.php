@@ -21,13 +21,13 @@ class EducationsController extends AppController {
 
     public function view($id) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid education'));
+            throw new NotFoundException(__('Formación no válida'));
         }
 
         $education = $this->Education->findById($id);
         $this->getLists();
         if (!$education) {
-            throw new NotFoundException(__('Invalid education'));
+            throw new NotFoundException(__('Formación no válida'));
         }
         $this->set('education', $education);
     }
@@ -43,10 +43,10 @@ class EducationsController extends AppController {
                     $item = $this->request->data;
                 }
                 if ($this->Education->save($item)) {
-                    $this->Session->setFlash(__('Your education has been saved.'));
+                    $this->Session->setFlash(__('La formación ha sido guardada'));
                     return $this->redirect(array('action' => 'index',$user_id));
                 }
-                $this->Session->setFlash(__('Unable to add your education.'));
+                $this->Session->setFlash(__('No se ha podido guardar la formación'));
             }
             $this->set(compact('user_id'));
         } else {
@@ -58,22 +58,22 @@ class EducationsController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
 
             if (!$id) {
-                throw new NotFoundException(__('Invalid education'));
+                throw new NotFoundException(__('Formación no válida'));
             }
 
             $education = $this->Education->findById($id);
             if (!$education) {
-                throw new NotFoundException(__('Invalid education'));
+                throw new NotFoundException(__('Formación no válida'));
             }
             $this->set('education', $education);
             $this->getLists($education);
             if ($this->request->is(array('post', 'put'))) {
                 $this->Education->id = $id;
                 if ($this->Education->save($this->request->data)) {
-                    $this->Session->setFlash(__('Your education has been updated.'));
+                    $this->Session->setFlash(__('La educación ha sido actualizada'));
                     return $this->redirect(array('action' => 'index'));
                 }
-                $this->Session->setFlash(__('Unable to update your education.'));
+                $this->Session->setFlash(__('La educación no ha podido ser actualizada'));
             }
 
             if (!$this->request->data) {
@@ -93,11 +93,11 @@ class EducationsController extends AppController {
 
             if ($this->Education->delete($id)) {
                 $this->Session->setFlash(
-                        __('The education with id: %s has been deleted.', h($id))
+                        __('La educación con id: %s ha sido borrada.', h($id))
                 );
             } else {
                 $this->Session->setFlash(
-                        __('The education with id: %s could not be deleted.', h($id))
+                        __('La educación con id: %s no ha podido ser borrada.', h($id))
                 );
             }
 

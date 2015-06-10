@@ -45,24 +45,21 @@
                     <td><?php echo $user['User']['phone']; ?></td>
                     <td>
                         <?php 
-                        echo $this->Html->link('<i class="fa fa-university familyIcon"></i>', array('controller' => 'educations', 'action' => 'index', $user['User']['id']),
+                        echo $this->Html->link('<i class="fa fa-university familyIcon" title="Ver formación"></i>', array('controller' => 'educations', 'action' => 'index', $user['User']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo '  ';
-                        echo $this->Html->link('<i class="fa fa-briefcase familyIcon"></i>', array('controller' => 'experiences', 'action' => 'index', $user['User']['id']),
+                        echo $this->Html->link('<i class="fa fa-briefcase familyIcon" title="Ver experiencia"></i>', array('controller' => 'experiences', 'action' => 'index', $user['User']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo '  ';
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'users', 'action' => 'edit', $user['User']['id']),
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon" title="Editar usuario"></i>', array('controller' => 'users', 'action' => 'edit', $user['User']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo '  ';
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'users', 'action' => 'delete', $user['User']['id']),
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar usuario"></i>', array('controller' => 'users', 'action' => 'delete', $user['User']['id']),
                                 array('escape' => false),
-                                array('confirm' => 'Are you sure?')
+                                array('confirm' => 'Está seguro?')
                                 );
                         ?>
                     </td>

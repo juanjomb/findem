@@ -24,7 +24,6 @@
 <?php } ?>
   <?php echo $this->Form->create('Comment') ?>
 
-            <div class="form-group">
 <?php
 echo $this->Form->hidden('user_id', array('value' => $this->Session->read('Auth.User.id'),'class'=>'js-userid'));
 echo $this->Form->hidden('post_id', array('value' => $post['Post']['id'],'class'=>'js-postid'));

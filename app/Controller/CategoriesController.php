@@ -24,13 +24,13 @@ class CategoriesController extends AppController {
 
     public function view($id) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid category'));
+            throw new NotFoundException(__('Categoría no válida'));
         }
 
         $category = $this->Category->findById($id);
         $this->getLists();
         if (!$category) {
-            throw new NotFoundException(__('Invalid category'));
+            throw new NotFoundException(__('Categoría no válida'));
         }
         $this->set('category', $category);
     }
@@ -44,10 +44,10 @@ if($this->Session->read('Auth.User.role')=='admin'){
                 $item = $this->request->data;
             }
             if ($this->Category->save($item)) {
-                $this->Session->setFlash(__('Your category has been saved.'));
+                $this->Session->setFlash(__('La categoría ha sido guardada'));
                 return $this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('Unable to add your category.'));
+            $this->Session->setFlash(__('No se ha podido guardar la categoría'));
         }
          }else{
                  $this->redirect('/pages/denied');
@@ -58,22 +58,22 @@ if($this->Session->read('Auth.User.role')=='admin'){
         if($this->Session->read('Auth.User.role')=='admin'){
     
         if (!$id) {
-            throw new NotFoundException(__('Invalid category'));
+            throw new NotFoundException(__('Categoría no válida'));
         }
 
         $category = $this->Category->findById($id);
         if (!$category) {
-            throw new NotFoundException(__('Invalid category'));
+            throw new NotFoundException(__('Categoría no válida'));
         }
          $this->set('category', $category);
         $this->getLists($category);
         if ($this->request->is(array('post', 'put'))) {
             $this->Category->id = $id;
             if ($this->Category->save($this->request->data)) {
-                $this->Session->setFlash(__('Your category has been updated.'));
+                $this->Session->setFlash(__('La categoría ha sido actualizada'));
                 return $this->redirect(array('action' => 'index'));
             }
-            $this->Session->setFlash(__('Unable to update your category.'));
+            $this->Session->setFlash(__('No se ha podido actualizar la categoría'));
         }
 
         if (!$this->request->data) {
@@ -93,11 +93,11 @@ if($this->Session->read('Auth.User.role')=='admin'){
 
         if ($this->Category->delete($id)) {
             $this->Session->setFlash(
-                    __('The category with id: %s has been deleted.', h($id))
+                    __('La categoría con id: %s ha sido borrada.', h($id))
             );
         } else {
             $this->Session->setFlash(
-                    __('The category with id: %s could not be deleted.', h($id))
+                    __('La categoría con id: %s no ha podido ser borrada.', h($id))
             );
         }
 

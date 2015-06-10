@@ -50,6 +50,7 @@ $(document).ready(function ($) {
         $('.js-unbookmark').on('click',unbookmarkUser);
         $('.js-send-reply').on('click',sendReply);
         $('.js-post-comment').on('click',postComment);
+        $('.js-btn-about').on('click',clickAbout)
          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $('#cbp-spmenu-s1').length>0 ) {
                    $(document).swipe({
                         tap: function(event, target) {
@@ -72,7 +73,7 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
-        if($('.js-profilecompleted').attr('aria-data')==="0"){
+        if($('.js-profilecompleted').attr('aria-label')==="0"){
             showPopup(true);
         }
         
@@ -232,7 +233,7 @@ $(document).ready(function ($) {
                     success: function (data) {
                         $(".js-optionSkills").empty();
                         $.each(data, function (item, value) {
-                            var pill = '<p class="completion" data="'+value.Skill.id+'">'+ value.Skill.title + "</p>";
+                            var pill = '<p class="completion" aria-label="'+value.Skill.id+'">'+ value.Skill.title + "</p>";
                             $(pill).appendTo(".js-optionSkills");
                             $('.completion').on('click',addSkill);
                         });
@@ -246,7 +247,7 @@ $(document).ready(function ($) {
            
         }
         function addSkill(){
-            var id = $(this).attr('data');
+            var id = $(this).attr('aria-label');
             var title = $(this).text();
             var btn = $(this);
              $.ajax({
@@ -255,8 +256,9 @@ $(document).ready(function ($) {
                     url: "/users/saveSkill/",
                     success: function (data) {
                         if(!data.ko){
-                            pill ='<p class="skillPill" data="' + data.skill_id + '">' + title + '<span class="fa fa-trash js-removeSkill"></span></p>';
+                            pill ='<p class="skillPill" aria-label="' + data.skill_id + '">' + title + '<span class="fa fa-trash js-removeSkill"></span></p>';
                             $('.js-skills-block').append(pill);
+                            $('.js-removeSkill').on('click', removeSkill);
                             btn.closest('.popup').find('.closePopup').trigger('click')
                         }
                     },
@@ -265,7 +267,7 @@ $(document).ready(function ($) {
         }
         
         function removeSkill(){
-            var id = $(this).closest('.skillPill').attr('data');
+            var id = $(this).closest('.skillPill').attr('aria-label');
             var pill = $(this).closest('.skillPill');
              $.ajax({
                     type: "POST",
@@ -290,7 +292,7 @@ $(document).ready(function ($) {
                     success: function (data) {
                         $(".js-optionLanguages").empty();
                         $.each(data, function (item, value) {
-                            var pill = '<p class="completion" data="'+value.Language.id+'">'+ value.Language.title + "</p>";
+                            var pill = '<p class="completion" aria-label="'+value.Language.id+'">'+ value.Language.title + "</p>";
                             $(pill).appendTo(".js-optionLanguages");
                             $('.completion').on('click',addLanguage);
                             $('.js-optionLanguages').mCustomScrollbar();
@@ -305,7 +307,7 @@ $(document).ready(function ($) {
            
         }
         function addLanguage(){
-            var id = $(this).attr('data');
+            var id = $(this).attr('aria-label');
             var title = $(this).text();
             var btn = $(this);
              $.ajax({
@@ -314,7 +316,7 @@ $(document).ready(function ($) {
                     url: "/users/saveLanguage/",
                     success: function (data) {
                         if(!data.ko){
-                            pill ='<p class="skillPill" data="' + data.language_id + '">' + title + '<span class="fa fa-trash js-removeLanguage"></span></p>';
+                            pill ='<p class="skillPill" aria-label="' + data.language_id + '">' + title + '<span class="fa fa-trash js-removeLanguage"></span></p>';
                             $('.js-languages-block').append(pill);
                             $('.js-removeLanguage').on('click', removeLanguage);
                             btn.closest('.popup').find('.closePopup').trigger('click')
@@ -325,7 +327,7 @@ $(document).ready(function ($) {
         }
         
         function removeLanguage(){
-            var id = $(this).closest('.skillPill').attr('data');
+            var id = $(this).closest('.skillPill').attr('aria-label');
             var pill = $(this).closest('.skillPill');
              $.ajax({
                     type: "POST",
@@ -341,7 +343,7 @@ $(document).ready(function ($) {
         }
         
          function removeEducation(){
-            var id = $(this).closest('p').attr('data-education');
+            var id = $(this).closest('p').attr('aria-label');
             var education = $(this).closest('.singleEducation');
              $.ajax({
                     type: "POST",
@@ -356,7 +358,7 @@ $(document).ready(function ($) {
                 });
         }
         function removeExperience(){
-            var id = $(this).closest('p').attr('data-experience');
+            var id = $(this).closest('p').attr('aria-label');
             var experience = $(this).closest('.singleExperience');
              $.ajax({
                     type: "POST",
@@ -412,9 +414,9 @@ $(document).ready(function ($) {
         }
 
         function saveEducation() {
+            event.preventDefault();
             var valid = validateForm($('.js-educationtitle').closest('form'))
            if(valid){
-            event.preventDefault();
             var formData = {
                 'title': $('.js-educationtitle').val(),
                 'description': $('.js-educationdescription').val(),
@@ -432,7 +434,7 @@ $(document).ready(function ($) {
                     $('.js-educationstart').val('');
                     $('.js-educationend').val('');
                     ed = '<div class="singleEducation col-xs-12 col-md-12">';
-                    ed += '<p data-education="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeEducation"></span></p>';
+                    ed += '<p aria-label="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeEducation"></span></p>';
                     ed += '<p>' + data.description + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                     ed += '</div>';
                     $('.educationData').append(ed);
@@ -465,9 +467,10 @@ $(window).unload(function () {
         
         
           function saveExperience() {
+              event.preventDefault();
               var valid = validateForm($('#ExperienceTitle').closest('form'))
            if(valid){
-            event.preventDefault();
+            
             var formData = {
                 'title': $('#ExperienceTitle').val(),
                 'description': $('#ExperienceDescription').val(),
@@ -487,7 +490,7 @@ $(window).unload(function () {
                     $('#ExperienceStartDate').val('');
                     $('#ExperienceEndDate').val('');
                     ed = '<div class="singleExperience col-xs-12 col-md-12">';
-                    ed += '<p data-experience="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeExperience"></span></p>';
+                    ed += '<p aria-label="'+data.id+'"=>' + data.title + '<span class="fa fa-trash js-removeExperience"></span></p>';
                     ed += '<p>' + data.company + ' ' + data.start_date + ' - ' + data.end_date + '</p>';
                      ed += '<p>' + data.description + '</p>';
                     ed += '</div>';
@@ -539,6 +542,10 @@ $(window).unload(function () {
         }
         
         function closePopup() {
+            $(this).closest('.popup').find('.error-input').each(function(){
+                $(this).removeClass('error-input');
+            });
+            $(this).closest('.popup').find('.error-message').hide();
             $(this).closest('.popupBg').hide();
             $('body').css('overflow-y','auto');
         }
@@ -554,6 +561,7 @@ $(window).unload(function () {
             }
         }
         function register() {
+            event.preventDefault();
              var valid = validateForm($(this).closest('form'))
            if(valid){
             event.preventDefault();
@@ -663,8 +671,10 @@ function postComment(){
 
 function validateForm(form){
 	
-        if(form.length<1){
+        if(form.type == 'submit'){
             form = $(this)
+        }else{
+            event.preventDefault();
         }
 		var noerror = true;
 		$('.error-message').hide();		
@@ -675,8 +685,8 @@ function validateForm(form){
 		  if($(this).val() == ''){
 		  	
                             $(this).addClass('error-input');
-                            $('.error-message.js-fill-inputs').show();
-		  	
+                            $(this).closest('form').find('.error-message').show();
+                            $('.error-message').html('Rellena los campos marcados en rojo, son requeridos');
 	  		
 	  		
 	  		noerror = false;
@@ -686,7 +696,8 @@ function validateForm(form){
 		form.find('.js-email').each(function(index, value){
 		  if(!validateEmail($(this).val())){
 		  	$(this).addClass('error-input');
-		  	$('.error-message.js-email-inputs').show();
+		  	$(this).closest('form').find('.error-message').show();
+                         $('.error-message').html('Introduce un email válido');
 		  	noerror = false;
 		  }
 		});	
@@ -696,10 +707,19 @@ function validateForm(form){
 		form.find('.js-password').each(function(index, value){
 		  if($(this).val().length < 8){
 		  	$(this).addClass('error-input');
-		  	$('.error-message.js-password-length').show();
+		  	$(this).closest('form').find('.error-message').show();
 		  	noerror = false;
 		  }
 		});	
+                
+                form.find('.js-startdate').each(function(index, value){
+		  if($(this).val() > $(this).closest('form').find('.js-enddate').val()){
+		  	$(this).addClass('error-input');
+		  	$(this).closest('form').find('.error-message').show();
+                        $('.error-message').html('El año de comienzo no puede ser mayor que el de finalización')
+		  	noerror = false;
+		  }
+		});
 			
 		if(!noerror){
 			return false;
@@ -729,6 +749,9 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+function clickAbout(){
+    $('.js-click-about').trigger('click');
+}
 
     });
 });

@@ -45,6 +45,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 echo $this->Html->script('util');
                 echo $this->Html->script('jquery.cookiebar');
                 echo $this->Html->script('jquery.touchSwipe.min');
+                 echo $this->Html->script('jquery.mCustomScrollbar');
                 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

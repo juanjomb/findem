@@ -48,12 +48,12 @@ class CommentsController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
 
             if (!$id) {
-                throw new NotFoundException(__('Invalid comment'));
+                throw new NotFoundException(__('Comentario no válido'));
             }
 
             $comment = $this->Comment->findById($id);
             if (!$comment) {
-                throw new NotFoundException(__('Invalid comment'));
+                throw new NotFoundException(__('Comentario no válido'));
             }
             $this->set('comment', $comment);
             $this->getLists($comment);

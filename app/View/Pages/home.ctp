@@ -1,7 +1,7 @@
 <section class="uno" id="top">
     <div class="content-uno">
         <h2>Encuentra el profesional que necesitas.</h2>
-        <a href="#about"><button class="info">Saber mas</button></a>
+        <button class="info js-btn-about">Saber mas</button>
     </div>
 </section>
 <section id="about" class="dos">
@@ -71,6 +71,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
             'class' => 'register'
         );
     ?>
+<p class="error-message">&nbsp;</p>
 <?php echo $this->Form->end($options); ?>
 <br>
         <div class="registermessage"></div>
@@ -97,6 +98,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
             'placeholder'=>"Password"
         ));
     ?>
+<p class="error-message">&nbsp;</p>
 <?php 
 $options = array(
             'label' => 'Register',
@@ -109,6 +111,6 @@ echo $this->Form->end($options); ?>
         </div>
     </div> 
 
-
+<a href="#about" class="js-click-about">&nbsp;</a>
 
 

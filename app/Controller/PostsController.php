@@ -9,7 +9,7 @@ class PostsController extends AppController {
         $this->Auth->allow('blog','view');
     }
 
-    public function index($user_id) {
+    public function index() {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $this->paginate = array(
             'limit' => 10,
@@ -58,8 +58,8 @@ class PostsController extends AppController {
                     $item = $this->request->data;
                 }
                 if ($this->Post->save($item)) {
-                    $this->Session->setFlash(__('Your post has been saved.'));
-                    return $this->redirect(array('action' => 'index',$user_id));
+                    $this->Session->setFlash(__('Tu post ha sido guardado.'));
+                    return $this->redirect(array('action' => 'index'));
                 }
                 $this->Session->setFlash(__('Unable to add your post.'));
                 }else{

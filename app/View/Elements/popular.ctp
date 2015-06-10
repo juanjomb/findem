@@ -11,7 +11,7 @@ $professionals=$Model->find('all',compact('conditions','order', 'limit'));
     <?php
    foreach ($professionals as $user){ 
        ?>
-<div class="user-result-block col-md-3 col-xs-10" data="<?php echo $user['User']['id']; ?>">
+<div class="user-result-block col-md-3 col-xs-10">
     <?php if(!empty($user['User']['image'])){ 
                echo $this->Html->image('/img/uploads/users/'.$user['User']['image'], array('alt' => 'User image','class'=>'user-result-image'));
                 } ?>
@@ -19,7 +19,7 @@ $professionals=$Model->find('all',compact('conditions','order', 'limit'));
                 <p class="user-result-data-category"><?php echo $user['Category']['title']; ?></p>
                 <p class="user-result-data-description"><?php echo $user['User']['description']; ?></p>
                 <p class="user-result-data-location"><?php echo $user['City']['municipio']; ?></p>
-                <?php echo $this->Html->link('<span class="fa fa-eye fa-2x user-result-viewprofile" title="Ver perfil"></span>', array('controller' => 'users', 'action' => 'view',$user['User']['id']), array('escape' => false));?>
+                <?php echo $this->Html->link('&nbsp;<span class="fa fa-eye fa-2x user-result-viewprofile" title="Ver perfil"></span>', array('controller' => 'users', 'action' => 'view',$user['User']['id']), array('escape' => false));?>
 </div>
     <?php
 } ?>

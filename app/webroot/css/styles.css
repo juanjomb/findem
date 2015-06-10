@@ -21,6 +21,9 @@ html,body{
     margin-top: 70px;
     
 }
+td i {
+    margin-left: 12px;
+}
 .pushmenu-bg{
     background-color: black;
     opacity: 0.5;
@@ -82,7 +85,7 @@ html,body{
   display: inline-block;
 }
 .post-view-link{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #276169;
 }
 .blog-header{
@@ -169,7 +172,7 @@ font-size: 1.2rem;
     width: 25%;
     margin-left: 3%;
     padding-left: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
 }
 .comment-count{
     float: right;
@@ -244,7 +247,7 @@ float: right;
     color: #276169;
 }
 .error-input{
-    box-shadow: 3px 3px 15px indianred;
+    box-shadow: 1px 1px 5px indianred;
 }
 .error-page-message{
     font-size: 1.5rem;
@@ -252,7 +255,11 @@ float: right;
     padding-left: 30px;
     padding-right:  30px;
 }
-
+.error-message{
+    clear: both;
+    color: indianred;
+    text-align: center;
+}
 .profile-category{
     font-size: 2rem;
     text-align: center;
@@ -834,7 +841,7 @@ a span{
     min-height: 80%;
 }
 .paging{
-    width: 20%;
+    min-width: 40%;
     margin-left: 30%;
     margin-bottom: 3%;
 }
@@ -844,7 +851,9 @@ a span{
     padding: 5px;
     
 }
-
+.current{
+    text-decoration: underline;
+}
 .paging a{
     text-decoration: none;
     color: #276169;
