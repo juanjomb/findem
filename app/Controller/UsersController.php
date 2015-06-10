@@ -605,7 +605,7 @@ class UsersController extends AppController {
                 $md5=uniqid(); 
                 $user['User']['reset_key']=$md5;
                 $this->User->save($user);
-                $message='<p>Hola, '.$user['User']['username'].', pulsa <a href="http://findem/recuperar-datos/'.$md5.'">aquí</a> para restablecer tu contraseña</p>';
+                $message='<p>Hola, '.$user['User']['username'].', pulsa <a href="http://findem.es/recuperar-datos/'.$md5.'">aquí</a> para restablecer tu contraseña</p>';
             	try {
                     $email = new CakeEmail('gmail');
                     $email->from('no-reply@gmail.com','Findem');
@@ -613,10 +613,10 @@ class UsersController extends AppController {
                     $email->to($this->request->data['User']['email']);
                     $email->subject('Restablecer contraseña');
                     $success = $email->send($message);
+                    $this->Session->setFlash(__('Te hemos enviado un email con los detalles para restablecer tu contraseña.'));
                 } catch (SocketException $e) {
                     $this->log(sprintf('Error enviando mail : %s', $e->getMessage()));
                     }
-                    $this->Session->setFlash(__('Te hemos enviado un email con los detalles para restablecer tu contraseña.'));
                     }else{
                        $this->Session->setFlash(__('No hay ningún usuario registrado con ese email.')); 
                     }

@@ -217,6 +217,23 @@ echo $this->Form->end($options);
         </div>
     </div> 
     
+<div class="popupBg">  
+        <div class="popup js-popup-languages">
+            <span class="fa fa-close closePopup"></span>
+            <p class="popup-header">Búsqueda de idiomas</p>
+            <input type="text" class="js-search-language">
+            <div class="js-optionLanguages"></div>
+        </div>
+    </div> 
+    <div class="popupBg">  
+        <div class="popup js-popup-skills">
+            <span class="fa fa-close closePopup"></span>
+            <p class="popup-header">Búsqueda de habilidad</p>
+            <input type="text" name="ser" class="js-search-skill">
+            <div class="js-optionSkills"></div>
+        </div>
+    </div> 
+    
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <?php
 echo $this->Html->script('mapview', array('inline' => false));?>

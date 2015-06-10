@@ -11590,3 +11590,39 @@ stream_socket_client(): Failed to enable crypto
 stream_socket_client(): unable to connect to ssl://smtp.gmail.com:465 (Unknown error)
 2015-06-06 17:06:55 Error: Error enviando mail : SMTP server did not accept the password.
 2015-06-06 17:08:10 Error: Error enviando mail : SMTP server did not accept the password.
+2015-06-09 17:18:01 Error: [MissingControllerException] Controller class BulebaController could not be found.
+Exception Attributes: array (
+  'class' => 'BulebaController',
+  'plugin' => NULL,
+)
+Request URL: /buleba
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-09 17:18:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-09 17:18:19 Error: [MissingControllerException] Controller class BulebaController could not be found.
+Exception Attributes: array (
+  'class' => 'BulebaController',
+  'plugin' => NULL,
+)
+Request URL: /buleba
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-09 17:18:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.nicescroll.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\findem\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

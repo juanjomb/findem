@@ -8,34 +8,40 @@
         <?php
         echo $this->Form->input('region_id', array(
             'options' => $regions,
+            'label'=>'Comunidad',
             'empty' => '(Selecciona una comunidad)',
             'class' => 'js-region col-xs-12 col-md-12 form-control searchinput',
             'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('province_id', array(
+            'label'=>'Provincia',
             'empty' => '(Selecciona una provincia)',
             'class' => 'js-province col-xs-12 col-md-12 form-control searchinput ',
             'div' => 'col-xs-12 col-md-4'
         ));
 
         echo $this->Form->input('city_id', array(
+            'label'=>'Ciudad',
             'empty' => '(Selecciona una ciudad)',
             'class' => 'js-city col-xs-12 col-md-12 form-control searchinput ',
             'div' => 'col-xs-12 col-md-4'
         )); 
         echo $this->Form->input('category_id', array(
+            'label'=>'Categoría',
             'options' => $categories,
             'empty' => '(Selecciona una categoría)',
             'class' => 'js-category col-xs-12 col-md-12 form-control searchinput',
             'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('skills', array(
+            'label'=>'Habilidades',
             'options' => $skills,
             'multiple' => true,
             'class' => 'col-xs-12 col-md-12 form-control searchinput js-skills-input',
             'div' => 'col-xs-12 col-md-4'
         ));
         echo $this->Form->input('languages', array(
+            'label'=>'Idiomas',
             'options' => $languages,
             'multiple' => true,
             'class' => 'col-xs-12 col-md-12 form-control searchinput js-languages-input',

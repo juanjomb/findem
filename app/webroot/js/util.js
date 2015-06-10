@@ -72,7 +72,7 @@ $(document).ready(function ($) {
             minDate: "-80Y",
             maxDate: "+1M +10D"
         });
-        if($('.js-profilecompleted').attr('data')==="0"){
+        if($('.js-profilecompleted').attr('aria-data')==="0"){
             showPopup(true);
         }
         
@@ -131,20 +131,20 @@ $(document).ready(function ($) {
             }
         }
         function showMenu() {
-            if ($(this).find('i').hasClass('active')) {
-                $(this).find('i').removeClass('fa-close');
+            if ($(this).find('span').hasClass('active')) {
+                $(this).find('span').removeClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                     $('body').css('overflow-y','auto');
                 }
-                $(this).find('i').addClass('fa-bars');
-                $(this).find('i').removeClass('active');
+                $(this).find('span').addClass('fa-bars');
+                $(this).find('span').removeClass('active');
             } else {
-                $(this).find('i').removeClass('fa-bars');
-                $(this).find('i').addClass('fa-close');
+                $(this).find('span').removeClass('fa-bars');
+                $(this).find('span').addClass('fa-close');
                 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
                     $('body').css('overflow-y','hidden');
                 }
-                $(this).find('i').addClass('active');
+                $(this).find('span').addClass('active');
             }
        
             if ($('body').hasClass('cbp-spmenu-push-toright')) {
@@ -558,9 +558,9 @@ $(window).unload(function () {
            if(valid){
             event.preventDefault();
             var formData = {
-                'username': $(this).closest('form').find('#UserUsername').val(),
-                'password': $(this).closest('form').find('#UserPassword').val(),
-                'role': $(this).closest('form').find('#UserRole').val()
+                'username': $(this).closest('form').find('.js-register-username').val(),
+                'password': $(this).closest('form').find('.js-register-password').val(),
+                'role': $(this).closest('form').find('.js-register-password').val()
             };
             $.ajax({
                 type: "POST",

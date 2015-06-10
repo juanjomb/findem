@@ -411,7 +411,7 @@ float: right;
     font-weight: bolder!important;
     color: #276169!important;
 }
-.icons i{
+.icons span{
     margin: 10px;
     color: white;
 }
@@ -566,19 +566,6 @@ float: right;
     margin-bottom: 20px!important;
 }
 
-.bgopacity{
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index:18;
-    -moz-opacity: 0.8;
-    opacity:.80;
-    filter: alpha(opacity=80);
-}
 
 .logdddinBg{
     width: 100%;
@@ -678,7 +665,7 @@ header{
     transition: height 1s;
 
 }
-a i{
+a span{
     margin: 5px;
 }
 .footerlink{
@@ -970,6 +957,7 @@ section.uno{
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1em 35%;
+    color: black;
 }
 .info:hover{
     border:none;
@@ -993,6 +981,11 @@ h4{
     font-size: 3rem;
     text-align: center;
     color: #0A3238;
+}
+.popup-header{
+    font-size: 3rem!important;
+    text-align: center!important;
+    color: #0A3238!important;
 }
 .dos p{
     font-size: 1rem;
@@ -1146,12 +1139,12 @@ p{
     box-shadow: 1px 8px 19px 0px rgba(50, 50, 50, 0.75);
 }
 
-.menu i{
+.menu span{
     margin-left: 25%;
     margin-top:  22%;
     cursor:pointer;
 }
-.goup i{
+.goup span{
     margin-left: 22%;
     margin-top:  18%;
     cursor:pointer;

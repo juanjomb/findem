@@ -38,6 +38,7 @@
 
         Router::connect('/perfil/:id', array('controller' => 'users', 'action' => 'view'),array('pass' => array('id')));
         Router::connect('/candidatos', array('controller' => 'users', 'action' => 'selected'));
+        Router::connect('/busqueda', array('controller' => 'users', 'action' => 'search'));
         Router::connect('/iniciar-sesion', array('controller' => 'users', 'action' => 'login'));
         Router::connect('/inbox', array('controller' => 'users', 'action' => 'inbox'));
         Router::connect('/blog', array('controller' => 'posts', 'action' => 'blog'));

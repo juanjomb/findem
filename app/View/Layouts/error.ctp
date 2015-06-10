@@ -19,7 +19,7 @@ $findemtitle = __d('cake_dev', 'Findem, red de profesionales informáticos');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
 	<?php echo $this->Html->charset(); ?>
         <title>

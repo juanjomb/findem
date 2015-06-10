@@ -11,38 +11,36 @@ $user = $this->Session->read('user'); ?>
         <?php } ?>
     <p class="userName"><?php echo $user['User']['name'] . ' ' . $user['User']['surname1'] ?></p>
 
-    <a href="/users/view/<?php echo $user['User']['id']; ?>"><i class="fa fa-user"></i>    Mi perfil</a>
-     <a href="/users/edit/<?php echo $user['User']['id']; ?>"><i class="fa fa-pencil"></i>    Editar perfil</a>
-       <a href="/inbox"><i class="fa fa-envelope"></i>    Inbox</a>
+    <a href="/users/view/<?php echo $user['User']['id']; ?>"><span class="fa fa-user"></span>    Mi perfil</a>
+     <a href="/users/edit/<?php echo $user['User']['id']; ?>"><span class="fa fa-pencil"></span>    Editar perfil</a>
+       <a href="/inbox"><span class="fa fa-envelope"></span>    Inbox</a>
         <?php
         if ($user['User']['role'] == 'admin') {
             ?>
-    <a href="/users/index/"><i class="fa fa-users"></i>     Usuarios</a>
-    <a href="/feedbacks/index/"><i class="fa fa-bullhorn"></i>     Feedbacks</a>
-    <a href="/languages/index/"><i class="fa fa-inbox"></i>    Idiomas</a>
-    <a href="/skills/index/"><i class="fa fa-institution"></i>     Habilidades</a>
-    <a href="/categories/index/"><i class="fa fa-tags"></i>     Categorías</a>
-    <a href="/posts/index/"><i class="fa fa-book"></i>     Posts</a>
-    <a href="/estadisticas"><i class="fa fa-bar-chart "></i>     Estadísticas</a>
+    <a href="/users/index/"><span class="fa fa-users"></span>     Usuarios</a>
+    <a href="/feedbacks/index/"><span class="fa fa-bullhorn"></span>     Feedbacks</a>
+    <a href="/languages/index/"><span class="fa fa-inbox"></span>    Idiomas</a>
+    <a href="/skills/index/"><span class="fa fa-institution"></span>     Habilidades</a>
+    <a href="/categories/index/"><span class="fa fa-tags"></span>     Categorías</a>
+    <a href="/posts/index/"><span class="fa fa-book"></span>     Posts</a>
+    <a href="/estadisticas"><span class="fa fa-bar-chart "></span>     Estadísticas</a>
     
             <?php
         }
         if ($user['User']['role'] == 'company') {
             ?>
-    <a href="/users/search/"><i class="fa fa-search"></i>    Búsqueda</a>
-    <a href="/users/selected/"><i class="fa fa-bookmark"></i>     Candidatos</a>
+    <a href="/users/search/"><span class="fa fa-search"></span>    Búsqueda</a>
+    <a href="/users/selected/"><span class="fa fa-bookmark"></span>     Candidatos</a>
             <?php
         }
        ?>
-    <a href="/users/logout"><i class="fa fa-close"></i>     Cerrar sesión</a>
+    <a href="/users/logout"><span class="fa fa-close"></span>     Cerrar sesión</a>
   
     <?php } else { ?>
-    <a href="/iniciar-sesion"><i class="fa fa-send"></i>     Inicia sesión</a>
-    <a href="#about"><i class="fa fa-info-circle"></i>     ¿Qué es Findem?</a>
-    <a href="#prof"><i class="fa fa-briefcase"></i>     Quiero registrarme</a>
-    <a href="/blog"><i class="fa fa-book"></i>     Blog</a>
-    <a href="/terminos"><i class="fa fa-warning"></i>     Términos y condiciones</a>
-    <a href="/contacto"><i class="fa fa-desktop"></i>     Contacto</a>
+    <a href="/iniciar-sesion"><span class="fa fa-send"></span>     Inicia sesión</a>
+    <a href="/blog"><span class="fa fa-book"></span>     Blog</a>
+    <a href="/terminos"><span class="fa fa-warning"></span>     Términos y condiciones</a>
+    <a href="/contacto"><span class="fa fa-desktop"></span>     Contacto</a>
     <?php } ?>
 
 
