@@ -44,6 +44,7 @@
         Router::connect('/blog', array('controller' => 'posts', 'action' => 'blog'));
         Router::connect('/estadisticas', array('controller' => 'users', 'action' => 'stats'));
         Router::connect('/contacto', array('controller' => 'pages', 'action' => 'display','contact'));
+        Router::connect('/terminos', array('controller' => 'pages', 'action' => 'display','terms'));
         Router::connect('/recuperar-datos', array('controller' => 'users', 'action' => 'recover'));
         Router::connect('/recuperar-datos/:reset', array('controller' => 'users', 'action' => 'recover'),array('pass' => array('reset')));
 

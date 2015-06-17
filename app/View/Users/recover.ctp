@@ -14,6 +14,7 @@
         ));
          $options = array('label' => 'Enviar','class'=>'feedbackBtn');
     ?>
+    <div class="error-message"></div>
 <?php echo $this->Form->end($options); ?>
     <?php }else{?>
      <h2>Restablece tu contraseña</h2>
@@ -32,6 +33,7 @@
         ));
          $options = array('label' => 'Enviar','class'=>'feedbackBtn');
     ?>
+     <div class="error-message"></div>
 <?php echo $this->Form->end($options); ?>
     <?php }?>
 </div>

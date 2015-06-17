@@ -122,6 +122,7 @@ echo $this->Form->create('User', array('enctype' => 'multipart/form-data')); ?>
         'class' => 'btn btn-default send',
         'div'=>'col-xs-12 col-md-12'
         );
+        echo '<div class="error-message"></div>';
         echo $this->Form->end($options);
         ?>
     </div>

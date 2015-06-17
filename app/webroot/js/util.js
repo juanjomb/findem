@@ -50,7 +50,13 @@ $(document).ready(function ($) {
         $('.js-unbookmark').on('click',unbookmarkUser);
         $('.js-send-reply').on('click',sendReply);
         $('.js-post-comment').on('click',postComment);
-        $('.js-btn-about').on('click',clickAbout)
+        $('.js-btn-about').on('click',clickAbout);
+        $(window).scroll(function() {
+            var o = $(this).scrollTop();
+            if($(".uno").length>0){
+             $(".uno").css("background-position-y", parseInt(-o / 4) + "px");
+            }
+        });
          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $('#cbp-spmenu-s1').length>0 ) {
                    $(document).swipe({
                         tap: function(event, target) {
@@ -64,7 +70,7 @@ $(document).ready(function ($) {
                                         }
                                       },
                                       allowPageScroll:"vertical",
-                                      threshold:120,
+                                      threshold:150,
                                     });
                 }
        
@@ -568,7 +574,7 @@ $(window).unload(function () {
             var formData = {
                 'username': $(this).closest('form').find('.js-register-username').val(),
                 'password': $(this).closest('form').find('.js-register-password').val(),
-                'role': $(this).closest('form').find('.js-register-password').val()
+                'role': $(this).closest('form').find('.js-register-role').val()
             };
             $.ajax({
                 type: "POST",
@@ -730,6 +736,8 @@ function validateForm(form){
 }
 function sendReply(){
     event.preventDefault();
+    var valid = validateForm($(this).closest('form'))
+           if(valid){
             var message = $('#ResponseMessage').val();
             var mail = $('#ResponseEmail').val();
             $.ajax({
@@ -743,6 +751,7 @@ function sendReply(){
                 },
                 dataType: 'json'
             });
+        }
 }
 function validateEmail(email) { 
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

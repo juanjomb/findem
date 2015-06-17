@@ -1,3 +1,4 @@
+<div class="blog-header avoid-header">Tus candidatos</div>
 <div class="row bookmarkscontainer">
 <?php
 if(isset($users)){

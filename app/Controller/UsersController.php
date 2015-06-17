@@ -32,12 +32,16 @@ class UsersController extends AppController {
     }
 
     public function index() {
-        $this->paginate = array(
-            'limit' => 10,
-            'order' => array('name' => 'desc')
-        );
-        $users = $this->paginate('User');
-        $this->set('users', $users);
+        if($this->Session->read('Auth.User.role')=='admin'){
+            $this->paginate = array(
+                'limit' => 10,
+                'order' => array('name' => 'desc')
+            );
+            $users = $this->paginate('User');
+            $this->set('users', $users);
+        }else{
+                 $this->redirect('/pages/denied');
+             }
     }
 
     public function isAdmin($user) {
@@ -178,6 +182,7 @@ class UsersController extends AppController {
     }
 
     public function delete($id) {
+        if($this->Session->read('Auth.User.role')=='admin'){
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
@@ -193,6 +198,9 @@ class UsersController extends AppController {
         }
 
         return $this->redirect(array('action' => 'index'));
+        }else{
+                 $this->redirect('/pages/denied');
+             }
     }
 
     private function getLists($user = null) {

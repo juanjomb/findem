@@ -13,7 +13,7 @@ class PostsController extends AppController {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             $this->paginate = array(
             'limit' => 10,
-            'order' => array('created' => 'asc')
+            'order' => array('created' => 'DESC')
         );
         $posts = $this->paginate('Post');
         $this->set('posts', $posts);

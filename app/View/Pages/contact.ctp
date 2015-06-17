@@ -22,5 +22,6 @@
         ));
          $options = array('label' => 'Enviar','class'=>'feedbackBtn');
     ?>
+    <div class="error-message"></div>
 <?php echo $this->Form->end($options); ?>
 </div>

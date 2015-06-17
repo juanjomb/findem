@@ -14,7 +14,7 @@
             'label' => 'Nombre',
             'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-2'));
-
+    if($this->Session->read('Auth.User.role')=='user'){
         echo $this->Form->input('surname1', array(
             'label' => 'Primer apellido',
             'class' => 'col-xs-12 col-md-12 form-control js-required',
@@ -32,11 +32,13 @@
             'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-4'
         ));
+    }
         ?>
     </div>
     <div class="clearfix"></div>
     <div class="form-group">
         <?php
+        if($this->Session->read('Auth.User.role')=='user'){
         echo $this->Form->input('Skill.Skill', array(
             'label'=>'Habilidades',
             'class' => 'col-xs-12 col-md-12 form-control',
@@ -47,12 +49,14 @@
             'class' => 'col-xs-12 col-md-12 form-control',
             'div' => 'col-xs-12 col-md-2'
         ));
+        }
         echo $this->Form->input('description', array(
             'label'=>'Descripción',
             'rows' => '3',
             'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-5'
         ));
+        if($this->Session->read('Auth.User.role')=='user'){
         echo $this->Form->input("birthdate", array(
              'label' => "Fecha de nacimiento : ",
              'type' => 'text',
@@ -60,6 +64,7 @@
             'class' => 'col-xs-12 col-md-12 form-control js-required',
             'div' => 'col-xs-12 col-md-3',
              'id' => 'datepicker'));
+        }
         ?>
     </div>
     <div class="clearfix"></div>
@@ -110,6 +115,7 @@
             'class' => 'btn btn-default send',
             'div'=>'col-xs-12 col-md-12'
         );
+        echo '<div class="error-message"></div>';
         echo $this->Form->end($options);
         ?>
     </div>

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-xs-12 col-md-12"> <h2>Educations</h2></div>
+        <div class="col-xs-12 col-md-12"> <h2>Formación</h2></div>
     </div>
 
 <div class="row">
 
         <div class="col-xs-12 col-md-12"> <?php 
-                        echo $this->Html->link('<span class="btn btn-success">Create education</span>', array('controller' => 'educations', 'action' => 'add',$user_id),
+                        echo $this->Html->link('<span class="btn btn-success">Crear formación</span>', array('controller' => 'educations', 'action' => 'add',$user_id),
                                 array('escape' => false)
                                 );?>
         </div>
@@ -16,11 +16,11 @@
     <div class="row">
         <table class="table table-hover">
             <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Start date</th>
-                <th>End date</th>
-                <th>Actions</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Acciones</th>
 
             </tr>
 
@@ -34,13 +34,13 @@
                     <td><?php echo $education['Education']['end_date']; ?></td>
                     <td>
                         <?php 
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'educations', 'action' => 'edit', $education['Education']['id']),
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon" title="Editar formación"></i>', array('controller' => 'educations', 'action' => 'edit', $education['Education']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'educations', 'action' => 'delete', $education['Education']['id']),
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar formación"></i>', array('controller' => 'educations', 'action' => 'delete', $education['Education']['id'],$education['Education']['user_id']),
                                 array('escape' => false),
-                                array('confirm' => 'Are you sure?')
+                                array('confirm' => 'Está seguro?')
                                 );
                         ?>
                     </td>

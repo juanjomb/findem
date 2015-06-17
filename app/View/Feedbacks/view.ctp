@@ -32,10 +32,12 @@
 
             $options = array(
                 'label' => 'Enviar respuesta',
-                'class' => 'reply-feedback-btn js-send-reply',
+                'class' => 'reply-feedback-btn js-send-reply js-required',
                 'div' => false
             );
-            echo $this->Form->end($options);
+            ?>
+            <div class="error-message"></div>
+           <?php echo $this->Form->end($options);
             ?>
         </div> 
     </div>

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
 
-        <div class="col-xs-12 col-md-12"> <h2>Experiences</h2></div>
+        <div class="col-xs-12 col-md-12"> <h2>Experiencias</h2></div>
     </div>
 
 <div class="row">
 
         <div class="col-xs-12 col-md-12"> <?php 
-                        echo $this->Html->link('<span class="btn btn-success">Create experience</span>', array('controller' => 'experiences', 'action' => 'add',$user_id),
+                        echo $this->Html->link('<span class="btn btn-success">Crear experiencia</span>', array('controller' => 'experiences', 'action' => 'add',$user_id),
                                 array('escape' => false)
                                 );?>
         </div>
@@ -16,12 +16,12 @@
     <div class="row">
         <table class="table table-hover">
             <tr>
-                <th>Title</th>
-                <th>Company</th>
-                <th>Description</th>
-                <th>Start date</th>
-                <th>End date</th>
-                <th>Actions</th>
+                <th>Título</th>
+                <th>Empresa</th>
+                <th>Descripción</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Acciones</th>
 
             </tr>
 
@@ -36,13 +36,13 @@
                     <td><?php echo $experience['Experience']['end_date']; ?></td>
                     <td>
                         <?php 
-                        echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'experiences', 'action' => 'edit', $experience['Experience']['id']),
+                        echo $this->Html->link('<i class="fa fa-pencil editIcon" title="Editar experiencia"></i>', array('controller' => 'experiences', 'action' => 'edit', $experience['Experience']['id']),
                                 array('escape' => false)
                                 
                                 );
-                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon"></i>', array('controller' => 'experiences', 'action' => 'delete', $experience['Experience']['id']),
+                        echo $this->Form->postLink('<i class="fa fa-trash deleteIcon" title="Borrar experiencia"></i>', array('controller' => 'experiences', 'action' => 'delete', $experience['Experience']['id'],$experience['Experience']['user_id']),
                                 array('escape' => false),
-                                array('confirm' => 'Are you sure?')
+                                array('confirm' => 'Está seguro?')
                                 );
                         ?>
                     </td>

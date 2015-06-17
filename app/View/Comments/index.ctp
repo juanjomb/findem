@@ -19,6 +19,7 @@
             <tr>
                 <th>Usuario</th>
                 <th>Fecha</th>
+                <th>Comentario</th>
                 <th>Acciones</th>
 
             </tr>
@@ -36,6 +37,7 @@
                 <tr>
                     <td><?php echo $name; ?></td>
                     <td><?php echo $comment['Comment']['created']; ?></td>
+                    <td><?php echo $comment['Comment']['comment']; ?></td>
                     <td>
                         <?php 
                         echo $this->Html->link('<i class="fa fa-pencil editIcon"></i>', array('controller' => 'comments', 'action' => 'edit', $comment['Comment']['id']),

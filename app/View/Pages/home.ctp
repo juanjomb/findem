@@ -62,7 +62,7 @@ Al contrario que en otras páginas de empleo, en Findem no hay ofertas de trabaj
         ));
         echo $this->Form->input('password',array(
             'label' => ' ',
-            'class'=>'loginInput js-required js-register-username',
+            'class'=>'loginInput js-required js-register-password',
             'placeholder'=>"Password"
             
         ));

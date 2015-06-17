@@ -15,7 +15,7 @@
         );
         
         ?>
-    
+    <div class="error-message"></div>
 </div>
      
           <?php

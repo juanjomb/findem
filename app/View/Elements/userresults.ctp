@@ -1,5 +1,5 @@
 <?php
-if(isset($users)){
+if(!empty($users)){
    foreach ($users as $user){ 
        ?>
 <div class="user-result-block col-md-5 col-xs-10" data="<?php echo $user['User']['id']; ?>">
@@ -15,6 +15,8 @@ if(isset($users)){
 </div>
     <?php
 } 
-}
+}else{ ?>
+       <h3>Lo sentimos, ningún usuario coincide con los criterios introducidos</h3>
+<?php }
 
 ?>

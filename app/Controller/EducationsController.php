@@ -71,7 +71,7 @@ class EducationsController extends AppController {
                 $this->Education->id = $id;
                 if ($this->Education->save($this->request->data)) {
                     $this->Session->setFlash(__('La educación ha sido actualizada'));
-                    return $this->redirect(array('action' => 'index'));
+                    return $this->redirect(array('action' => 'index',$education['Education']['user_id']));
                 }
                 $this->Session->setFlash(__('La educación no ha podido ser actualizada'));
             }
@@ -84,7 +84,7 @@ class EducationsController extends AppController {
         }
     }
 
-    public function delete($id) {
+    public function delete($id,$user_id) {
         if ($this->Session->read('Auth.User.role') == 'admin') {
 
             if ($this->request->is('get')) {
@@ -101,7 +101,7 @@ class EducationsController extends AppController {
                 );
             }
 
-            return $this->redirect(array('action' => 'index'));
+            return $this->redirect(array('action' => 'index',$user_id));
         } else {
             $this->redirect('/pages/denied');
         }

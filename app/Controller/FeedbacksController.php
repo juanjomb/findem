@@ -41,7 +41,6 @@ class FeedbacksController extends AppController {
     }
 
     public function add() {   
-         if($this->Session->read('Auth.User.role')=='admin'){
         $this->autoRender=false;
             $this->Feedback->create();
             if(!empty($this->request->data)){
@@ -49,14 +48,12 @@ class FeedbacksController extends AppController {
                     $item=$this->request->data;
                 }
             if ($this->Feedback->save($item)) {
-                $this->Session->setFlash(__('Your feedback has been saved.'));
+                $this->Session->setFlash(__('Tu feedback ha sido guardado. El equipo de Findem te responderá a la mayor brevedad.'));
                 return $this->redirect($this->referer());
             }
-            $this->Session->setFlash(__('Unable to add your feedback.'));
+            $this->Session->setFlash(__('No se ha podido guardar el feedback.'));
         }
-         } else {
-            $this->redirect('/pages/denied');
-        }
+         
     }
 
     public function edit($id = null) {

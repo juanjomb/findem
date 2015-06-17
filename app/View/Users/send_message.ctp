@@ -22,6 +22,8 @@
         'placeholder'=>"Escribe aquí tu mensaje"
 
     ));
-    $options = array('label' => 'Enviar','class'=>'feedbackBtn');
-    echo $this->Form->end($options); ?>
+    
+    $options = array('label' => 'Enviar','class'=>'feedbackBtn');?>
+    <div class="error-message"></div>
+  <?php  echo $this->Form->end($options); ?>
 </div>

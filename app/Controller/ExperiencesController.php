@@ -67,10 +67,10 @@ class ExperiencesController extends AppController {
             if ($this->request->is(array('post', 'put'))) {
                 $this->Experience->id = $id;
                 if ($this->Experience->save($this->request->data)) {
-                    $this->Session->setFlash(__('Your experience has been updated.'));
-                    return $this->redirect(array('action' => 'index'));
+                    $this->Session->setFlash(__('Su experiencia ha sido actualizada.'));
+                    return $this->redirect(array('action' => 'index',$experience['Experience']['user_id']));
                 }
-                $this->Session->setFlash(__('Unable to update your experience.'));
+                $this->Session->setFlash(__('No se ha podido actualizar la experiencia.'));
             }
 
             if (!$this->request->data) {
@@ -81,7 +81,7 @@ class ExperiencesController extends AppController {
         }
     }
 
-    public function delete($id) {
+    public function delete($id,$user_id) {
         if ($this->Session->read('Auth.User.role') == 'admin') {
             if ($this->request->is('get')) {
                 throw new MethodNotAllowedException();
@@ -97,7 +97,7 @@ class ExperiencesController extends AppController {
                 );
             }
 
-            return $this->redirect(array('action' => 'index'));
+            return $this->redirect(array('action' => 'index',$user_id));
         } else {
             $this->redirect('/pages/denied');
         }
